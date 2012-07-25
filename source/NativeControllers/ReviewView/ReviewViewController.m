@@ -137,6 +137,8 @@
         
         [backButton addTarget:self action:@selector(goBack:) forControlEvents:UIControlEventTouchUpInside];
         
+        backButton.accessibilityLabel=@"Back";
+        
         [self.view addSubview:backButton];
         
         [backButton release];
@@ -210,6 +212,8 @@
         [backButton setBackgroundImage:[UIImage imageNamed:@"back_btn.png"] forState:UIControlStateNormal];
         
         [backButton addTarget:self action:@selector(goBack:) forControlEvents:UIControlEventTouchUpInside];
+        
+        backButton.accessibilityLabel=@"Back";
         
         [self.view addSubview:backButton];
         

@@ -209,6 +209,8 @@
         
         [checkout addTarget:self action:@selector(viewAction:) forControlEvents:UIControlEventTouchUpInside];
         
+        checkout.accessibilityLabel = @"CheckOut";
+        
         [self.view addSubview:checkout];
         
         [checkout release];
@@ -334,6 +336,8 @@
         [checkout setBackgroundImage:[UIImage imageNamed:@"checkout_btn.png"] forState:UIControlStateNormal];
         
         [checkout addTarget:self action:@selector(viewAction:) forControlEvents:UIControlEventTouchUpInside];
+        
+        checkout.accessibilityLabel = @"CheckOut";
         
         [self.view addSubview:checkout];
         

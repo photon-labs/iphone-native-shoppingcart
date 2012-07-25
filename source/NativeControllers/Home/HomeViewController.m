@@ -163,6 +163,7 @@
          [btnSearchIcon setBackgroundImage:[UIImage imageNamed:@"searchbox_icon.png"] forState:UIControlStateNormal];
          [btnSearchIcon addTarget:self action:@selector(searchButtonSelected) forControlEvents:UIControlEventTouchUpInside];
          [self.view addSubview:btnSearchIcon];
+         btnSearchIcon.accessibilityLabel = @"Searchbutton";
          
          [searchBarView release];
      }
@@ -191,6 +192,7 @@
          [btnSearchIcon setBackgroundImage:[UIImage imageNamed:@"searchbox_icon.png"] forState:UIControlStateNormal];
          [btnSearchIcon addTarget:self action:@selector(searchButtonSelected) forControlEvents:UIControlEventTouchUpInside];
          [self.view addSubview:btnSearchIcon];
+          btnSearchIcon.accessibilityLabel = @"Searchbutton";
          
          [searchBarView release];
           
@@ -376,6 +378,23 @@
             button.titleLabel.text = [titleLabel objectAtIndex:i];
             
             [self.view addSubview:button];
+            
+            if(i==0) {
+                
+                button.accessibilityLabel = @"Browse";
+            }
+            if(i==1) {
+                
+                button.accessibilityLabel = @"Offer";
+            }
+            if(i==2) {
+                
+                button.accessibilityLabel = @"Login";
+            }
+            if(i==3) {
+                
+                button.accessibilityLabel = @"Register";
+            }
             
             x = x + 120;
             

@@ -219,6 +219,8 @@
         
         [cancelCart addTarget:self action:@selector(reviewAction:) forControlEvents:UIControlEventTouchUpInside];
         
+        cancelCart.accessibilityLabel = @"Submit";
+        
         [self.view addSubview:cancelCart];
         
         [cancelCart release];
@@ -321,6 +323,8 @@
         [cancelCart setBackgroundImage:[UIImage imageNamed:@"submitorder_btn.png"] forState:UIControlStateNormal];
         
         [cancelCart addTarget:self action:@selector(reviewAction:) forControlEvents:UIControlEventTouchUpInside];
+        
+         cancelCart.accessibilityLabel = @"Submit";
         
         [self.view addSubview:cancelCart];
         

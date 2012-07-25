@@ -394,6 +394,8 @@
     [reviewCart addTarget:self action:@selector(cancelAction:) forControlEvents:UIControlEventTouchUpInside];
     
     [self.view addSubview:reviewCart];
+        
+    reviewCart.accessibilityLabel = @"revieworder btn";   
     
     [reviewCart release];
     
@@ -559,13 +561,13 @@
 -(void)cancelAction:(id)sender
 {
     
-     if ((![txtFirst.text length]) || (![txtAdd1.text length]) || (![txtAdd2.text length]) || (![txtCity.text length]) || (![txtState.text length]) || (![txtCountry.text length]) || (![txtPost.text length]) || (![txtOrder.text length])){
-     
-         UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"" message:@"Enter all Required Values" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
-         [alert show];
-         [alert release];
-     }
-     else {
+//     if ((![txtFirst.text length]) || (![txtAdd1.text length]) || (![txtAdd2.text length]) || (![txtCity.text length]) || (![txtState.text length]) || (![txtCountry.text length]) || (![txtPost.text length]) || (![txtOrder.text length])){
+//     
+//         UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"" message:@"Enter all Required Values" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+//         [alert show];
+//         [alert release];
+//     }
+//     else {
          CheckOutOVerallViewController  *checkOutController = [[CheckOutOVerallViewController alloc] initWithNibName:@"CheckOutOVerallViewController" bundle:nil];
          checkOutController.strFirst = txtFirst.text;
          checkOutController.strLast = txtLast.text;
@@ -584,7 +586,7 @@
          
         [self.view addSubview:overallViewController.view];
         [checkOutController release];
-     }
+    // }
     
     
     
@@ -1189,26 +1191,32 @@
             [cell.textLabel setFont:[UIFont fontWithName:@"Helvetica" size:30]];
             cell.textLabel.text = @"Customer Information"; // only top row showing
             cell.textLabel.textColor = [UIColor whiteColor];
+                cell.accessibilityLabel = @"CustInfo"; 
+                
             } else if (indexPath.section ==1)
             {
                 [cell.textLabel setFont:[UIFont fontWithName:@"Helvetica" size:30]];
                 cell.textLabel.text = @"Delivery Information"; // only top row showing
                 cell.textLabel.textColor = [UIColor whiteColor];
+                cell.accessibilityLabel = @"DelInfo";
             } else if (indexPath.section ==2)
             {
                 [cell.textLabel setFont:[UIFont fontWithName:@"Helvetica" size:30]];
                 cell.textLabel.text = @"Billing Information"; // only top row showing
                 cell.textLabel.textColor = [UIColor whiteColor];
+                cell.accessibilityLabel = @"BillInfo";
             } else if (indexPath.section ==3)
             {
                 [cell.textLabel setFont:[UIFont fontWithName:@"Helvetica" size:30]];
                 cell.textLabel.text = @"Payment Methods"; // only top row showing
                 cell.textLabel.textColor = [UIColor whiteColor];
+                cell.accessibilityLabel = @"PaytMethods";
             } else 
             {
                 [cell.textLabel setFont:[UIFont fontWithName:@"Helvetica" size:30]];
                 cell.textLabel.text = @"Order Comments"; // only top row showing
                 cell.textLabel.textColor = [UIColor whiteColor];
+                cell.accessibilityLabel = @"OrderComm";
             }
             
             
@@ -1806,6 +1814,8 @@
                 billLabel.text = @"My Billing information is the same as my delivery information";
                 
                 chekBoxBtn = (UIButton *)[cell viewWithTag:32];
+                chekBoxBtn.accessibilityLabel = @"CheckButton";
+
                 [chekBoxBtn setBackgroundImage:[UIImage imageNamed:@"checked_bok.png"] forState:UIControlStateHighlighted];
                 [chekBoxBtn setBackgroundImage:[UIImage imageNamed:@"unchecked_bok.png"] forState:UIControlStateNormal];
                 [chekBoxBtn setBackgroundImage:[UIImage imageNamed:@"checked_bok.png"] forState:UIControlStateSelected];
@@ -1971,9 +1981,11 @@
                 lblOne.text = @"Select a payment method from the following options";
                 
                 cheqBtn = (UIButton *)[cell viewWithTag:59];
+                cheqBtn.accessibilityLabel = @"ChequeBuuton";
                 [cheqBtn addTarget:self action:@selector(chequeIndex:) forControlEvents:UIControlEventTouchUpInside];
                 
                 cashBtn = (UIButton *)[cell viewWithTag:60];
+                cashBtn.accessibilityLabel = @"CashButton";
                 [cashBtn addTarget:self action:@selector(cashIndex:) forControlEvents:UIControlEventTouchUpInside];
                 
                 UILabel *lblCheque = (UILabel *)[cell viewWithTag:61];
@@ -2040,7 +2052,10 @@
                 
             txtOrder = (UITextView *)[cell viewWithTag:69];
             [txtOrder setDelegate:self];
+            txtOrder.isAccessibilityElement = YES;
+            txtOrder.accessibilityLabel = @"OderTextView";
             txtOrder.text = @"Phresco products are nice and cool...";
+            txtOrder.accessibilityValue = txtOrder.text; 
             }
         }
  
@@ -2055,26 +2070,31 @@
                 [cell.textLabel setFont:[UIFont fontWithName:@"Helvetica" size:16]];
                 cell.textLabel.text = @"Customer Information"; // only top row showing
                 cell.textLabel.textColor = [UIColor whiteColor];
+                cell.accessibilityLabel = @"CustInfo";
             } else if (indexPath.section ==1)
             {
                 [cell.textLabel setFont:[UIFont fontWithName:@"Helvetica" size:16]];
                 cell.textLabel.text = @"Delivery Information"; // only top row showing
                 cell.textLabel.textColor = [UIColor whiteColor];
+                cell.accessibilityLabel = @"DelInfo";
             } else if (indexPath.section ==2)
             {
                 [cell.textLabel setFont:[UIFont fontWithName:@"Helvetica" size:16]];
                 cell.textLabel.text = @"Billing Information"; // only top row showing
                 cell.textLabel.textColor = [UIColor whiteColor];
+                cell.accessibilityLabel = @"BillInfo";
             } else if (indexPath.section ==3)
             {
                 [cell.textLabel setFont:[UIFont fontWithName:@"Helvetica" size:16]];
                 cell.textLabel.text = @"Payment Methods"; // only top row showing
                 cell.textLabel.textColor = [UIColor whiteColor];
+                cell.accessibilityLabel = @"PaytMethods";
             } else 
             {
                 [cell.textLabel setFont:[UIFont fontWithName:@"Helvetica" size:16]];
                 cell.textLabel.text = @"Order Comments"; // only top row showing
                 cell.textLabel.textColor = [UIColor whiteColor];
+                cell.accessibilityLabel = @"OrderComm";
             }
             
             
@@ -2672,6 +2692,8 @@
                 billLabel.text = @"My Billing information is the same as my delivery information";
                 
                 chekBoxBtn = (UIButton *)[cell viewWithTag:32];
+                chekBoxBtn.accessibilityLabel = @"CheckButton";
+
                 [chekBoxBtn setBackgroundImage:[UIImage imageNamed:@"checked_bok.png"] forState:UIControlStateHighlighted];
                 [chekBoxBtn setBackgroundImage:[UIImage imageNamed:@"unchecked_bok.png"] forState:UIControlStateNormal];
                 [chekBoxBtn setBackgroundImage:[UIImage imageNamed:@"checked_bok.png"] forState:UIControlStateSelected];
@@ -2840,9 +2862,11 @@
                 lblOne.text = @"Select a payment method from the following options";
                 
                 cheqBtn = (UIButton *)[cell viewWithTag:59];
+                cheqBtn.accessibilityLabel = @"ChequeBuuton";
                 [cheqBtn addTarget:self action:@selector(chequeIndex:) forControlEvents:UIControlEventTouchUpInside];
                 
                 cashBtn = (UIButton *)[cell viewWithTag:60];
+                cashBtn.accessibilityLabel = @"CashButton";
                 [cashBtn addTarget:self action:@selector(cashIndex:) forControlEvents:UIControlEventTouchUpInside];
                 
                 UILabel *lblCheque = (UILabel *)[cell viewWithTag:61];
@@ -2908,8 +2932,11 @@
                 lblView.text = @"Order Comments";
                 
                 txtOrder = (UITextView *)[cell viewWithTag:69];
+                txtOrder.isAccessibilityElement = YES;
+                txtOrder.accessibilityLabel = @"OderTextView";
                 [txtOrder setDelegate:self];
                 txtOrder.text = @"Phresco products are nice and cool...";
+                txtOrder.accessibilityValue = txtOrder.text;
             }
         }
         

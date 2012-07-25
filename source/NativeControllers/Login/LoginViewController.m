@@ -380,6 +380,8 @@
         
         [self.view addSubview:loginButton];
         
+        loginButton.accessibilityLabel =@"log";
+        
         
         cancelButton = [[UIButton alloc] init];
         
@@ -391,6 +393,7 @@
         
         [self.view addSubview:cancelButton];
         
+        cancelButton.accessibilityLabel = @"logCancel";
         
         registerButton = [[UIButton alloc] init];
         
@@ -399,8 +402,11 @@
         [registerButton setBackgroundImage:[UIImage imageNamed:@"register_btn.png"] forState:UIControlStateNormal];
         
         [registerButton addTarget:self action:@selector(registerButtonSelected:) forControlEvents:UIControlEventTouchUpInside];
+        registerButton.accessibilityLabel =@"logRegister";
+
         
         [self.view addSubview:registerButton];
+        
         
         
         
@@ -583,6 +589,11 @@
                 label.textColor =[UIColor whiteColor];
                 label.backgroundColor = [UIColor clearColor];
                 label.adjustsFontSizeToFitWidth = YES;
+                
+                label.accessibilityLabel =@"LoginResult";
+                
+                label.accessibilityValue = successMsg;
+                
                 label.font = [UIFont fontWithName:@"Times New Roman-Regular" size:24];
                 UIImageView *myImageView = [[UIImageView alloc] initWithImage : 
                                             [UIImage imageNamed :@"popup_bg.png"]];
@@ -599,6 +610,7 @@
                 [okButton addTarget:self action:@selector(okButtonSelected:) forControlEvents:UIControlEventTouchUpInside];
                 [viewController_ addSubview:okButton];
                 
+                okButton.accessibilityLabel = @"loginOkbutton";
                 
             }
             else {
@@ -607,6 +619,9 @@
                 UIView *viewController_ = [[UIView alloc] init];    
                 viewController_.frame = CGRectMake(20, 150, 390, 120);
                 
+                viewController_.isAccessibilityElement=NO; //Added for Automation testing
+                viewController_.accessibilityLabel = @"AlertView";
+                
                 UILabel *label = [[UILabel alloc] init];
                 label.text = successMsg;
                 label.frame = CGRectMake(80, 30, 150, 20);
@@ -614,6 +629,11 @@
                 label.textColor =[UIColor whiteColor];
                 label.backgroundColor = [UIColor clearColor];
                 label.adjustsFontSizeToFitWidth = YES;
+                
+                label.accessibilityLabel =@"LoginResult";
+                
+                label.accessibilityValue = successMsg;
+                
                 label.font = [UIFont fontWithName:@"Times New Roman-Regular" size:12];
                 UIImageView *myImageView = [[UIImageView alloc] initWithImage : 
                                             [UIImage imageNamed :@"popup_bg.png"]];
@@ -629,6 +649,9 @@
                 [okButton setBackgroundImage:[UIImage imageNamed:@"ok_btn.png"] forState:UIControlStateNormal];
                 
                 [okButton addTarget:self action:@selector(okButtonSelected:) forControlEvents:UIControlEventTouchUpInside];
+                
+                okButton.accessibilityLabel = @"loginOkbutton";
+                
                 [viewController_ addSubview:okButton];
                 [backButton setUserInteractionEnabled:NO];
                 [registerButton setUserInteractionEnabled:NO];

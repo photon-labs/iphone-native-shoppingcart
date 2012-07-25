@@ -400,6 +400,9 @@
         [[cell reviewsButton] addTarget:self
                                  action:@selector(reviewButtonSelected:)
                        forControlEvents:UIControlEventTouchUpInside];
+        cell.reviewsButton.accessibilityLabel=@"Review";
+        cell.reviewsButton.isAccessibilityElement=YES;
+        
     }
 	 [[cell reviewsButton] setTag:[indexPath row]];
     
@@ -503,6 +506,9 @@
             [[cell reviewsButton] addTarget:self
                                      action:@selector(reviewButtonSelected:)
                            forControlEvents:UIControlEventTouchUpInside];
+            cell.reviewsButton.accessibilityLabel=@"Review";
+            cell.reviewsButton.isAccessibilityElement=YES;
+            
         }
         [[cell reviewsButton] setTag:[indexPath row]];
         

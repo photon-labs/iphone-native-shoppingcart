@@ -401,6 +401,8 @@
         
         [self.view addSubview:registerButton];
         
+        registerButton.accessibilityLabel = @"reg";
+        
         cancelButton = [[UIButton alloc] init];
         
         [cancelButton setFrame:CGRectMake(225, buttonY, 70, 30)];
@@ -410,6 +412,8 @@
         [cancelButton addTarget:self action:@selector(cancelButtonSelected:) forControlEvents:UIControlEventTouchUpInside];
         
         [self.view addSubview:cancelButton];
+        
+        cancelButton.accessibilityLabel= @"logCancel";
         
         activityIndicator = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhiteLarge];
         activityIndicator.frame = CGRectMake(130, 250, 50, 40);
@@ -622,6 +626,8 @@
                         label.text = successMsg;
                         label.frame = CGRectMake(200, 60, 300, 40);
                         label.backgroundColor = [UIColor clearColor];
+                        label.accessibilityLabel = @"ResultLabel";
+                        label.accessibilityValue = successMsg;
                         label.adjustsFontSizeToFitWidth = YES;
                         label.textColor =[UIColor whiteColor];
                         label.font = [UIFont fontWithName:@"Times New Roman-Regular" size:24];
@@ -639,6 +645,8 @@
                         
                         [viewController addSubview:okButton];
                         
+                        okButton.accessibilityLabel = @"OkButton";
+
                         closeButton = [[UIButton alloc] init];
                         
                         [registerButton setUserInteractionEnabled:NO];
@@ -657,6 +665,10 @@
                     label.text = successMsg;
                     
                     label.frame = CGRectMake(100, 30, 150, 20);
+                        
+                    label.accessibilityLabel = @"ResultLabel";
+                        
+                    label.accessibilityValue = successMsg; 
                     
                     label.backgroundColor = [UIColor clearColor];
                     
@@ -684,6 +696,8 @@
                     [okButton addTarget:self action:@selector(okButtonSelected:) forControlEvents:UIControlEventTouchUpInside];
                         
                     [viewController addSubview:okButton];
+                    
+                    okButton.accessibilityLabel = @"OkButton";
                         
                     [registerButton setUserInteractionEnabled:NO];
                     

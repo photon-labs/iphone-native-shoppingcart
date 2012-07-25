@@ -439,6 +439,8 @@
 	[addToCart setImage:[UIImage imageNamed:@"addtocart_btn.png"] forState:UIControlStateNormal];
 	
     [addToCart addTarget:self action:@selector(addToCart:) forControlEvents:UIControlEventTouchUpInside];
+        
+    addToCart.accessibilityLabel=@"AddToCart";
 	
 	[self.scrollView addSubview:addToCart];
 	
