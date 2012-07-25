@@ -35,7 +35,7 @@
 // The designated initializer.  Override if you create the controller programmatically and want to perform customization that is not appropriate for viewDidLoad.
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
-
+    
     if(UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
 	{
 		self = [super initWithNibName:@"HomeViewController-iPAd" bundle:nil];
@@ -54,7 +54,7 @@
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad {
     [super viewDidLoad];
-
+    
     AssetsDataEntity *assetsData = [SharedObjects sharedInstance].assetsDataEntity;
     
     activityIndicator = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhiteLarge];
@@ -136,65 +136,67 @@
 
 -(void) addSearchBar
 {
-     if(UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
-         
-         UIImageView *searchBarView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 91 , 768, 120)];
-         
-         [searchBarView setImage:[UIImage imageNamed:@"searchblock_bg-72.png"]];
-         
-         [self.view addSubview:searchBarView];
-         
-         UIImageView *searchText = [[UIImageView alloc] initWithFrame:CGRectMake(12, 116 , 670, 65)];
-         
-         [searchText setImage:[UIImage imageNamed:@"searchbox.png"]];
-         
-         [self.view addSubview:searchText];
-         
-               
-         searchTextField = [[UITextField alloc]initWithFrame:CGRectMake(40, 130, 620, 50)];
-         searchTextField.delegate = self;
-         searchTextField.backgroundColor = [UIColor clearColor];
-         searchTextField.font = [UIFont systemFontOfSize:17.0];
-         searchTextField.textColor = [UIColor blackColor];
-         [self.view addSubview:searchTextField];
-         
-         
-         btnSearchIcon = [[UIButton alloc]initWithFrame:CGRectMake(695, 115, 60, 60)];
-         [btnSearchIcon setBackgroundImage:[UIImage imageNamed:@"searchbox_icon.png"] forState:UIControlStateNormal];
-         [btnSearchIcon addTarget:self action:@selector(searchButtonSelected) forControlEvents:UIControlEventTouchUpInside];
-         [self.view addSubview:btnSearchIcon];
-         
-         [searchBarView release];
-     }
-     else {
-         
-         UIImageView *searchBarView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 41 , 320, 40)];
-         
-         [searchBarView setImage:[UIImage imageNamed:@"searchblock_bg.png"]];
-         
-         [self.view addSubview:searchBarView];
-         
-         UIImageView *searchText = [[UIImageView alloc] initWithFrame:CGRectMake(8, 44 , 275, 30)];
-         
-         [searchText setImage:[UIImage imageNamed:@"searchbox.png"]];
-         
-         [self.view addSubview:searchText];
-     
-         
-         searchTextField = [[UITextField alloc]initWithFrame:CGRectMake(25, 48, 245, 24)];
-         searchTextField.delegate = self;
-         searchTextField.backgroundColor = [UIColor clearColor];
-         searchTextField.textColor = [UIColor blackColor];
-         [self.view addSubview:searchTextField];
-         
-         btnSearchIcon = [[UIButton alloc]initWithFrame:CGRectMake(285, 43, 30, 32)];
-         [btnSearchIcon setBackgroundImage:[UIImage imageNamed:@"searchbox_icon.png"] forState:UIControlStateNormal];
-         [btnSearchIcon addTarget:self action:@selector(searchButtonSelected) forControlEvents:UIControlEventTouchUpInside];
-         [self.view addSubview:btnSearchIcon];
-         
-         [searchBarView release];
-          
-     }
+    if(UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
+        
+        UIImageView *searchBarView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 91 , 768, 120)];
+        
+        [searchBarView setImage:[UIImage imageNamed:@"searchblock_bg-72.png"]];
+        
+        [self.view addSubview:searchBarView];
+        
+        UIImageView *searchText = [[UIImageView alloc] initWithFrame:CGRectMake(12, 116 , 670, 65)];
+        
+        [searchText setImage:[UIImage imageNamed:@"searchbox.png"]];
+        
+        [self.view addSubview:searchText];
+        
+        
+        searchTextField = [[UITextField alloc]initWithFrame:CGRectMake(40, 130, 620, 50)];
+        searchTextField.delegate = self;
+        searchTextField.backgroundColor = [UIColor clearColor];
+        searchTextField.font = [UIFont systemFontOfSize:17.0];
+        searchTextField.textColor = [UIColor blackColor];
+        [self.view addSubview:searchTextField];
+        
+        
+        btnSearchIcon = [[UIButton alloc]initWithFrame:CGRectMake(695, 115, 60, 60)];
+        [btnSearchIcon setBackgroundImage:[UIImage imageNamed:@"searchbox_icon.png"] forState:UIControlStateNormal];
+        [btnSearchIcon addTarget:self action:@selector(searchButtonSelected) forControlEvents:UIControlEventTouchUpInside];
+        [self.view addSubview:btnSearchIcon];
+        btnSearchIcon.accessibilityLabel = @"Searchbutton";
+        
+        [searchBarView release];
+    }
+    else {
+        
+        UIImageView *searchBarView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 41 , 320, 40)];
+        
+        [searchBarView setImage:[UIImage imageNamed:@"searchblock_bg.png"]];
+        
+        [self.view addSubview:searchBarView];
+        
+        UIImageView *searchText = [[UIImageView alloc] initWithFrame:CGRectMake(8, 44 , 275, 30)];
+        
+        [searchText setImage:[UIImage imageNamed:@"searchbox.png"]];
+        
+        [self.view addSubview:searchText];
+        
+        
+        searchTextField = [[UITextField alloc]initWithFrame:CGRectMake(25, 48, 245, 24)];
+        searchTextField.delegate = self;
+        searchTextField.backgroundColor = [UIColor clearColor];
+        searchTextField.textColor = [UIColor blackColor];
+        [self.view addSubview:searchTextField];
+        
+        btnSearchIcon = [[UIButton alloc]initWithFrame:CGRectMake(285, 43, 30, 32)];
+        [btnSearchIcon setBackgroundImage:[UIImage imageNamed:@"searchbox_icon.png"] forState:UIControlStateNormal];
+        [btnSearchIcon addTarget:self action:@selector(searchButtonSelected) forControlEvents:UIControlEventTouchUpInside];
+        [self.view addSubview:btnSearchIcon];
+        btnSearchIcon.accessibilityLabel = @"Searchbutton";
+        
+        [searchBarView release];
+        
+    }
 	
 }
 
@@ -205,8 +207,8 @@
     NSString* str = textField.text;
     
     if([str length] > 0 ){
-       
-
+        
+        
         [self searchButtonSelected];
     }
     else
@@ -242,7 +244,7 @@
     else
     { 
         [activityIndicator stopAnimating];
-
+        
         UIAlertView* alert = [[UIAlertView alloc] initWithTitle:@"Search Product" message:@"Enter a product name" delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil, nil];
         [alert show];
         [alert release];
@@ -276,13 +278,13 @@
         
     }
     else {
-    
+        
         ResultViewController	*tempResultViewController = [[ResultViewController alloc] initWithNibName:@"ResultViewController" bundle:nil];
-    
+        
         self.resultViewController = tempResultViewController;
-    
+        
         [self.view addSubview:tempResultViewController.view];
-    
+        
         [tempResultViewController release];
     }
 }
@@ -377,6 +379,23 @@
             
             [self.view addSubview:button];
             
+            if(i==0) {
+                
+                button.accessibilityLabel = @"Browse";
+            }
+            if(i==1) {
+                
+                button.accessibilityLabel = @"Offer";
+            }
+            if(i==2) {
+                
+                button.accessibilityLabel = @"Login";
+            }
+            if(i==3) {
+                
+                button.accessibilityLabel = @"Register";
+            }
+            
             x = x + 120;
             
             if([self checkIfOdd:i])
@@ -415,7 +434,7 @@
 -(void) buttonAction:(id) sender
 {
 	UIButton *button = (UIButton*) sender;
-//	 activityIndicator = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhiteLarge];
+    //	 activityIndicator = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhiteLarge];
     
 	if([button.titleLabel.text isEqualToString:@"Login"])
 	{
@@ -463,23 +482,23 @@
             
             [tempRegistrationViewController release];
         }
-       
+        
     }
 	else if([button.titleLabel.text isEqualToString:@"Browse"])
 	{
-            activityIndicator = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhiteLarge];
-            activityIndicator.frame = CGRectMake(130, 250, 50, 40);
+        activityIndicator = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhiteLarge];
+        activityIndicator.frame = CGRectMake(130, 250, 50, 40);
         
-            [self.view addSubview:activityIndicator];
-       
-            [activityIndicator startAnimating];
+        [self.view addSubview:activityIndicator];
         
-            ServiceHandler *serviceHandler = [[ServiceHandler alloc] init];
+        [activityIndicator startAnimating];
         
-            [serviceHandler catalogService:self :@selector(finishedCatalogService:)];
+        ServiceHandler *serviceHandler = [[ServiceHandler alloc] init];
         
-            [serviceHandler release];
-               
+        [serviceHandler catalogService:self :@selector(finishedCatalogService:)];
+        
+        [serviceHandler release];
+        
 	}
     
     else if([button.titleLabel.text isEqualToString:@"Offer"])
@@ -508,7 +527,7 @@
     [assetsData updateCatalogModel:data];
     
     [activityIndicator stopAnimating];
-
+    
     
     if(UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
         
@@ -521,27 +540,27 @@
         [tempBrowseViewController release];
     }
     else {
-         if(loginViewController.isLogin == YES) {
-             
-        BrowseViewController	*tempBrowseViewController = [[BrowseViewController alloc] initWithNibName:@"BrowseViewController" bundle:nil];
+        if(loginViewController.isLogin == YES) {
+            
+            BrowseViewController	*tempBrowseViewController = [[BrowseViewController alloc] initWithNibName:@"BrowseViewController" bundle:nil];
+            
+            self.browseViewController = tempBrowseViewController;
+            browseViewController.loginChk  = YES;
+            tempBrowseViewController.array_ = array;
+            [self.view addSubview:browseViewController.view];
+            
+            [tempBrowseViewController release];
+        }
         
-        self.browseViewController = tempBrowseViewController;
-        browseViewController.loginChk  = YES;
-        tempBrowseViewController.array_ = array;
-        [self.view addSubview:browseViewController.view];
-        
-        [tempBrowseViewController release];
-         }
-        
-         else {
-             BrowseViewController	*tempBrowseViewController = [[BrowseViewController alloc] initWithNibName:@"BrowseViewController" bundle:nil];
-             
-             self.browseViewController = tempBrowseViewController;
-             
-             [self.view addSubview:browseViewController.view];
-             
-             [tempBrowseViewController release];
-         }
+        else {
+            BrowseViewController	*tempBrowseViewController = [[BrowseViewController alloc] initWithNibName:@"BrowseViewController" bundle:nil];
+            
+            self.browseViewController = tempBrowseViewController;
+            
+            [self.view addSubview:browseViewController.view];
+            
+            [tempBrowseViewController release];
+        }
     }
     
 }
@@ -554,34 +573,34 @@
     
     [assetsData updateSpecialproductsModel:data];
     
-     if(UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
-         
-         SpecialOffersViewController *tempSpecialOffersViewController = [[SpecialOffersViewController alloc] initWithNibName:@"SpecialOffersViewController-iPad" bundle:nil];
-         
-         self.specialOffersViewController = tempSpecialOffersViewController;
-         
-         [self.view addSubview:specialOffersViewController.view];
-         
-         [tempSpecialOffersViewController release];
-     }
-     else {
-         
+    if(UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
+        
+        SpecialOffersViewController *tempSpecialOffersViewController = [[SpecialOffersViewController alloc] initWithNibName:@"SpecialOffersViewController-iPad" bundle:nil];
+        
+        self.specialOffersViewController = tempSpecialOffersViewController;
+        
+        [self.view addSubview:specialOffersViewController.view];
+        
+        [tempSpecialOffersViewController release];
+    }
+    else {
+        
         if(loginViewController.isLogin == YES) {
-          
-         SpecialOffersViewController *tempSpecialOffersViewController = [[SpecialOffersViewController alloc] initWithNibName:@"SpecialOffersViewController" bundle:nil];
-         
+            
+            SpecialOffersViewController *tempSpecialOffersViewController = [[SpecialOffersViewController alloc] initWithNibName:@"SpecialOffersViewController" bundle:nil];
+            
             self.specialOffersViewController = tempSpecialOffersViewController;
-         
+            
             specialOffersViewController.loginChk = YES;
-          
+            
             [self.view addSubview:specialOffersViewController.view];
-         
+            
             [tempSpecialOffersViewController release];
-             
-         }
-         
+            
+        }
+        
         else {
-         
+            
             
             SpecialOffersViewController *tempSpecialOffersViewController = [[SpecialOffersViewController alloc] initWithNibName:@"SpecialOffersViewController" bundle:nil];
             
@@ -592,17 +611,17 @@
             [tempSpecialOffersViewController release];
             
         }
-         
-     }
+        
+    }
     
 }
 /*
-// Override to allow orientations other than the default portrait orientation.
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
-    // Return YES for supported orientations.
-    return (interfaceOrientation == UIInterfaceOrientationPortrait);
-}
-*/
+ // Override to allow orientations other than the default portrait orientation.
+ - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
+ // Return YES for supported orientations.
+ return (interfaceOrientation == UIInterfaceOrientationPortrait);
+ }
+ */
 
 - (void)didReceiveMemoryWarning {
     // Releases the view if it doesn't have a superview.

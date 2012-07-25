@@ -47,7 +47,7 @@
         self = [super initWithNibName:@"ResultViewController" bundle:nil];
         
     }
-
+    
     return self;
 }
 
@@ -260,7 +260,7 @@
     //resultTable.separatorColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"split_line.png"]];
     
     AssetsDataEntity *assetsData = [SharedObjects sharedInstance].assetsDataEntity;
-   
+    
 	[self.view addSubview:resultTable];
 	
     
@@ -268,12 +268,12 @@
     {
         productNameArray = [[NSMutableArray alloc] init];
     }
- 
+    
     for(int i = 0;i<[assetsData.productArray count]; i++)
     {
         
         [productNameArray addObject:[[assetsData.productArray objectAtIndex:i] productDetailName]];
-
+        
     }
     
     if(nil == productImageArray)
@@ -284,7 +284,7 @@
     {
         [productImageArray addObject:[[assetsData.productArray objectAtIndex:i] productDetailImageUrl]];
     }
-   
+    
     if(nil == priceArray)
     {
         priceArray = [[NSMutableArray alloc] init];
@@ -386,105 +386,108 @@
     
     if(UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
         
-	static NSString *CellIdentifier = @"ProductsCell";
-	
-	ResultViewCustomCell *cell = (ResultViewCustomCell*) [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
-	
-	if ((cell == nil) ||(cell != nil)) {
-        cell = [[[ResultViewCustomCell alloc]
-				 initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier]
-				autorelease];
-        cell.textLabel.lineBreakMode = UILineBreakModeWordWrap;
-        cell.textLabel.numberOfLines = 2;
-
-        [[cell reviewsButton] addTarget:self
-                                 action:@selector(reviewButtonSelected:)
-                       forControlEvents:UIControlEventTouchUpInside];
-    }
-	 [[cell reviewsButton] setTag:[indexPath row]];
-    
+        static NSString *CellIdentifier = @"ProductsCell";
         
-	cell.selectionStyle = UITableViewCellSelectionStyleNone;
-	//cell.accessoryType =  UITableViewCellAccessoryDisclosureIndicator;
-    
-    [[cell disImage] setImage:[UIImage imageNamed:@"nav_arrow-72.png"]];
+        ResultViewCustomCell *cell = (ResultViewCustomCell*) [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
         
-    
-    CGRect frame;
+        if ((cell == nil) ||(cell != nil)) {
+            cell = [[[ResultViewCustomCell alloc]
+                     initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier]
+                    autorelease];
+            cell.textLabel.lineBreakMode = UILineBreakModeWordWrap;
+            cell.textLabel.numberOfLines = 2;
+            
+            [[cell reviewsButton] addTarget:self
+                                     action:@selector(reviewButtonSelected:)
+                           forControlEvents:UIControlEventTouchUpInside];
+            cell.reviewsButton.accessibilityLabel=@"Review";
+            cell.reviewsButton.isAccessibilityElement=YES;
+            
+        }
+        [[cell reviewsButton] setTag:[indexPath row]];
+        
+        
+        cell.selectionStyle = UITableViewCellSelectionStyleNone;
+        //cell.accessoryType =  UITableViewCellAccessoryDisclosureIndicator;
+        
+        [[cell disImage] setImage:[UIImage imageNamed:@"nav_arrow-72.png"]];
+        
+        
+        CGRect frame;
         
         frame.size.width=90; 
         frame.size.height=90;
         frame.origin.x=20; 
         frame.origin.y=15;
-    
-    
-    AsyncImageView *tasyncImage = [[AsyncImageView alloc]
-                                   initWithFrame:frame] ;
-    
-    
-    // TODO: Add Code for getting Coupons Image URL
-	NSURL	*url = nil;
-	
-	if([productImageArray count] > 0 && indexPath.row < [productImageArray count])
-	{
-		url = [NSURL URLWithString:[productImageArray objectAtIndex:indexPath.row]];
-		
-		[tasyncImage loadImageFromURL:url];
-		
-		[cell.contentView addSubview:tasyncImage];
-        [tasyncImage release];
-		
-	}
-    
-    
-    AssetsDataEntity *assestsData = [SharedObjects sharedInstance].assetsDataEntity;
-    
-    [[cell productName] setText:[[assestsData.productArray objectAtIndex:indexPath.row] productDetailName]];
-   
-   
-    [[cell productPrice] setText: [NSString stringWithFormat:@"%@",[[assestsData.productArray objectAtIndex:indexPath.row] productDetailsPrice]]];
-// [[cell reviewsButton] addTarget:self action:@selector(reviewButtonSelected:) forControlEvents:UIControlEventTouchUpInside];
-   
-    
-    NSString* string = [NSString stringWithFormat:@"%@",[[assestsData.productArray objectAtIndex:indexPath.row] productRatingView]];
-    //NSInteger rateValue = [string intValue];
-   
-    index = indexPath.row;
-         
-    float x = 145;
-    
-    float  y =  172;
-    
-    float  width = 25;
-    
-    float height = 25;
-    
-    NSMutableArray *imageFramesWhiteArray = [[NSMutableArray alloc]init];
-    for(int i = 0; i<5;i++)
-    {
-        UIImageView *ratingsView = [[UIImageView alloc]init];
-        ratingsView.frame = CGRectMake(x,y,width,height);
-        [ratingsView setImage:[UIImage imageNamed:@"white_star.png"]];
-        x = x + 25;
-        [ratingsView setTag:i];
-        [cell.contentView  addSubview:ratingsView];
-        [imageFramesWhiteArray addObject:ratingsView];
-    }
-    
-    float xBlue = 145;
-    NSMutableArray *imageFramesArray = [[NSMutableArray alloc]init];
-    for(int i = 0; i<[string intValue];i++)
-    {
-        UIImageView *ratingsView = [[UIImageView alloc]init];
-        ratingsView.frame = CGRectMake(xBlue,y,width,height);
-        [ratingsView setImage:[UIImage imageNamed:@"blue_star.png"]];
-        xBlue = xBlue + 25;
-        [ratingsView setTag:i];
-        [cell.contentView  addSubview:ratingsView];
-        [imageFramesArray addObject:ratingsView];
-    }
-    
-         
+        
+        
+        AsyncImageView *tasyncImage = [[AsyncImageView alloc]
+                                       initWithFrame:frame] ;
+        
+        
+        // TODO: Add Code for getting Coupons Image URL
+        NSURL	*url = nil;
+        
+        if([productImageArray count] > 0 && indexPath.row < [productImageArray count])
+        {
+            url = [NSURL URLWithString:[productImageArray objectAtIndex:indexPath.row]];
+            
+            [tasyncImage loadImageFromURL:url];
+            
+            [cell.contentView addSubview:tasyncImage];
+            [tasyncImage release];
+            
+        }
+        
+        
+        AssetsDataEntity *assestsData = [SharedObjects sharedInstance].assetsDataEntity;
+        
+        [[cell productName] setText:[[assestsData.productArray objectAtIndex:indexPath.row] productDetailName]];
+        
+        
+        [[cell productPrice] setText: [NSString stringWithFormat:@"%@",[[assestsData.productArray objectAtIndex:indexPath.row] productDetailsPrice]]];
+        // [[cell reviewsButton] addTarget:self action:@selector(reviewButtonSelected:) forControlEvents:UIControlEventTouchUpInside];
+        
+        
+        NSString* string = [NSString stringWithFormat:@"%@",[[assestsData.productArray objectAtIndex:indexPath.row] productRatingView]];
+        //NSInteger rateValue = [string intValue];
+        
+        index = indexPath.row;
+        
+        float x = 145;
+        
+        float  y =  172;
+        
+        float  width = 25;
+        
+        float height = 25;
+        
+        NSMutableArray *imageFramesWhiteArray = [[NSMutableArray alloc]init];
+        for(int i = 0; i<5;i++)
+        {
+            UIImageView *ratingsView = [[UIImageView alloc]init];
+            ratingsView.frame = CGRectMake(x,y,width,height);
+            [ratingsView setImage:[UIImage imageNamed:@"white_star.png"]];
+            x = x + 25;
+            [ratingsView setTag:i];
+            [cell.contentView  addSubview:ratingsView];
+            [imageFramesWhiteArray addObject:ratingsView];
+        }
+        
+        float xBlue = 145;
+        NSMutableArray *imageFramesArray = [[NSMutableArray alloc]init];
+        for(int i = 0; i<[string intValue];i++)
+        {
+            UIImageView *ratingsView = [[UIImageView alloc]init];
+            ratingsView.frame = CGRectMake(xBlue,y,width,height);
+            [ratingsView setImage:[UIImage imageNamed:@"blue_star.png"]];
+            xBlue = xBlue + 25;
+            [ratingsView setTag:i];
+            [cell.contentView  addSubview:ratingsView];
+            [imageFramesArray addObject:ratingsView];
+        }
+        
+        
         return cell;
     }
     else {
@@ -503,6 +506,9 @@
             [[cell reviewsButton] addTarget:self
                                      action:@selector(reviewButtonSelected:)
                            forControlEvents:UIControlEventTouchUpInside];
+            cell.reviewsButton.accessibilityLabel=@"Review";
+            cell.reviewsButton.isAccessibilityElement=YES;
+            
         }
         [[cell reviewsButton] setTag:[indexPath row]];
         
@@ -513,10 +519,10 @@
         
         CGRect frame;
         
-            frame.size.width=60; 
-            frame.size.height=60;
-            frame.origin.x=10; 
-            frame.origin.y=7;
+        frame.size.width=60; 
+        frame.size.height=60;
+        frame.origin.x=10; 
+        frame.origin.y=7;
         
         
         AsyncImageView *tasyncImage = [[AsyncImageView alloc]
@@ -543,45 +549,45 @@
         
         
         [[cell productPrice] setText: [NSString stringWithFormat:@"%@",[[assestsData.productArray objectAtIndex:indexPath.row] productDetailsPrice]]];
-           
+        
         NSString* string = [NSString stringWithFormat:@"%@",[[assestsData.productArray objectAtIndex:indexPath.row] productRatingView]];
         
         index = indexPath.row;
         
-            
-            float x = 85;
-            
-            float  y =  65;
-            
-            float  width = 15;
-            
-            float height = 15;
-            
-            
-            NSMutableArray *imageFramesWhiteArray = [[NSMutableArray alloc]init];
-            for(int i = 0; i<5;i++)
-            {
-                UIImageView *ratingsView = [[UIImageView alloc]init];
-                ratingsView.frame = CGRectMake(x,y,width,height);
-                [ratingsView setImage:[UIImage imageNamed:@"white_star.png"]];
-                x = x + 15;
-                [ratingsView setTag:i];
-                [cell.contentView  addSubview:ratingsView];
-                [imageFramesWhiteArray addObject:ratingsView];
-            }
-            
-            float xBlue = 85;
-            NSMutableArray *imageFramesArray = [[NSMutableArray alloc]init];
-            for(int i = 0; i<[string intValue];i++)
-            {
-                UIImageView *ratingsView = [[UIImageView alloc]init];
-                ratingsView.frame = CGRectMake(xBlue,y,width,height);
-                [ratingsView setImage:[UIImage imageNamed:@"blue_star.png"]];
-                xBlue = xBlue + 15;
-                [ratingsView setTag:i];
-                [cell.contentView  addSubview:ratingsView];
-                [imageFramesArray addObject:ratingsView];
-            }
+        
+        float x = 85;
+        
+        float  y =  65;
+        
+        float  width = 15;
+        
+        float height = 15;
+        
+        
+        NSMutableArray *imageFramesWhiteArray = [[NSMutableArray alloc]init];
+        for(int i = 0; i<5;i++)
+        {
+            UIImageView *ratingsView = [[UIImageView alloc]init];
+            ratingsView.frame = CGRectMake(x,y,width,height);
+            [ratingsView setImage:[UIImage imageNamed:@"white_star.png"]];
+            x = x + 15;
+            [ratingsView setTag:i];
+            [cell.contentView  addSubview:ratingsView];
+            [imageFramesWhiteArray addObject:ratingsView];
+        }
+        
+        float xBlue = 85;
+        NSMutableArray *imageFramesArray = [[NSMutableArray alloc]init];
+        for(int i = 0; i<[string intValue];i++)
+        {
+            UIImageView *ratingsView = [[UIImageView alloc]init];
+            ratingsView.frame = CGRectMake(xBlue,y,width,height);
+            [ratingsView setImage:[UIImage imageNamed:@"blue_star.png"]];
+            xBlue = xBlue + 15;
+            [ratingsView setTag:i];
+            [cell.contentView  addSubview:ratingsView];
+            [imageFramesArray addObject:ratingsView];
+        }
         
         return cell;
     }
@@ -622,12 +628,12 @@
         if(loginChk == YES) {
             
             ProductDetailsViewController	*tempProductDetailsViewController = [[ProductDetailsViewController alloc] initWithNibName:@"ProductDetailsViewController" bundle:nil];
-	
+            
             self.productDetailsViewController = tempProductDetailsViewController;
 	        productDetailsViewController.loginChk = YES;
             productDetailsViewController.index = index ;
             [self.view addSubview:productDetailsViewController.view];
-	
+            
             [tempProductDetailsViewController release];
         }
         else {
@@ -665,14 +671,14 @@
         
         if(loginChk == YES) {
             
-          ReviewViewController	*tempReviewViewController = [[ReviewViewController alloc] initWithNibName:@"ReviewViewController" bundle:nil];
-        
+            ReviewViewController	*tempReviewViewController = [[ReviewViewController alloc] initWithNibName:@"ReviewViewController" bundle:nil];
+            
             self.reviewViewController = tempReviewViewController;
             reviewViewController.loginChk = YES;
             reviewViewController.reviewProductId = index;
             reviewViewController.array_ = array_;
             [self.view addSubview:reviewViewController.view];
-        
+            
             [tempReviewViewController release];
             
         }
@@ -699,8 +705,8 @@
     ServiceHandler* service = [[ServiceHandler alloc]init];
     
     AssetsDataEntity *assetsData = [SharedObjects sharedInstance].assetsDataEntity;
-
-     int rowOfButton = [sender tag];
+    
+    int rowOfButton = [sender tag];
     
     index= rowOfButton;
     
@@ -718,12 +724,12 @@
 }
 
 /*
-// Override to allow orientations other than the default portrait orientation.
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
-    // Return YES for supported orientations.
-    return (interfaceOrientation == UIInterfaceOrientationPortrait);
-}
-*/
+ // Override to allow orientations other than the default portrait orientation.
+ - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
+ // Return YES for supported orientations.
+ return (interfaceOrientation == UIInterfaceOrientationPortrait);
+ }
+ */
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

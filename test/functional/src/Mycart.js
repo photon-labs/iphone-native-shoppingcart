@@ -1,70 +1,126 @@
-/*
- * ###
- * PHR_IphoneNative
- * %%
- * Copyright (C) 1999 - 2012 Photon Infotech Inc.
- * %%
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- * 
- *      http://www.apache.org/licenses/LICENSE-2.0
- * 
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- * ###
- */
 #import "BaseScreen.js"
-function Comp_Test()
+
+
+function MyCart_Test()
 {
-    try
-    {
-    var com= "Comp_Test";
+try
+{
+    var com= "MyCart_Test";
     var app=UIATarget.localTarget();
     var target=app.frontMostApp();
     var main=target.mainWindow();
-    var button=main.buttons()[Browser].tap();
+   
+    main.buttons()[BrowseButton].tap();
+            
     app.delay(2);
-    main.tableViews()[category].cells()[computer].tap();
+    main.tableViews()[0].cells()[0].tap();
     app.delay(2);
-    main.tableViews()[category].cells()[mobile].buttons()[review].tap();
+    
+    main.tableViews()[0].cells()[0].tap();
     app.delay(2);
-    main.buttons()[back].tap();
-    app.delay(2);
-    main.tableViews()[category].cells()[mobile].tap();
-    app.delay(2);
-    main.scrollViews()[detaildesc_tv].buttons()[addcart].tap();
-    app.delay(2);
-    main.buttons()[1].tap();
-    main.tableViews()[category].cells()[mobile].tap();
-    app.delay(2);
-    main.tableViews()[category].cells()[mobile].tap();
-    app.delay(2);
-    main.scrollViews()[detaildesc_tv].buttons()[addcart].tap();
-    app.delay(2);
-    main.buttons()[1].tap();
-    app.delay(2);
-    main.tableViews()[category].cells()[tablet].tap();
-    app.delay(2);
-    main.tableViews()[category].cells()[mobile].tap();
-    app.delay(2);
-    main.scrollViews()[detaildesc_tv].buttons()[addtocart].tap(); 
-    main.buttons()[update].tap(); 
-    app.delay(2);
-    main.buttons()[viewmycart].tap();
-    app.delay(2);
-    UIALogger.logPass(com);
-}
-    catch(err)
+    main.scrollViews()[0].buttons()[addToCartButton].tap(); 
+   
+    
+    ////Assertion // 
+    
+   //UIATarget.localTarget().logElementTree();
+    
+   var val= main.tableViews()[0].cells()[0].textFields()[txtVewQnt].value();
+
+   UIALogger.logMessage("val"+val);
+   
+
+   var cost = main.scrollViews()[0].staticTexts()[2].value();
+     
+   UIALogger.logMessage("cost "+cost);
+
+
+    main.buttons()[updateCart].tap(); 
+   app.delay(2);
+    
+    
+  cost = cost.replace('$','');
+  
+  UIALogger.logMessage("cost"+cost);
+  
+  var subVal = parseFloat(cost) * parseFloat(val); 
+   UIALogger.logMessage("subVal"+ subVal);
+   
+   var tot = main.staticTexts()[total].value();
+   UIALogger.logMessage("tot "+tot);
+   
+  // assertEquals("629",subVal);
+  //Assert.AreEqual("629","subVal",success);
+ 
+    if(subVal != "629")
     {
-        UIALogger.logMessage("There is an error") ;
-        if(UIALogger.logError())
-        {
-            UIATarget.localTarget().captureScreenWithName("Mycart_test screenshots"); 
-        }
+        UIALogger.logFail("UnSuccssful");
     }
+    else
+    {
+         UIALogger.logPass("Succssful");
+       
+    }
+    
+    /// ===============//
+    
+    app.delay(2);
+    
+    
+   main.buttons()[viewMyCart].tap();
+    app.delay(2);
+  
+    main.buttons()[checkoutButton].tap();
+    app.delay(2);
+    
+    main.tableViews()[0].cells()[custInfo].tap();
+    app.delay(2);
+    main.tableViews()[0].cells()[custInfo].tap(); 
+    main.tableViews()[0].cells()[delInfo].tap();
+    main.tableViews()[0].cells()[2].textFields()[0].setValue(add);
+    main.tableViews()[0].cells()[2].textFields()[1].setValue(first);
+    main.tableViews()[0].cells()[2].textFields()[2].setValue(last);
+    main.tableViews()[0].cells()[2].textFields()[3].setValue(company);
+    main.tableViews()[0].cells()[2].textFields()[4].setValue(add1);
+    main.tableViews()[0].cells()[2].textFields()[5].setValue(add2);
+    main.tableViews()[0].cells()[2].textFields()[6].setValue(city);
+    main.tableViews()[0].cells()[2].textFields()[7].setValue(state);
+    main.tableViews()[0].cells()[2].textFields()[8].setValue(country);
+    main.tableViews()[0].cells()[2].textFields()[9].setValue(code);
+    main.tableViews()[0].cells()[2].textFields()[10].setValue(phoneno);
+    
+    main.tableViews()[0].cells()[billInfo].tap();
+    
+    main.tableViews()[0].cells()[4].buttons()[checkButton].tap();
+    
+    main.tableViews()[0].cells()[paytMethods].tap(); 
+    main.tableViews()[0].cells()[6].buttons()[cashButton].tap(); 
+    main.tableViews()[0].cells()[oderComm].tap();
+    
+    UIATarget.localTarget().logElementTree();
+    
+    var text = main.tableViews()[0].cells()[8].textViews()[oderTextView].value();
+    UIALogger.logMessage("text "+text);
+   
+    main.tableViews()[0].cells()[8].textViews()[oderTextView].setValue("Phresco");
+     app.delay(2);
+    main.buttons()[revieworder].tap(); 
+    app.delay(2); 
+    main.buttons()[submitButton].tap();
+    app.delay(2);
+    
+    UIALogger.logPass(com);
+    
+}      
+catch(err)
+{
+            UIALogger.logMessage("There is an error") ;
+            if(UIALogger.logError())
+            {
+                UIATarget.localTarget().captureScreenWithName("MyCart screenshots"); 
+            }
 }
-Comp_Test();
+  
+}
+MyCart_Test();
+

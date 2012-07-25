@@ -126,133 +126,133 @@
     [arrayCountry addObject:@"INDIA"];
     
     countryName = [arrayCountry objectAtIndex:[pickerView selectedRowInComponent:0]];
-
+    
     if([countryName isEqualToString:@"USA"])
     {
         
-    [arrayState addObject:@"AL"];
-    [arrayState addObject:@"AK"];
-    [arrayState addObject:@"AZ"];
-    [arrayState addObject:@"AR"];
-    [arrayState addObject:@"CA"];
-    [arrayState addObject:@"CO"];
-    [arrayState addObject:@"CT"];
-    [arrayState addObject:@"DE"];
-    [arrayState addObject:@"FL"];
-    [arrayState addObject:@"GA"];
-    [arrayState addObject:@"HI"];
-    [arrayState addObject:@"ID"];
-    [arrayState addObject:@"IL"];
-    [arrayState addObject:@"IN"];
-    [arrayState addObject:@"IA"];
-    [arrayState addObject:@"KS"];
-    [arrayState addObject:@"KY"];
-    [arrayState addObject:@"LA"];
-    [arrayState addObject:@"ME"];
-    [arrayState addObject:@"MD"];
-    [arrayState addObject:@"MA"];
-    [arrayState addObject:@"MI"];
-    [arrayState addObject:@"MN"];
-    [arrayState addObject:@"MS"];
-    [arrayState addObject:@"MO"];
-    [arrayState addObject:@"MT"];
-    [arrayState addObject:@"NE"];
-    [arrayState addObject:@"NV"];
-    [arrayState addObject:@"NH"];
-    [arrayState addObject:@"NJ"];
-    [arrayState addObject:@"NM"];
-    [arrayState addObject:@"NY"];
-    [arrayState addObject:@"NC"];
-    [arrayState addObject:@"ND"];
-    [arrayState addObject:@"OH"];
-    [arrayState addObject:@"OK"];
-    [arrayState addObject:@"OR"];
-    [arrayState addObject:@"PA"];
-    [arrayState addObject:@"RI"];
-    [arrayState addObject:@"SC"];
-    [arrayState addObject:@"SD"];
-    [arrayState addObject:@"TN"];
-    [arrayState addObject:@"TX"];
-    [arrayState addObject:@"UT"];
-    [arrayState addObject:@"VT"];
-    [arrayState addObject:@"VA"];
-    [arrayState addObject:@"WA"];
-    [arrayState addObject:@"WV"];
-    [arrayState addObject:@"WI"];
-    [arrayState addObject:@"WY"];
+        [arrayState addObject:@"AL"];
+        [arrayState addObject:@"AK"];
+        [arrayState addObject:@"AZ"];
+        [arrayState addObject:@"AR"];
+        [arrayState addObject:@"CA"];
+        [arrayState addObject:@"CO"];
+        [arrayState addObject:@"CT"];
+        [arrayState addObject:@"DE"];
+        [arrayState addObject:@"FL"];
+        [arrayState addObject:@"GA"];
+        [arrayState addObject:@"HI"];
+        [arrayState addObject:@"ID"];
+        [arrayState addObject:@"IL"];
+        [arrayState addObject:@"IN"];
+        [arrayState addObject:@"IA"];
+        [arrayState addObject:@"KS"];
+        [arrayState addObject:@"KY"];
+        [arrayState addObject:@"LA"];
+        [arrayState addObject:@"ME"];
+        [arrayState addObject:@"MD"];
+        [arrayState addObject:@"MA"];
+        [arrayState addObject:@"MI"];
+        [arrayState addObject:@"MN"];
+        [arrayState addObject:@"MS"];
+        [arrayState addObject:@"MO"];
+        [arrayState addObject:@"MT"];
+        [arrayState addObject:@"NE"];
+        [arrayState addObject:@"NV"];
+        [arrayState addObject:@"NH"];
+        [arrayState addObject:@"NJ"];
+        [arrayState addObject:@"NM"];
+        [arrayState addObject:@"NY"];
+        [arrayState addObject:@"NC"];
+        [arrayState addObject:@"ND"];
+        [arrayState addObject:@"OH"];
+        [arrayState addObject:@"OK"];
+        [arrayState addObject:@"OR"];
+        [arrayState addObject:@"PA"];
+        [arrayState addObject:@"RI"];
+        [arrayState addObject:@"SC"];
+        [arrayState addObject:@"SD"];
+        [arrayState addObject:@"TN"];
+        [arrayState addObject:@"TX"];
+        [arrayState addObject:@"UT"];
+        [arrayState addObject:@"VT"];
+        [arrayState addObject:@"VA"];
+        [arrayState addObject:@"WA"];
+        [arrayState addObject:@"WV"];
+        [arrayState addObject:@"WI"];
+        [arrayState addObject:@"WY"];
     }
     else    {
-            
-    [arrayState addObject:@"Andhra Pradesh"];
-    [arrayState addObject:@"Arunachal Pradesh"];
-    [arrayState addObject:@"Assam"];
-    [arrayState addObject:@"Bihar"];
-    [arrayState addObject:@"Chhattisgarh"];
-    [arrayState addObject:@"Goa"];
-    [arrayState addObject:@"Gujarat"];
-    [arrayState addObject:@"Haryana"];
-    [arrayState addObject:@"Himachal Pradesh"];
-    [arrayState addObject:@"Jammu and Kashmir"];
-    [arrayState addObject:@"Jharkhand"];
-    [arrayState addObject:@"Karnataka"];
-    [arrayState addObject:@"Kerala"];
-    [arrayState addObject:@"Madhya Pradesh"];
-    [arrayState addObject:@"Maharashtra"];
-    [arrayState addObject:@"Manipur"];
-    [arrayState addObject:@"Meghalaya"];
-    [arrayState addObject:@"Mizoram"];
-    [arrayState addObject:@"Nagaland"];
-    [arrayState addObject:@"Orissa"];
-    [arrayState addObject:@"Punjab"];
-    [arrayState addObject:@"Rajasthan"];
-    [arrayState addObject:@"Sikkim"];
-    [arrayState addObject:@"Tamil Nadu"];
-    [arrayState addObject:@"Tripura"];
-    [arrayState addObject:@"Uttar Pradesh"];
-    [arrayState addObject:@"Uttarakhand"];
-    [arrayState addObject:@"West Bengal"];
-    [arrayState addObject:@"Andaman and Nicobar Islands"];
-    [arrayState addObject:@"Chandigarh"];
-    [arrayState addObject:@"Dadra and Nagar Haveli"];
-    [arrayState addObject:@"Daman and Diu"];
-    [arrayState addObject:@"Lakshadweep"];
-    [arrayState addObject:@"Delhi"];
-    [arrayState addObject:@"Pondicherry"];
-    
-   
+        
+        [arrayState addObject:@"Andhra Pradesh"];
+        [arrayState addObject:@"Arunachal Pradesh"];
+        [arrayState addObject:@"Assam"];
+        [arrayState addObject:@"Bihar"];
+        [arrayState addObject:@"Chhattisgarh"];
+        [arrayState addObject:@"Goa"];
+        [arrayState addObject:@"Gujarat"];
+        [arrayState addObject:@"Haryana"];
+        [arrayState addObject:@"Himachal Pradesh"];
+        [arrayState addObject:@"Jammu and Kashmir"];
+        [arrayState addObject:@"Jharkhand"];
+        [arrayState addObject:@"Karnataka"];
+        [arrayState addObject:@"Kerala"];
+        [arrayState addObject:@"Madhya Pradesh"];
+        [arrayState addObject:@"Maharashtra"];
+        [arrayState addObject:@"Manipur"];
+        [arrayState addObject:@"Meghalaya"];
+        [arrayState addObject:@"Mizoram"];
+        [arrayState addObject:@"Nagaland"];
+        [arrayState addObject:@"Orissa"];
+        [arrayState addObject:@"Punjab"];
+        [arrayState addObject:@"Rajasthan"];
+        [arrayState addObject:@"Sikkim"];
+        [arrayState addObject:@"Tamil Nadu"];
+        [arrayState addObject:@"Tripura"];
+        [arrayState addObject:@"Uttar Pradesh"];
+        [arrayState addObject:@"Uttarakhand"];
+        [arrayState addObject:@"West Bengal"];
+        [arrayState addObject:@"Andaman and Nicobar Islands"];
+        [arrayState addObject:@"Chandigarh"];
+        [arrayState addObject:@"Dadra and Nagar Haveli"];
+        [arrayState addObject:@"Daman and Diu"];
+        [arrayState addObject:@"Lakshadweep"];
+        [arrayState addObject:@"Delhi"];
+        [arrayState addObject:@"Pondicherry"];
+        
+        
     }
     
     
-   
+    
     if(UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
 	{
-    actionSheet = [[UIActionSheet alloc] initWithTitle:nil 
-                                              delegate:nil
-                                     cancelButtonTitle:nil
-                                destructiveButtonTitle:nil
-                                     otherButtonTitles:nil];
-    
-    [actionSheet setActionSheetStyle:UIActionSheetStyleBlackTranslucent];
-    
-    CGRect pickerFrame = CGRectMake(0, 40, 0, 162);
-    
-    pickerView = [[UIPickerView alloc] initWithFrame:pickerFrame];
-    pickerView.showsSelectionIndicator = YES;
-    pickerView.dataSource = self;
-    pickerView.delegate = self;
-    
-    [pickerView selectRow:1 inComponent:0 animated:NO];
-    
-    [actionSheet addSubview:pickerView];
-    
-    UISegmentedControl *closeButton = [[UISegmentedControl alloc] initWithItems:[NSArray arrayWithObject:@"Close"]];
-    closeButton.momentary = YES; 
-    closeButton.frame = CGRectMake(260, 7.0f, 50.0f, 30.0f);
-    closeButton.segmentedControlStyle = UISegmentedControlStyleBar;
-    closeButton.tintColor = [UIColor blackColor];
-    [closeButton addTarget:self action:@selector(dismissActionSheet:) forControlEvents:UIControlEventValueChanged];
-    [actionSheet addSubview:closeButton];
-    [closeButton release];
+        actionSheet = [[UIActionSheet alloc] initWithTitle:nil 
+                                                  delegate:nil
+                                         cancelButtonTitle:nil
+                                    destructiveButtonTitle:nil
+                                         otherButtonTitles:nil];
+        
+        [actionSheet setActionSheetStyle:UIActionSheetStyleBlackTranslucent];
+        
+        CGRect pickerFrame = CGRectMake(0, 40, 0, 162);
+        
+        pickerView = [[UIPickerView alloc] initWithFrame:pickerFrame];
+        pickerView.showsSelectionIndicator = YES;
+        pickerView.dataSource = self;
+        pickerView.delegate = self;
+        
+        [pickerView selectRow:1 inComponent:0 animated:NO];
+        
+        [actionSheet addSubview:pickerView];
+        
+        UISegmentedControl *closeButton = [[UISegmentedControl alloc] initWithItems:[NSArray arrayWithObject:@"Close"]];
+        closeButton.momentary = YES; 
+        closeButton.frame = CGRectMake(260, 7.0f, 50.0f, 30.0f);
+        closeButton.segmentedControlStyle = UISegmentedControlStyleBar;
+        closeButton.tintColor = [UIColor blackColor];
+        [closeButton addTarget:self action:@selector(dismissActionSheet:) forControlEvents:UIControlEventValueChanged];
+        [actionSheet addSubview:closeButton];
+        [closeButton release];
     }
     else {
         
@@ -271,8 +271,8 @@
         pickerView.dataSource = self;
         pickerView.delegate = self;
         
-       [pickerView selectRow:1 inComponent:0 animated:NO];
-
+        [pickerView selectRow:1 inComponent:0 animated:NO];
+        
         [actionSheet addSubview:pickerView];
         
         UISegmentedControl *closeButton = [[UISegmentedControl alloc] initWithItems:[NSArray arrayWithObject:@"Close"]];
@@ -293,7 +293,7 @@
     
     [strConcat appendString:strInfo];
     [strConcat appendString:strEmail];
-
+    
 }
 
 -(void) loadNavigationBar
@@ -301,111 +301,113 @@
 	//add scroll view
     if(UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
 	{
-	
-	UIImageView *navBarView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 768, 90)];
-	
-	[navBarView setImage:[UIImage imageNamed:@"header_logo-72.png"]];
-	
-	[self.view addSubview:navBarView];
-	
-	[navBarView release];
-    
-    UIImageView    *bgView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 91, 768, 845)];
-    
-    [bgView setImage:[UIImage imageNamed:@"home_screen_bg-72.png"]];
-    
-    [self.view addSubview:bgView];
-    
-    [bgView release];
-	
-	UIButton *backButton = [[UIButton alloc] init];
-	
-	[backButton setFrame:CGRectMake(5, 15, 123, 60)];
-	
-	[backButton setBackgroundImage:[UIImage imageNamed:@"back_btn-72.png"] forState:UIControlStateNormal];
-	
-	[backButton addTarget:self action:@selector(goBack:) forControlEvents:UIControlEventTouchUpInside];
-	
-	[self.view addSubview:backButton];
-	
-	[backButton release];
-    
-    UIImageView *searchBarView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 92 , 768, 60)];
-	
-	[searchBarView setImage:[UIImage imageNamed:@"searchblock_bg-72.png"]];
-	
-	[self.view addSubview:searchBarView];
-	
-	[searchBarView release];
-	
-	NSMutableArray *buttonArray = [[NSMutableArray alloc] initWithObjects:[UIImage imageNamed:@"browse_btn_normal-72.png"], [UIImage imageNamed:@"specialoffers_btn_normal-72.png"], [UIImage imageNamed:@"mycart_btn_highlighted-72.png"], 
-								    nil];
-	
-	int x  = 8;
-	
-	int y = 92;
-	
-	int width = 250;
-	
-	int height = 55;
-	
-	for(int i = 0; i<[buttonArray count]; i++)
-	{
-		UIButton *button = [[UIButton alloc] init];
-		
-		[button setFrame:CGRectMake(x, y, width, height)];
-		
-		[button setBackgroundImage:[buttonArray objectAtIndex:i] forState:UIControlStateNormal];
-		
-		[self.view addSubview:button];
-		
-		x = x + 252;
-		
-        if(i==0)
+        
+        UIImageView *navBarView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 768, 90)];
+        
+        [navBarView setImage:[UIImage imageNamed:@"header_logo-72.png"]];
+        
+        [self.view addSubview:navBarView];
+        
+        [navBarView release];
+        
+        UIImageView    *bgView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 91, 768, 845)];
+        
+        [bgView setImage:[UIImage imageNamed:@"home_screen_bg-72.png"]];
+        
+        [self.view addSubview:bgView];
+        
+        [bgView release];
+        
+        UIButton *backButton = [[UIButton alloc] init];
+        
+        [backButton setFrame:CGRectMake(5, 15, 123, 60)];
+        
+        [backButton setBackgroundImage:[UIImage imageNamed:@"back_btn-72.png"] forState:UIControlStateNormal];
+        
+        [backButton addTarget:self action:@selector(goBack:) forControlEvents:UIControlEventTouchUpInside];
+        
+        [self.view addSubview:backButton];
+        
+        [backButton release];
+        
+        UIImageView *searchBarView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 92 , 768, 60)];
+        
+        [searchBarView setImage:[UIImage imageNamed:@"searchblock_bg-72.png"]];
+        
+        [self.view addSubview:searchBarView];
+        
+        [searchBarView release];
+        
+        NSMutableArray *buttonArray = [[NSMutableArray alloc] initWithObjects:[UIImage imageNamed:@"browse_btn_normal-72.png"], [UIImage imageNamed:@"specialoffers_btn_normal-72.png"], [UIImage imageNamed:@"mycart_btn_highlighted-72.png"], 
+                                       nil];
+        
+        int x  = 8;
+        
+        int y = 92;
+        
+        int width = 250;
+        
+        int height = 55;
+        
+        for(int i = 0; i<[buttonArray count]; i++)
         {
-            [button addTarget:self action:@selector(browseButtonSelected:) forControlEvents:UIControlEventTouchUpInside];
+            UIButton *button = [[UIButton alloc] init];
+            
+            [button setFrame:CGRectMake(x, y, width, height)];
+            
+            [button setBackgroundImage:[buttonArray objectAtIndex:i] forState:UIControlStateNormal];
+            
+            [self.view addSubview:button];
+            
+            x = x + 252;
+            
+            if(i==0)
+            {
+                [button addTarget:self action:@selector(browseButtonSelected:) forControlEvents:UIControlEventTouchUpInside];
+            }
+            
+            if(i==1)
+            {
+                [button addTarget:self action:@selector(specialOfferButtonSelected:) forControlEvents:UIControlEventTouchUpInside];
+            }
+            [button release];       
+            
         }
         
-        if(i==1)
-        {
-            [button addTarget:self action:@selector(specialOfferButtonSelected:) forControlEvents:UIControlEventTouchUpInside];
-        }
-		[button release];       
-		
-	}
-    
-    UILabel *myCartView = [[UILabel alloc] initWithFrame:CGRectMake(300, 150 , 180, 40)];
-	
-	[myCartView setFont:[UIFont fontWithName:@"Helvetica" size:24]];
-    myCartView.backgroundColor = [UIColor clearColor];
-    [myCartView setText:@"Check Out"];
-    [myCartView setTextColor:[UIColor whiteColor]];
-	
-	[self.view addSubview:myCartView];
-	
-	[myCartView release];
-    
-    
-    
-    UIButton *reviewCart = [[UIButton alloc] initWithFrame:CGRectMake(120, 780 , 200, 44)];
-	
-    [reviewCart setBackgroundImage:[UIImage imageNamed:@"revieworder_btn.png"] forState:UIControlStateNormal];
-    
-    [reviewCart addTarget:self action:@selector(cancelAction:) forControlEvents:UIControlEventTouchUpInside];
-    
-    [self.view addSubview:reviewCart];
-    
-    [reviewCart release];
-    
-    UIButton *cancelCart = [[UIButton alloc] initWithFrame:CGRectMake(480, 780 , 106, 44)];
-	
-    [cancelCart setBackgroundImage:[UIImage imageNamed:@"cancel_btn.png"] forState:UIControlStateNormal];
-    
-    [cancelCart addTarget:self action:@selector(reviewAction:) forControlEvents:UIControlEventTouchUpInside];
-    
-    [self.view addSubview:cancelCart];
-    
-    [cancelCart release];
+        UILabel *myCartView = [[UILabel alloc] initWithFrame:CGRectMake(300, 150 , 180, 40)];
+        
+        [myCartView setFont:[UIFont fontWithName:@"Helvetica" size:24]];
+        myCartView.backgroundColor = [UIColor clearColor];
+        [myCartView setText:@"Check Out"];
+        [myCartView setTextColor:[UIColor whiteColor]];
+        
+        [self.view addSubview:myCartView];
+        
+        [myCartView release];
+        
+        
+        
+        UIButton *reviewCart = [[UIButton alloc] initWithFrame:CGRectMake(120, 780 , 200, 44)];
+        
+        [reviewCart setBackgroundImage:[UIImage imageNamed:@"revieworder_btn.png"] forState:UIControlStateNormal];
+        
+        [reviewCart addTarget:self action:@selector(cancelAction:) forControlEvents:UIControlEventTouchUpInside];
+        
+        [self.view addSubview:reviewCart];
+        
+        reviewCart.accessibilityLabel = @"revieworder btn";   
+        
+        [reviewCart release];
+        
+        UIButton *cancelCart = [[UIButton alloc] initWithFrame:CGRectMake(480, 780 , 106, 44)];
+        
+        [cancelCart setBackgroundImage:[UIImage imageNamed:@"cancel_btn.png"] forState:UIControlStateNormal];
+        
+        [cancelCart addTarget:self action:@selector(reviewAction:) forControlEvents:UIControlEventTouchUpInside];
+        
+        [self.view addSubview:cancelCart];
+        
+        [cancelCart release];
     }
     else {
         
@@ -559,32 +561,32 @@
 -(void)cancelAction:(id)sender
 {
     
-     if ((![txtFirst.text length]) || (![txtAdd1.text length]) || (![txtAdd2.text length]) || (![txtCity.text length]) || (![txtState.text length]) || (![txtCountry.text length]) || (![txtPost.text length]) || (![txtOrder.text length])){
-     
-         UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"" message:@"Enter all Required Values" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
-         [alert show];
-         [alert release];
-     }
-     else {
-         CheckOutOVerallViewController  *checkOutController = [[CheckOutOVerallViewController alloc] initWithNibName:@"CheckOutOVerallViewController" bundle:nil];
-         checkOutController.strFirst = txtFirst.text;
-         checkOutController.strLast = txtLast.text;
-         checkOutController.strComp = txtComp.text;
-         checkOutController.strAddr1 = txtAdd1.text;
-         checkOutController.strAddr2 = txtAdd2.text;
-         checkOutController.strCity = txtCity.text;
-         checkOutController.strState = txtState.text;
-         checkOutController.strCountry = txtCountry.text;
-         checkOutController.strZip = txtPost.text;
-         checkOutController.strPhone = txtPhone.text;
-         checkOutController.strOrderComments = txtOrder.text;
-         checkOutController.stringTotalPrice = checkTotalPrice;
-         checkOutController.strEmailId = [NSString stringWithFormat:@"%@",strEmail];
-         self.overallViewController = checkOutController;
-         
-        [self.view addSubview:overallViewController.view];
-        [checkOutController release];
-     }
+    //     if ((![txtFirst.text length]) || (![txtAdd1.text length]) || (![txtAdd2.text length]) || (![txtCity.text length]) || (![txtState.text length]) || (![txtCountry.text length]) || (![txtPost.text length]) || (![txtOrder.text length])){
+    //     
+    //         UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"" message:@"Enter all Required Values" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+    //         [alert show];
+    //         [alert release];
+    //     }
+    //     else {
+    CheckOutOVerallViewController  *checkOutController = [[CheckOutOVerallViewController alloc] initWithNibName:@"CheckOutOVerallViewController" bundle:nil];
+    checkOutController.strFirst = txtFirst.text;
+    checkOutController.strLast = txtLast.text;
+    checkOutController.strComp = txtComp.text;
+    checkOutController.strAddr1 = txtAdd1.text;
+    checkOutController.strAddr2 = txtAdd2.text;
+    checkOutController.strCity = txtCity.text;
+    checkOutController.strState = txtState.text;
+    checkOutController.strCountry = txtCountry.text;
+    checkOutController.strZip = txtPost.text;
+    checkOutController.strPhone = txtPhone.text;
+    checkOutController.strOrderComments = txtOrder.text;
+    checkOutController.stringTotalPrice = checkTotalPrice;
+    checkOutController.strEmailId = [NSString stringWithFormat:@"%@",strEmail];
+    self.overallViewController = checkOutController;
+    
+    [self.view addSubview:overallViewController.view];
+    [checkOutController release];
+    // }
     
     
     
@@ -656,7 +658,7 @@
 
 -(void) editIndex:(id)sender
 {
-
+    
     [chekBoxBtn setBackgroundImage:[UIImage imageNamed:@"checked_bok.png"] forState:UIControlStateNormal];
     txtBillSaved.text = txtSaved.text;
     txtBillFirst.text=txtFirst.text;
@@ -674,15 +676,15 @@
 
 -(void) chequeIndex:(id)sender
 {
-     [cheqBtn setBackgroundImage:[UIImage imageNamed:@"radio_btn_checked.png"] forState:UIControlStateNormal];
-     [cashBtn setBackgroundImage:[UIImage imageNamed:@"radio_btn_unchecked.png"] forState:UIControlStateNormal];
+    [cheqBtn setBackgroundImage:[UIImage imageNamed:@"radio_btn_checked.png"] forState:UIControlStateNormal];
+    [cashBtn setBackgroundImage:[UIImage imageNamed:@"radio_btn_unchecked.png"] forState:UIControlStateNormal];
 }
 
 
 -(void) cashIndex:(id)sender
 {
-     [cashBtn setBackgroundImage:[UIImage imageNamed:@"radio_btn_checked.png"] forState:UIControlStateNormal];
-     [cheqBtn setBackgroundImage:[UIImage imageNamed:@"radio_btn_unchecked.png"] forState:UIControlStateNormal];
+    [cashBtn setBackgroundImage:[UIImage imageNamed:@"radio_btn_checked.png"] forState:UIControlStateNormal];
+    [cheqBtn setBackgroundImage:[UIImage imageNamed:@"radio_btn_unchecked.png"] forState:UIControlStateNormal];
 }
 
 
@@ -750,12 +752,12 @@
 #pragma mark Text Field Delegate Methods
 - (void)textFieldDidBeginEditing:(UITextField *)textField {
 	
-   
+    
 }
 
 - (void)textFieldDidEndEditing:(UITextField *)textField {
 	
-   
+    
 }
 
 
@@ -798,7 +800,7 @@
             break;
         case 28:
             txtPost.text = textField.text; 
-           
+            
             break;
         case 29:
             txtPhone.text = textField.text;
@@ -891,7 +893,7 @@
     
     [actionSheet setBounds:CGRectMake(0, 0, 320, 485)];
     
-
+    
 }
 
 -(void)countrySelected
@@ -991,7 +993,7 @@
         [arrayState addObject:@"Pondicherry"];
         
     }
-
+    
     
 }
 -(void) stateAction:(id)sender
@@ -1001,13 +1003,13 @@
     [pickerView reloadAllComponents];
     
     mlabel.text= [arrayState objectAtIndex:[pickerView selectedRowInComponent:0]]; 
-   
+    
     [actionSheet showInView:[[UIApplication sharedApplication] keyWindow]];
     
     [actionSheet setBounds:CGRectMake(0, 0, 320, 485)];
     
 }
-    
+
 
 -(void) dismissActionSheet:(id)sender
 {
@@ -1023,12 +1025,12 @@
 { 
     if(mySelection == 1) {
         
-       txtBillSaved.text = [arraySaved objectAtIndex:row];
-       txtSaved.text = [arraySaved objectAtIndex:row];
+        txtBillSaved.text = [arraySaved objectAtIndex:row];
+        txtSaved.text = [arraySaved objectAtIndex:row];
         
     }
     else if (mySelection == 2) {
-       
+        
         txtCountry.text = [arrayCountry objectAtIndex:row];
         txtBillCountry.text = [arrayCountry objectAtIndex:row];
         countryName = txtCountry.text;
@@ -1036,8 +1038,8 @@
         
     }
     else {
-                txtState.text = [arrayState objectAtIndex:row];
-                txtBillState.text = [arrayState objectAtIndex:row];
+        txtState.text = [arrayState objectAtIndex:row];
+        txtBillState.text = [arrayState objectAtIndex:row];
     }
     
 }
@@ -1051,14 +1053,14 @@
     }
     else if (mySelection == 2) {
         
-          return [arrayCountry count];
+        return [arrayCountry count];
         
     }
     else {
-
-                return  [arrayState count];
         
-            }
+        return  [arrayState count];
+        
+    }
 }
 
 - (NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component;
@@ -1071,13 +1073,13 @@
     }
     else if (mySelection == 2) {
         return [arrayCountry objectAtIndex:row];
-                
+        
     }
     else{
-            
-             return [arrayState objectAtIndex:row];
-           
-        }
+        
+        return [arrayState objectAtIndex:row];
+        
+    }
     
 }
 
@@ -1101,13 +1103,13 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-  
-        if ([expandedSections containsIndex:section])
-        {
-            return 2; // return rows when expanded
-        }
-        
-        return 1;
+    
+    if ([expandedSections containsIndex:section])
+    {
+        return 2; // return rows when expanded
+    }
+    
+    return 1;
 }
 
 
@@ -1175,40 +1177,46 @@
     static NSString *CellIdentifier = @"Cell";
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
-
-   cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
-
+    
+    cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
+    
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
     if(UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
 	{
-    
+        
         if (!indexPath.row)
         {
             if (indexPath.section ==0){
-            // first row
-            [cell.textLabel setFont:[UIFont fontWithName:@"Helvetica" size:30]];
-            cell.textLabel.text = @"Customer Information"; // only top row showing
-            cell.textLabel.textColor = [UIColor whiteColor];
+                // first row
+                [cell.textLabel setFont:[UIFont fontWithName:@"Helvetica" size:30]];
+                cell.textLabel.text = @"Customer Information"; // only top row showing
+                cell.textLabel.textColor = [UIColor whiteColor];
+                cell.accessibilityLabel = @"CustInfo"; 
+                
             } else if (indexPath.section ==1)
             {
                 [cell.textLabel setFont:[UIFont fontWithName:@"Helvetica" size:30]];
                 cell.textLabel.text = @"Delivery Information"; // only top row showing
                 cell.textLabel.textColor = [UIColor whiteColor];
+                cell.accessibilityLabel = @"DelInfo";
             } else if (indexPath.section ==2)
             {
                 [cell.textLabel setFont:[UIFont fontWithName:@"Helvetica" size:30]];
                 cell.textLabel.text = @"Billing Information"; // only top row showing
                 cell.textLabel.textColor = [UIColor whiteColor];
+                cell.accessibilityLabel = @"BillInfo";
             } else if (indexPath.section ==3)
             {
                 [cell.textLabel setFont:[UIFont fontWithName:@"Helvetica" size:30]];
                 cell.textLabel.text = @"Payment Methods"; // only top row showing
                 cell.textLabel.textColor = [UIColor whiteColor];
+                cell.accessibilityLabel = @"PaytMethods";
             } else 
             {
                 [cell.textLabel setFont:[UIFont fontWithName:@"Helvetica" size:30]];
                 cell.textLabel.text = @"Order Comments"; // only top row showing
                 cell.textLabel.textColor = [UIColor whiteColor];
+                cell.accessibilityLabel = @"OrderComm";
             }
             
             
@@ -1226,40 +1234,40 @@
         else if ((indexPath.section ==0) && (indexPath.row == 1))
         {
             if ((cell == nil) ||(cell != nil)) {
-
                 
-            UIImageView *checkoutImageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 768, 220)];
-            checkoutImageView.tag = 1;
-            [cell.contentView addSubview:checkoutImageView];
-            [checkoutImageView release];
                 
-            UITextView *indexTemp = [[UITextView alloc] initWithFrame:CGRectMake(20, 10, 600, 100)];
-            indexTemp.tag = 2;
-            indexTemp.backgroundColor = [UIColor colorWithRed:29.0/255.0 green:106.0/255.0 blue:160.0/255.0 alpha:1.0];
-            indexTemp.textColor = [UIColor whiteColor];
-            [cell.contentView addSubview:indexTemp];
-            [indexTemp release];
+                UIImageView *checkoutImageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 768, 220)];
+                checkoutImageView.tag = 1;
+                [cell.contentView addSubview:checkoutImageView];
+                [checkoutImageView release];
                 
-            UIButton *btnEdit = [[UIButton alloc] initWithFrame:CGRectMake(260, 125, 121, 50)];
-            btnEdit.tag = 3;
-            [btnEdit setBackgroundImage:[UIImage imageNamed:@"edit_btn.png"] forState:UIControlStateNormal];
-            [cell.contentView addSubview:btnEdit];
-            [btnEdit release];
-            
-            UIImageView *imgView = (UIImageView *)[cell viewWithTag:1];
-            imgView.image = [UIImage imageNamed:@"descriptionblock_bg.png"];
+                UITextView *indexTemp = [[UITextView alloc] initWithFrame:CGRectMake(20, 10, 600, 100)];
+                indexTemp.tag = 2;
+                indexTemp.backgroundColor = [UIColor colorWithRed:29.0/255.0 green:106.0/255.0 blue:160.0/255.0 alpha:1.0];
+                indexTemp.textColor = [UIColor whiteColor];
+                [cell.contentView addSubview:indexTemp];
+                [indexTemp release];
                 
-            UITextView *lblIndex = (UITextView *)[cell viewWithTag:2];
-            [lblIndex setFont:[UIFont fontWithName:@"Helvetica" size:24]];
-            lblIndex.text = @"Order Information will be sent to your A/C Email list below.Email address: jack@gmail.com";
+                UIButton *btnEdit = [[UIButton alloc] initWithFrame:CGRectMake(260, 125, 121, 50)];
+                btnEdit.tag = 3;
+                [btnEdit setBackgroundImage:[UIImage imageNamed:@"edit_btn.png"] forState:UIControlStateNormal];
+                [cell.contentView addSubview:btnEdit];
+                [btnEdit release];
                 
-            UIButton *editButton = (UIButton *)[cell viewWithTag:3];
-            [editButton addTarget:self action:@selector(editButtonClicked:) forControlEvents:UIControlEventTouchUpInside];
+                UIImageView *imgView = (UIImageView *)[cell viewWithTag:1];
+                imgView.image = [UIImage imageNamed:@"descriptionblock_bg.png"];
                 
-            
+                UITextView *lblIndex = (UITextView *)[cell viewWithTag:2];
+                [lblIndex setFont:[UIFont fontWithName:@"Helvetica" size:24]];
+                lblIndex.text = @"Order Information will be sent to your A/C Email list below.Email address: jack@gmail.com";
+                
+                UIButton *editButton = (UIButton *)[cell viewWithTag:3];
+                [editButton addTarget:self action:@selector(editButtonClicked:) forControlEvents:UIControlEventTouchUpInside];
+                
+                
                 
             }
-
+            
         }
         else if ((indexPath.section ==1) && (indexPath.row == 1))
         {
@@ -1479,7 +1487,7 @@
                 [cell.contentView addSubview:tfNumber];
                 //[tfNumber release];
                 
-                            
+                
                 UILabel *billLabel = (UILabel *)[cell viewWithTag:4];
                 billLabel.text = @"Enter your Delivery address and Information here";
                 
@@ -1509,7 +1517,7 @@
                 
                 UILabel *lblState = (UILabel *)[cell viewWithTag:13];
                 lblState.text = @"State/Province";
-
+                
                 UILabel *lblPost = (UILabel *)[cell viewWithTag:14];
                 lblPost.text = @"Postcode";
                 
@@ -1806,6 +1814,8 @@
                 billLabel.text = @"My Billing information is the same as my delivery information";
                 
                 chekBoxBtn = (UIButton *)[cell viewWithTag:32];
+                chekBoxBtn.accessibilityLabel = @"CheckButton";
+                
                 [chekBoxBtn setBackgroundImage:[UIImage imageNamed:@"checked_bok.png"] forState:UIControlStateHighlighted];
                 [chekBoxBtn setBackgroundImage:[UIImage imageNamed:@"unchecked_bok.png"] forState:UIControlStateNormal];
                 [chekBoxBtn setBackgroundImage:[UIImage imageNamed:@"checked_bok.png"] forState:UIControlStateSelected];
@@ -1971,9 +1981,11 @@
                 lblOne.text = @"Select a payment method from the following options";
                 
                 cheqBtn = (UIButton *)[cell viewWithTag:59];
+                cheqBtn.accessibilityLabel = @"ChequeBuuton";
                 [cheqBtn addTarget:self action:@selector(chequeIndex:) forControlEvents:UIControlEventTouchUpInside];
                 
                 cashBtn = (UIButton *)[cell viewWithTag:60];
+                cashBtn.accessibilityLabel = @"CashButton";
                 [cashBtn addTarget:self action:@selector(cashIndex:) forControlEvents:UIControlEventTouchUpInside];
                 
                 UILabel *lblCheque = (UILabel *)[cell viewWithTag:61];
@@ -1998,53 +2010,56 @@
             
             if ((cell == nil) ||(cell != nil)) {
                 
-            UILabel *lblComments = [[UILabel alloc] initWithFrame:CGRectMake(50, 20, 500, 40)];
-            lblComments.tag = 66;
-            [lblComments setFont:[UIFont fontWithName:@"Helvetica" size:24]];
-            lblComments.backgroundColor = [UIColor clearColor];
-            lblComments.textColor = [UIColor whiteColor];
-            [cell.contentView addSubview:lblComments];
-            [lblComments release];
+                UILabel *lblComments = [[UILabel alloc] initWithFrame:CGRectMake(50, 20, 500, 40)];
+                lblComments.tag = 66;
+                [lblComments setFont:[UIFont fontWithName:@"Helvetica" size:24]];
+                lblComments.backgroundColor = [UIColor clearColor];
+                lblComments.textColor = [UIColor whiteColor];
+                [cell.contentView addSubview:lblComments];
+                [lblComments release];
                 
-            UILabel *lblSecond = [[UILabel alloc] initWithFrame:CGRectMake(100, 70, 400, 40)];
-            lblSecond.tag = 67;
-            [lblSecond setFont:[UIFont fontWithName:@"Helvetica" size:24]];
-            lblSecond.backgroundColor = [UIColor clearColor];
-            lblSecond.textColor = [UIColor whiteColor];
-            [cell.contentView addSubview:lblSecond];
-            [lblSecond release];
+                UILabel *lblSecond = [[UILabel alloc] initWithFrame:CGRectMake(100, 70, 400, 40)];
+                lblSecond.tag = 67;
+                [lblSecond setFont:[UIFont fontWithName:@"Helvetica" size:24]];
+                lblSecond.backgroundColor = [UIColor clearColor];
+                lblSecond.textColor = [UIColor whiteColor];
+                [cell.contentView addSubview:lblSecond];
+                [lblSecond release];
                 
-            UILabel *lblOrder = [[UILabel alloc] initWithFrame:CGRectMake(20, 130, 200, 40)];
-            lblOrder.tag = 68;
-            [lblOrder setFont:[UIFont fontWithName:@"Helvetica" size:24]];
-            lblOrder.backgroundColor = [UIColor clearColor];
-            lblOrder.textColor = [UIColor whiteColor];
-            [cell.contentView addSubview:lblOrder];
-            [lblOrder release];
+                UILabel *lblOrder = [[UILabel alloc] initWithFrame:CGRectMake(20, 130, 200, 40)];
+                lblOrder.tag = 68;
+                [lblOrder setFont:[UIFont fontWithName:@"Helvetica" size:24]];
+                lblOrder.backgroundColor = [UIColor clearColor];
+                lblOrder.textColor = [UIColor whiteColor];
+                [cell.contentView addSubview:lblOrder];
+                [lblOrder release];
                 
-            UITextView *orderText = [[UITextView alloc] initWithFrame:CGRectMake(20, 180, 500, 200)];
-            orderText.tag = 69;
-            orderText.backgroundColor = [UIColor whiteColor];
-            orderText.textColor = [UIColor colorWithRed:29.0/255.0 green:106.0/255.0 blue:160.0/255.0 alpha:1.0];
-            [cell.contentView addSubview:orderText];
-            //[orderText release];
-            
-            UILabel *lblOne = (UILabel *)[cell viewWithTag:66];
-            lblOne.text = @"Use this area for special Instructions or ";
+                UITextView *orderText = [[UITextView alloc] initWithFrame:CGRectMake(20, 180, 500, 200)];
+                orderText.tag = 69;
+                orderText.backgroundColor = [UIColor whiteColor];
+                orderText.textColor = [UIColor colorWithRed:29.0/255.0 green:106.0/255.0 blue:160.0/255.0 alpha:1.0];
+                [cell.contentView addSubview:orderText];
+                //[orderText release];
                 
-            UILabel *lblTwo = (UILabel *)[cell viewWithTag:67];
-            lblTwo.text = @"Question regards your order ";
+                UILabel *lblOne = (UILabel *)[cell viewWithTag:66];
+                lblOne.text = @"Use this area for special Instructions or ";
                 
-            UILabel *lblView = (UILabel *)[cell viewWithTag:68];
-            lblView.text = @"Order Comments";
+                UILabel *lblTwo = (UILabel *)[cell viewWithTag:67];
+                lblTwo.text = @"Question regards your order ";
                 
-            txtOrder = (UITextView *)[cell viewWithTag:69];
-            [txtOrder setDelegate:self];
-            txtOrder.text = @"Phresco products are nice and cool...";
+                UILabel *lblView = (UILabel *)[cell viewWithTag:68];
+                lblView.text = @"Order Comments";
+                
+                txtOrder = (UITextView *)[cell viewWithTag:69];
+                [txtOrder setDelegate:self];
+                txtOrder.isAccessibilityElement = YES;
+                txtOrder.accessibilityLabel = @"OderTextView";
+                txtOrder.text = @"Phresco products are nice and cool...";
+                txtOrder.accessibilityValue = txtOrder.text; 
             }
         }
- 
-    return cell;
+        
+        return cell;
     }
     else {
         
@@ -2055,26 +2070,31 @@
                 [cell.textLabel setFont:[UIFont fontWithName:@"Helvetica" size:16]];
                 cell.textLabel.text = @"Customer Information"; // only top row showing
                 cell.textLabel.textColor = [UIColor whiteColor];
+                cell.accessibilityLabel = @"CustInfo";
             } else if (indexPath.section ==1)
             {
                 [cell.textLabel setFont:[UIFont fontWithName:@"Helvetica" size:16]];
                 cell.textLabel.text = @"Delivery Information"; // only top row showing
                 cell.textLabel.textColor = [UIColor whiteColor];
+                cell.accessibilityLabel = @"DelInfo";
             } else if (indexPath.section ==2)
             {
                 [cell.textLabel setFont:[UIFont fontWithName:@"Helvetica" size:16]];
                 cell.textLabel.text = @"Billing Information"; // only top row showing
                 cell.textLabel.textColor = [UIColor whiteColor];
+                cell.accessibilityLabel = @"BillInfo";
             } else if (indexPath.section ==3)
             {
                 [cell.textLabel setFont:[UIFont fontWithName:@"Helvetica" size:16]];
                 cell.textLabel.text = @"Payment Methods"; // only top row showing
                 cell.textLabel.textColor = [UIColor whiteColor];
+                cell.accessibilityLabel = @"PaytMethods";
             } else 
             {
                 [cell.textLabel setFont:[UIFont fontWithName:@"Helvetica" size:16]];
                 cell.textLabel.text = @"Order Comments"; // only top row showing
                 cell.textLabel.textColor = [UIColor whiteColor];
+                cell.accessibilityLabel = @"OrderComm";
             }
             
             
@@ -2373,7 +2393,7 @@
                 
                 UILabel *lblState = (UILabel *)[cell viewWithTag:13];
                 lblState.text = @"State/Province";
-
+                
                 
                 UILabel *lblPost = (UILabel *)[cell viewWithTag:14];
                 lblPost.text = @"Postcode";
@@ -2422,7 +2442,7 @@
                 UIButton *countryBtn = (UIButton *)[cell viewWithTag:25];
                 [countryBtn addTarget:self action:@selector(countryAction:) forControlEvents:UIControlEventTouchUpInside];
                 
-               
+                
                 txtState = (UITextField *)[cell viewWithTag:26];
                 [txtState setDelegate:self];
                 txtState.userInteractionEnabled = NO;
@@ -2672,6 +2692,8 @@
                 billLabel.text = @"My Billing information is the same as my delivery information";
                 
                 chekBoxBtn = (UIButton *)[cell viewWithTag:32];
+                chekBoxBtn.accessibilityLabel = @"CheckButton";
+                
                 [chekBoxBtn setBackgroundImage:[UIImage imageNamed:@"checked_bok.png"] forState:UIControlStateHighlighted];
                 [chekBoxBtn setBackgroundImage:[UIImage imageNamed:@"unchecked_bok.png"] forState:UIControlStateNormal];
                 [chekBoxBtn setBackgroundImage:[UIImage imageNamed:@"checked_bok.png"] forState:UIControlStateSelected];
@@ -2703,7 +2725,7 @@
                 
                 UILabel *lblState = (UILabel *)[cell viewWithTag:41];
                 lblState.text = @"State/Province";
-
+                
                 
                 UILabel *lblPost = (UILabel *)[cell viewWithTag:42];
                 lblPost.text = @"Postcode";
@@ -2840,9 +2862,11 @@
                 lblOne.text = @"Select a payment method from the following options";
                 
                 cheqBtn = (UIButton *)[cell viewWithTag:59];
+                cheqBtn.accessibilityLabel = @"ChequeBuuton";
                 [cheqBtn addTarget:self action:@selector(chequeIndex:) forControlEvents:UIControlEventTouchUpInside];
                 
                 cashBtn = (UIButton *)[cell viewWithTag:60];
+                cashBtn.accessibilityLabel = @"CashButton";
                 [cashBtn addTarget:self action:@selector(cashIndex:) forControlEvents:UIControlEventTouchUpInside];
                 
                 UILabel *lblCheque = (UILabel *)[cell viewWithTag:61];
@@ -2908,8 +2932,11 @@
                 lblView.text = @"Order Comments";
                 
                 txtOrder = (UITextView *)[cell viewWithTag:69];
+                txtOrder.isAccessibilityElement = YES;
+                txtOrder.accessibilityLabel = @"OderTextView";
                 [txtOrder setDelegate:self];
                 txtOrder.text = @"Phresco products are nice and cool...";
+                txtOrder.accessibilityValue = txtOrder.text;
             }
         }
         
@@ -2920,56 +2947,56 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
 	
-        if (!indexPath.row)
+    if (!indexPath.row)
+    {
+        // only first row toggles exapand/collapse
+        [tableView deselectRowAtIndexPath:indexPath animated:YES];
+        
+        NSInteger section = indexPath.section;
+        BOOL currentlyExpanded = [expandedSections containsIndex:section];
+        NSInteger rows;
+        
+        
+        NSMutableArray *tmpArray = [NSMutableArray array];
+        
+        if (currentlyExpanded)
         {
-            // only first row toggles exapand/collapse
-            [tableView deselectRowAtIndexPath:indexPath animated:YES];
+            rows = [self tableView:tableView numberOfRowsInSection:section];
+            [expandedSections removeIndex:section];
             
-            NSInteger section = indexPath.section;
-            BOOL currentlyExpanded = [expandedSections containsIndex:section];
-            NSInteger rows;
-            
-            
-            NSMutableArray *tmpArray = [NSMutableArray array];
-            
-            if (currentlyExpanded)
-            {
-                rows = [self tableView:tableView numberOfRowsInSection:section];
-                [expandedSections removeIndex:section];
-                
-            }
-            else
-            {
-                [expandedSections addIndex:section];
-                rows = [self tableView:tableView numberOfRowsInSection:section];
-            }
-            
-            
-            for (int i=1; i<rows; i++)
-            {
-                NSIndexPath *tmpIndexPath = [NSIndexPath indexPathForRow:i 
-                                                               inSection:section];
-                [tmpArray addObject:tmpIndexPath];
-            }
-            
-            UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
-            
-            if (currentlyExpanded)
-            {
-                [tableView deleteRowsAtIndexPaths:tmpArray 
-                                 withRowAnimation:UITableViewRowAnimationTop];
-                
-                cell.accessoryView = [DTCustomColoredAccessory accessoryWithColor:[UIColor grayColor] type:DTCustomColoredAccessoryTypeDown];
-                
-            }
-            else
-            {
-                [tableView insertRowsAtIndexPaths:tmpArray 
-                                 withRowAnimation:UITableViewRowAnimationTop];
-                cell.accessoryView =  [DTCustomColoredAccessory accessoryWithColor:[UIColor grayColor] type:DTCustomColoredAccessoryTypeUp];
-                
-            }
         }
+        else
+        {
+            [expandedSections addIndex:section];
+            rows = [self tableView:tableView numberOfRowsInSection:section];
+        }
+        
+        
+        for (int i=1; i<rows; i++)
+        {
+            NSIndexPath *tmpIndexPath = [NSIndexPath indexPathForRow:i 
+                                                           inSection:section];
+            [tmpArray addObject:tmpIndexPath];
+        }
+        
+        UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
+        
+        if (currentlyExpanded)
+        {
+            [tableView deleteRowsAtIndexPaths:tmpArray 
+                             withRowAnimation:UITableViewRowAnimationTop];
+            
+            cell.accessoryView = [DTCustomColoredAccessory accessoryWithColor:[UIColor grayColor] type:DTCustomColoredAccessoryTypeDown];
+            
+        }
+        else
+        {
+            [tableView insertRowsAtIndexPaths:tmpArray 
+                             withRowAnimation:UITableViewRowAnimationTop];
+            cell.accessoryView =  [DTCustomColoredAccessory accessoryWithColor:[UIColor grayColor] type:DTCustomColoredAccessoryTypeUp];
+            
+        }
+    }
     
 }
 

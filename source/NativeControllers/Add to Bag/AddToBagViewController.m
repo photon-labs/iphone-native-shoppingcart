@@ -191,6 +191,7 @@
             [viewMyCart setBackgroundImage:[UIImage imageNamed:@"viewmycart_btn.png"] forState:UIControlStateNormal];
             
             [viewMyCart addTarget:self action:@selector(viewMyCart:) forControlEvents:UIControlEventTouchUpInside];
+            viewMyCart.accessibilityLabel=@"NavigationCart";
             
             [self.view addSubview:viewMyCart];
             
@@ -201,6 +202,8 @@
             [updateCart setBackgroundImage:[UIImage imageNamed:@"updatecart_btn.png"] forState:UIControlStateNormal];
             
             [updateCart addTarget:self action:@selector(updateAction:) forControlEvents:UIControlEventTouchUpInside];
+            
+            updateCart.accessibilityLabel=@"UpdateCart";
             
             [self.view addSubview:updateCart];
             
@@ -313,11 +316,13 @@
             
             x = x + 102;
             if(i==0) {
+                button.accessibilityLabel=@"NavigationBrowse";
                 [button addTarget:self action:@selector(browseButtonSelected:) forControlEvents:UIControlEventTouchUpInside];
             }
             
             if(i==1)
             {
+                button.accessibilityLabel=@"NavigationOffer";
                 [button addTarget:self action:@selector(specialOfferButtonSelected:) forControlEvents:UIControlEventTouchUpInside];
             }
             
@@ -348,6 +353,8 @@
             
             [viewMyCart addTarget:self action:@selector(viewMyCart:) forControlEvents:UIControlEventTouchUpInside];
             
+            viewMyCart.accessibilityLabel=@"NavigationCart";
+            
             [self.view addSubview:viewMyCart];
             
             [viewMyCart release];
@@ -357,6 +364,8 @@
             [updateCart setBackgroundImage:[UIImage imageNamed:@"updatecart_btn.png"] forState:UIControlStateNormal];
             
             [updateCart addTarget:self action:@selector(updateAction:) forControlEvents:UIControlEventTouchUpInside];
+            
+            updateCart.accessibilityLabel=@"UpdateCart";
             
             [self.view addSubview:updateCart];
             
@@ -398,6 +407,11 @@
         lblSubtotal.backgroundColor = [UIColor clearColor];
         [lblSubtotal setText:[NSString stringWithFormat:@"Subtotal:$ %d",purchase]];
         [lblSubtotal setTextColor:[UIColor blueColor]];
+        lblSubtotal.isAccessibilityElement = YES;
+        lblSubtotal.accessibilityLabel = @"subtotal";
+        lblSubtotal.accessibilityValue=[NSString stringWithFormat:@"Subtotal:$ %d",purchase];
+        
+        
         
         [self.view addSubview:lblSubtotal];
     }
@@ -813,6 +827,10 @@
                 quantityTextView.keyboardType = UIKeyboardTypeDefault;
                 quantityTextView.returnKeyType = UIReturnKeyDone;
                 [quantityTextView setEnabled: YES];
+                quantityTextView.isAccessibilityElement = YES;
+                quantityTextView.accessibilityLabel = @"quantityTxtVw";
+                NSLog(@"qnt is %@",quantityTextView.text);
+                quantityTextView.accessibilityValue =cartCount;
                 [cell.contentView addSubview:quantityTextView];
                 [quantityTextView release];
                 
@@ -835,6 +853,12 @@
                 priceValue.tag=700;
                 priceValue.backgroundColor = [UIColor clearColor];
                 [priceValue setTextColor:[UIColor yellowColor]];
+                
+                priceValue.isAccessibilityElement = YES;
+                priceValue.accessibilityLabel = @"priceVal";
+                NSLog(@"price is %@",priceValue.text);
+                priceValue.accessibilityValue = priceValue.text;
+                
                 [cell.contentView addSubview:priceValue];
                 [priceValue release];
                 
@@ -928,6 +952,12 @@
                 quantityTextView.returnKeyType = UIReturnKeyDone;
                 [quantityTextView setEnabled: YES];
                 
+                
+                quantityTextView.isAccessibilityElement = YES;
+                quantityTextView.accessibilityLabel = @"quantityTxtVw";
+                NSLog(@"Quantity :%@", quantityTextView.text);
+                quantityTextView.accessibilityValue = quantityTextView.text;
+                
                 //        NSNumberFormatter *numberFormatter = [[[NSNumberFormatter alloc] init] autorelease];
                 //        [numberFormatter setFormat:@"$#, ##0.00"];
                 
@@ -953,6 +983,12 @@
                 priceValue.tag=700;
                 priceValue.backgroundColor = [UIColor clearColor];
                 [priceValue setTextColor:[UIColor yellowColor]];
+                
+                
+                priceValue.isAccessibilityElement = YES;
+                priceValue.accessibilityLabel = @"priceVal";
+                
+                
                 [cell.contentView addSubview:priceValue];
                 [priceValue release];
                 

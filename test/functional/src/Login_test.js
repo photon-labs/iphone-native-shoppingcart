@@ -1,22 +1,3 @@
-/*
- * ###
- * PHR_IphoneNative
- * %%
- * Copyright (C) 1999 - 2012 Photon Infotech Inc.
- * %%
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- * 
- *      http://www.apache.org/licenses/LICENSE-2.0
- * 
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- * ###
- */
 #import "BaseScreen.js"
 
 
@@ -28,7 +9,9 @@ try
     var app=UIATarget.localTarget();
     var target=app.frontMostApp();
     var main=target.mainWindow();
-    main.buttons()[login].tap();
+   
+    
+    main.buttons()[LoginButton].tap();
     var textfields = main.textFields(); 
     var passwordfields = main.secureTextFields(); 
     var buttons = main.buttons(); 
@@ -38,11 +21,28 @@ try
     app.delay(2);
     target.keyboard().buttons()[RETURN].tap();
     app.delay(2);
-    buttons[login1].tap(); 
+    buttons[login_].tap(); 
     app.delay(2);
-    main.buttons()[1].tap();
+    UIATarget.localTarget().logElementTree();
+    
+    //var textValue = main.staticTexts()[logResult].value();
+   // UIALogger.logMessage("There is an error"+textValue) ;
+    
+    var textValue = main.staticTexts()[logResult].value();
+
+    
+    if (textValue === logSuccess){ 
+        UIALogger.logPass( logSuccess ); 
+    }
+    else{
+        UIALogger.logFail( failed ); 
+    }
+    
+    main.buttons()[okButton].tap();
     app.delay(5);
+    
     UIALogger.logPass(log);
+    
 }      
 catch(err)
 {

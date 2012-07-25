@@ -41,7 +41,7 @@
         self = [super initWithNibName:@"ProductDetailsViewController" bundle:nil];
         
     }
-
+    
     return self;
 }
 
@@ -154,65 +154,65 @@
 	}
     else {
         
-    scrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 415)];
-	
-	scrollView.pagingEnabled = YES;
-	
-	scrollView.contentSize = CGSizeMake(320, 600);
-	
-	[self.view addSubview:scrollView];
-	
-	UIImageView *navBarView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 320, 40)];
-	
-	[navBarView setImage:[UIImage imageNamed:@"header_logo.png"]];
-	
-	[scrollView addSubview:navBarView];
-	
-	[navBarView release];
-    
-    UIImageView    *bgView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 41, 320, 600)];
-    
-    [bgView setImage:[UIImage imageNamed:@"home_screen_bg.png"]];
-    
-    [scrollView addSubview:bgView];
-    
-    [bgView release];
-	
-	UIButton *backButton = [[UIButton alloc] init];
-	
-	[backButton setFrame:CGRectMake(5, 5, 60, 30)];
-	
-	[backButton setBackgroundImage:[UIImage imageNamed:@"back_btn.png"] forState:UIControlStateNormal];
-	
-	[backButton addTarget:self action:@selector(goBack:) forControlEvents:UIControlEventTouchUpInside];
-	
-	[scrollView addSubview:backButton];
-	
-	[backButton release];
-    
-    UIImageView *searchBarView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 40 , 320, 40)];
-	
-	[searchBarView setImage:[UIImage imageNamed:@"searchblock_bg.png"]];
-	
-	[scrollView addSubview:searchBarView];
-	
-	[searchBarView release];
-    
-     AssetsDataEntity *assetsData = [SharedObjects sharedInstance].assetsDataEntity;
-	
-	UILabel *productTitle = [[UILabel alloc] initWithFrame:CGRectMake(100, 43, 200, 30)];
-	
-	productTitle.text = [NSString stringWithFormat:@"%@",[[assetsData.productDetailArray objectAtIndex:0] productDetailName]];
-	
-	productTitle.backgroundColor = kColorClear;
-	
-	productTitle.textColor = kColorWhiteColor;
-	
-	productTitle.font = kFontHelvetica;
-	
-	[scrollView addSubview:productTitle];
-	
-	[productTitle release];
+        scrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 415)];
+        
+        scrollView.pagingEnabled = YES;
+        
+        scrollView.contentSize = CGSizeMake(320, 600);
+        
+        [self.view addSubview:scrollView];
+        
+        UIImageView *navBarView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 320, 40)];
+        
+        [navBarView setImage:[UIImage imageNamed:@"header_logo.png"]];
+        
+        [scrollView addSubview:navBarView];
+        
+        [navBarView release];
+        
+        UIImageView    *bgView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 41, 320, 600)];
+        
+        [bgView setImage:[UIImage imageNamed:@"home_screen_bg.png"]];
+        
+        [scrollView addSubview:bgView];
+        
+        [bgView release];
+        
+        UIButton *backButton = [[UIButton alloc] init];
+        
+        [backButton setFrame:CGRectMake(5, 5, 60, 30)];
+        
+        [backButton setBackgroundImage:[UIImage imageNamed:@"back_btn.png"] forState:UIControlStateNormal];
+        
+        [backButton addTarget:self action:@selector(goBack:) forControlEvents:UIControlEventTouchUpInside];
+        
+        [scrollView addSubview:backButton];
+        
+        [backButton release];
+        
+        UIImageView *searchBarView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 40 , 320, 40)];
+        
+        [searchBarView setImage:[UIImage imageNamed:@"searchblock_bg.png"]];
+        
+        [scrollView addSubview:searchBarView];
+        
+        [searchBarView release];
+        
+        AssetsDataEntity *assetsData = [SharedObjects sharedInstance].assetsDataEntity;
+        
+        UILabel *productTitle = [[UILabel alloc] initWithFrame:CGRectMake(100, 43, 200, 30)];
+        
+        productTitle.text = [NSString stringWithFormat:@"%@",[[assetsData.productDetailArray objectAtIndex:0] productDetailName]];
+        
+        productTitle.backgroundColor = kColorClear;
+        
+        productTitle.textColor = kColorWhiteColor;
+        
+        productTitle.font = kFontHelvetica;
+        
+        [scrollView addSubview:productTitle];
+        
+        [productTitle release];
     }
 }
 
@@ -278,8 +278,8 @@
         
         UIButton *reviewButton = [[UIButton alloc] initWithFrame:CGRectMake( 480, 155, 220, 100)];
         
-       [reviewButton setImage:[UIImage imageNamed:@"review_btn-72.png"] forState:UIControlStateNormal];
-       
+        [reviewButton setImage:[UIImage imageNamed:@"review_btn-72.png"] forState:UIControlStateNormal];
+        
         [scrollView addSubview:reviewButton];
         
         [reviewButton addTarget:self action:@selector(reviewButtonSelected:) forControlEvents:UIControlEventTouchUpInside];;
@@ -331,118 +331,120 @@
     }
     else {
         
-	UIImageView *productBgView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 81, 320, 150)];
-	
-	productBgView.image = [UIImage imageNamed:@"Productdetail_bg.png"];
-	
-	[scrollView addSubview:productBgView];
-	
-	[productBgView release];
-    
-    AssetsDataEntity *assetsData = [SharedObjects sharedInstance].assetsDataEntity;
-	
-    NSURL *url = [NSURL URLWithString:[[assetsData.productDetailArray objectAtIndex:0] productDetailImageUrl]];
-	
-	UIImageView *productImageView = [[UIImageView alloc] initWithFrame:CGRectMake(10, 90, 100, 90)];
-	
-	productImageView.image = [UIImage imageWithData:[NSData dataWithContentsOfURL:url]];
-	
-	[scrollView addSubview:productImageView];
-	
-	[productImageView release];
-	
-	//add ratings to the view
-	//Note: This logic has to be changed when integrating with the services
-	
-	int x = productImageView.frame.origin.x + productImageView.frame.size.width + 25;
-	
-	int y = productImageView.frame.origin.y + 5;
-	
-	int width = 15;
-	
-	int height = 13;
-    
-    NSMutableArray *imageFramesArray = [[NSMutableArray alloc]init];
-    for(int i = 0; i<5;i++)
-    {
-        UIImageView *ratingsView = [[UIImageView alloc]init];
-        ratingsView.frame = CGRectMake(x,y,width,height);
-        [ratingsView setImage:[UIImage imageNamed:@"white_star.png"]];
-        x = x + 15;
-        [ratingsView setTag:i];
-        [scrollView  addSubview:ratingsView];
-        [imageFramesArray addObject:ratingsView];
-    }
-    
-    int xStar = productImageView.frame.origin.x + productImageView.frame.size.width + 25;
-
-    NSString* string = [NSString stringWithFormat:@"%@",[[assetsData.productDetailArray objectAtIndex:0] productRatingView]];
-	
-     for (int i =0;i<[string intValue];i++) {
-         
-    starImage = [[[UIImageView alloc] initWithFrame:CGRectMake(xStar,y,width, height)] autorelease];
-    
-    starImage.image  = [UIImage imageNamed:@"blue_star.png"];
-    
-    [scrollView addSubview:starImage];	
-         
-    xStar = xStar + 15;
-    }
-    
-	UIButton *reviewButton = [[UIButton alloc] initWithFrame:CGRectMake(productImageView.frame.origin.x + 200, 
-																		productImageView.frame.origin.y, 60, 30)];
-	
-	[reviewButton setImage:[UIImage imageNamed:@"review_btn.png"] forState:UIControlStateNormal];
-	
-	[scrollView addSubview:reviewButton];
-    
-    [reviewButton addTarget:self action:@selector(reviewButtonSelected:) forControlEvents:UIControlEventTouchUpInside]; 
-    
-	[reviewButton release];
-	
-	//add price label and price
-	UILabel *priceLabel = [[UILabel alloc] initWithFrame:CGRectMake(productImageView.frame.origin.x + productImageView.frame.size.width + 25, productImageView.frame.origin.y + 25, 70, 40)];
-	
-	[priceLabel setText:@"Price:"];
-	
-	[priceLabel setFont:kFontHelveticaBoldBigger];
-	
-	priceLabel.textColor = [UIColor colorWithHue:31.0/255.0 saturation:95.0/255.0 brightness:141.0/255.0 alpha:1.0];
-	
-	priceLabel.backgroundColor = kColorClear;
-	
-	[scrollView addSubview:priceLabel];
-	
-	[priceLabel release];
-	
-	//add price to the scroll view
-	
-	UILabel *price = [[UILabel alloc] initWithFrame:CGRectMake(priceLabel.frame.origin.x + priceLabel.frame.size.width, priceLabel.frame.origin.y, 
-																	70, priceLabel.frame.size.height)];
-	price.text = [NSString stringWithFormat:@"$%@",[[assetsData.productDetailArray objectAtIndex:0] productDetailsPrice]];
-	
-	[price setFont:kFontHelveticaBoldBigger];
-	
-	price.textColor = [UIColor colorWithHue:31.0/255.0 saturation:95.0/255.0 brightness:141.0/255.0 alpha:1.0];
-	
-	price.backgroundColor = kColorClear;
-	
-	[scrollView addSubview:price];
-	
-	[price release];
-	
-	//add addtocart button to scroll view
-	
-	UIButton *addToCart = [[UIButton alloc] initWithFrame:CGRectMake(priceLabel.frame.origin.x, priceLabel.frame.origin.y + priceLabel.frame.size.height,
-																	 priceLabel.frame.size.width + price.frame.size.width, priceLabel.frame.size.height)];
-	
-	[addToCart setImage:[UIImage imageNamed:@"addtocart_btn.png"] forState:UIControlStateNormal];
-	
-    [addToCart addTarget:self action:@selector(addToCart:) forControlEvents:UIControlEventTouchUpInside];
-	
-	[self.scrollView addSubview:addToCart];
-	
-	[addToCart release];
+        UIImageView *productBgView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 81, 320, 150)];
+        
+        productBgView.image = [UIImage imageNamed:@"Productdetail_bg.png"];
+        
+        [scrollView addSubview:productBgView];
+        
+        [productBgView release];
+        
+        AssetsDataEntity *assetsData = [SharedObjects sharedInstance].assetsDataEntity;
+        
+        NSURL *url = [NSURL URLWithString:[[assetsData.productDetailArray objectAtIndex:0] productDetailImageUrl]];
+        
+        UIImageView *productImageView = [[UIImageView alloc] initWithFrame:CGRectMake(10, 90, 100, 90)];
+        
+        productImageView.image = [UIImage imageWithData:[NSData dataWithContentsOfURL:url]];
+        
+        [scrollView addSubview:productImageView];
+        
+        [productImageView release];
+        
+        //add ratings to the view
+        //Note: This logic has to be changed when integrating with the services
+        
+        int x = productImageView.frame.origin.x + productImageView.frame.size.width + 25;
+        
+        int y = productImageView.frame.origin.y + 5;
+        
+        int width = 15;
+        
+        int height = 13;
+        
+        NSMutableArray *imageFramesArray = [[NSMutableArray alloc]init];
+        for(int i = 0; i<5;i++)
+        {
+            UIImageView *ratingsView = [[UIImageView alloc]init];
+            ratingsView.frame = CGRectMake(x,y,width,height);
+            [ratingsView setImage:[UIImage imageNamed:@"white_star.png"]];
+            x = x + 15;
+            [ratingsView setTag:i];
+            [scrollView  addSubview:ratingsView];
+            [imageFramesArray addObject:ratingsView];
+        }
+        
+        int xStar = productImageView.frame.origin.x + productImageView.frame.size.width + 25;
+        
+        NSString* string = [NSString stringWithFormat:@"%@",[[assetsData.productDetailArray objectAtIndex:0] productRatingView]];
+        
+        for (int i =0;i<[string intValue];i++) {
+            
+            starImage = [[[UIImageView alloc] initWithFrame:CGRectMake(xStar,y,width, height)] autorelease];
+            
+            starImage.image  = [UIImage imageNamed:@"blue_star.png"];
+            
+            [scrollView addSubview:starImage];	
+            
+            xStar = xStar + 15;
+        }
+        
+        UIButton *reviewButton = [[UIButton alloc] initWithFrame:CGRectMake(productImageView.frame.origin.x + 200, 
+                                                                            productImageView.frame.origin.y, 60, 30)];
+        
+        [reviewButton setImage:[UIImage imageNamed:@"review_btn.png"] forState:UIControlStateNormal];
+        
+        [scrollView addSubview:reviewButton];
+        
+        [reviewButton addTarget:self action:@selector(reviewButtonSelected:) forControlEvents:UIControlEventTouchUpInside]; 
+        
+        [reviewButton release];
+        
+        //add price label and price
+        UILabel *priceLabel = [[UILabel alloc] initWithFrame:CGRectMake(productImageView.frame.origin.x + productImageView.frame.size.width + 25, productImageView.frame.origin.y + 25, 70, 40)];
+        
+        [priceLabel setText:@"Price:"];
+        
+        [priceLabel setFont:kFontHelveticaBoldBigger];
+        
+        priceLabel.textColor = [UIColor colorWithHue:31.0/255.0 saturation:95.0/255.0 brightness:141.0/255.0 alpha:1.0];
+        
+        priceLabel.backgroundColor = kColorClear;
+        
+        [scrollView addSubview:priceLabel];
+        
+        [priceLabel release];
+        
+        //add price to the scroll view
+        
+        UILabel *price = [[UILabel alloc] initWithFrame:CGRectMake(priceLabel.frame.origin.x + priceLabel.frame.size.width, priceLabel.frame.origin.y, 
+                                                                   70, priceLabel.frame.size.height)];
+        price.text = [NSString stringWithFormat:@"$%@",[[assetsData.productDetailArray objectAtIndex:0] productDetailsPrice]];
+        
+        [price setFont:kFontHelveticaBoldBigger];
+        
+        price.textColor = [UIColor colorWithHue:31.0/255.0 saturation:95.0/255.0 brightness:141.0/255.0 alpha:1.0];
+        
+        price.backgroundColor = kColorClear;
+        
+        [scrollView addSubview:price];
+        
+        [price release];
+        
+        //add addtocart button to scroll view
+        
+        UIButton *addToCart = [[UIButton alloc] initWithFrame:CGRectMake(priceLabel.frame.origin.x, priceLabel.frame.origin.y + priceLabel.frame.size.height,
+                                                                         priceLabel.frame.size.width + price.frame.size.width, priceLabel.frame.size.height)];
+        
+        [addToCart setImage:[UIImage imageNamed:@"addtocart_btn.png"] forState:UIControlStateNormal];
+        
+        [addToCart addTarget:self action:@selector(addToCart:) forControlEvents:UIControlEventTouchUpInside];
+        
+        addToCart.accessibilityLabel=@"AddToCart";
+        
+        [self.scrollView addSubview:addToCart];
+        
+        [addToCart release];
     }
 }
 
@@ -450,46 +452,46 @@
 {
     if(UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
         
-	//add description background
-	UIImageView *descriptionBlock = [[UIImageView alloc] initWithFrame:CGRectMake(0, 434, 768, 230)];
-	
-	[descriptionBlock setImage:[UIImage imageNamed:@"descriptionblock_bg-72.png"]];
-	
-	[self.scrollView addSubview:descriptionBlock];
-	
-	[descriptionBlock release];
-	
-	//add description header to scroll view
-	
-    AssetsDataEntity *assetsData = [SharedObjects sharedInstance].assetsDataEntity;
-    
-	UIImageView	*descriptionHeader = [[UIImageView alloc] initWithFrame:CGRectMake(230, 414, 260, 60)];
-
-	[descriptionHeader setImage:[UIImage imageNamed:@"description_header-72.png"]];
-	
-	[self.scrollView addSubview:descriptionHeader];
-	
-	[descriptionHeader release];
-	
-	//add the description to the scroll view
-	
-	UILabel *descriptionLabel = [[UILabel alloc] initWithFrame:CGRectMake(20, 474, 680, 150)];
-	
-	descriptionLabel.text = [NSString stringWithFormat:@"%@",[[assetsData.productDetailArray objectAtIndex:0] productDescription]];
-	
-	descriptionLabel.numberOfLines = 5;
-	
-	descriptionLabel.lineBreakMode = UILineBreakModeWordWrap;
-	
-	descriptionLabel.backgroundColor = kColorClear;
-	
-	descriptionLabel.font = [UIFont fontWithName:@"Helvetica-Bold" size:24];
-	
-	descriptionLabel.textColor = kColorWhiteColor;
-	
-	[self.scrollView addSubview:descriptionLabel];
-	
-	[descriptionLabel release];
+        //add description background
+        UIImageView *descriptionBlock = [[UIImageView alloc] initWithFrame:CGRectMake(0, 434, 768, 230)];
+        
+        [descriptionBlock setImage:[UIImage imageNamed:@"descriptionblock_bg-72.png"]];
+        
+        [self.scrollView addSubview:descriptionBlock];
+        
+        [descriptionBlock release];
+        
+        //add description header to scroll view
+        
+        AssetsDataEntity *assetsData = [SharedObjects sharedInstance].assetsDataEntity;
+        
+        UIImageView	*descriptionHeader = [[UIImageView alloc] initWithFrame:CGRectMake(230, 414, 260, 60)];
+        
+        [descriptionHeader setImage:[UIImage imageNamed:@"description_header-72.png"]];
+        
+        [self.scrollView addSubview:descriptionHeader];
+        
+        [descriptionHeader release];
+        
+        //add the description to the scroll view
+        
+        UILabel *descriptionLabel = [[UILabel alloc] initWithFrame:CGRectMake(20, 474, 680, 150)];
+        
+        descriptionLabel.text = [NSString stringWithFormat:@"%@",[[assetsData.productDetailArray objectAtIndex:0] productDescription]];
+        
+        descriptionLabel.numberOfLines = 5;
+        
+        descriptionLabel.lineBreakMode = UILineBreakModeWordWrap;
+        
+        descriptionLabel.backgroundColor = kColorClear;
+        
+        descriptionLabel.font = [UIFont fontWithName:@"Helvetica-Bold" size:24];
+        
+        descriptionLabel.textColor = kColorWhiteColor;
+        
+        [self.scrollView addSubview:descriptionLabel];
+        
+        [descriptionLabel release];
     }
     else {
         
@@ -698,31 +700,31 @@
     
     if(UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
 	{
-    
-    ReviewViewController	*tempReviewViewController = [[ReviewViewController alloc] initWithNibName:@"ReviewViewController-iPAd" bundle:nil];
-   
-    self.reviewViewController = tempReviewViewController;
-    
-    [self.view addSubview:reviewViewController.view];
-    
-    [tempReviewViewController release];
+        
+        ReviewViewController	*tempReviewViewController = [[ReviewViewController alloc] initWithNibName:@"ReviewViewController-iPAd" bundle:nil];
+        
+        self.reviewViewController = tempReviewViewController;
+        
+        [self.view addSubview:reviewViewController.view];
+        
+        [tempReviewViewController release];
     }
     else {
         
         
         if(loginChk == YES) { //When the user is logged in
-        
-        ReviewViewController	*tempReviewViewController = [[ReviewViewController alloc] initWithNibName:@"ReviewViewController" bundle:nil];
-       
-        self.reviewViewController = tempReviewViewController;
-        
-         reviewViewController.loginChk = YES;
             
-         reviewViewController.reviewProductId =  index;
+            ReviewViewController	*tempReviewViewController = [[ReviewViewController alloc] initWithNibName:@"ReviewViewController" bundle:nil];
             
-        [self.view addSubview:reviewViewController.view];
-        
-        [tempReviewViewController release]; 
+            self.reviewViewController = tempReviewViewController;
+            
+            reviewViewController.loginChk = YES;
+            
+            reviewViewController.reviewProductId =  index;
+            
+            [self.view addSubview:reviewViewController.view];
+            
+            [tempReviewViewController release]; 
             
         }
         
@@ -758,77 +760,77 @@
 -(void) addToCart:(id) sender
 {
     
-if(UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
+    if(UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
         
         BOOL isCount = FALSE;
         int indexVal=0;
-    
-        AssetsDataEntity *assetsData = [SharedObjects sharedInstance].assetsDataEntity;
-    
-        AddtoBagCustomCell *cusCell = [[AddtoBagCustomCell alloc]init];
-    
-        NSString *strPrice = [NSString stringWithFormat:@"%@",[[assetsData.productDetailArray objectAtIndex:[sender tag]] productDetailsPrice]];
-    
-        NSString *strImg = [NSString stringWithFormat:@"%@",[[assetsData.productDetailArray objectAtIndex:[sender tag]] productDetailImageUrl]];
-     
-        NSString *strName = [NSString stringWithFormat:@"%@",[[assetsData.productDetailArray objectAtIndex:[sender tag]] productDetailName]];
-    
-        NSString *strId = [NSString stringWithFormat:@"%@",[[assetsData.productDetailArray objectAtIndex:[sender tag]] productDetailId]];
-    
-        NSString *strCount = [[NSString alloc] init];
-    
-            for(int i=0; i<[assetsData.arrayAddtoCart count]; i++) {
         
-                    if([strId isEqualToString:[[assetsData.arrayAddtoCart objectAtIndex:i]objectForKey:@"Id"]])
-                    {
+        AssetsDataEntity *assetsData = [SharedObjects sharedInstance].assetsDataEntity;
+        
+        AddtoBagCustomCell *cusCell = [[AddtoBagCustomCell alloc]init];
+        
+        NSString *strPrice = [NSString stringWithFormat:@"%@",[[assetsData.productDetailArray objectAtIndex:[sender tag]] productDetailsPrice]];
+        
+        NSString *strImg = [NSString stringWithFormat:@"%@",[[assetsData.productDetailArray objectAtIndex:[sender tag]] productDetailImageUrl]];
+        
+        NSString *strName = [NSString stringWithFormat:@"%@",[[assetsData.productDetailArray objectAtIndex:[sender tag]] productDetailName]];
+        
+        NSString *strId = [NSString stringWithFormat:@"%@",[[assetsData.productDetailArray objectAtIndex:[sender tag]] productDetailId]];
+        
+        NSString *strCount = [[NSString alloc] init];
+        
+        for(int i=0; i<[assetsData.arrayAddtoCart count]; i++) {
             
-                        NSString *strInt = [NSString stringWithFormat:@"%@",[[assetsData.arrayAddtoCart objectAtIndex:i]objectForKey:@"Count"]];
-                        indexVal = [strInt intValue];
-                        
-                        indexVal = indexVal + 1;
-                        isCount = TRUE;
-                        
-                        NSMutableDictionary *newDict = [[NSMutableDictionary alloc] init];
-                        
-                        NSDictionary *oldDict = (NSDictionary *)[assetsData.arrayAddtoCart objectAtIndex:i];
-                        
-                        [newDict addEntriesFromDictionary:oldDict];
-                        
-                        [newDict setObject:[NSString stringWithFormat:@"%d", indexVal] forKey:@"Count"];
-                        
-                        [assetsData.arrayAddtoCart replaceObjectAtIndex:i withObject:newDict];
-                        [newDict release];
-                        cusCell.delObj = [NSString stringWithFormat:@"%d", i];
-                        break;
-          
-                        } 
-                        else
-                        {
-                            isCount =  FALSE;
-                            strCount = @"1";
-          
-                        }
-                    }
-    
-                    if (isCount == TRUE) {
-         
-                    }
-                    else {
-                            int x=1;
-                            strCount = [NSString stringWithFormat:@"%d",x];
-                            [assetsData.dictCart setObject:strPrice forKey:@"ListPrice"];
-    
-                            [assetsData.dictCart setObject:strImg forKey:@"Image"];
-    
-                            [assetsData.dictCart setObject:strName forKey:@"Name"];
-    
-                            [assetsData.dictCart setObject:strId forKey:@"Id"]; 
-    
-                            [assetsData.dictCart setObject:strCount forKey:@"Count"];
-                            NSLog(@"strCount:%@ ",strCount);
-                            [assetsData.arrayAddtoCart addObject:[assetsData.dictCart copy]];
-                    }
+            if([strId isEqualToString:[[assetsData.arrayAddtoCart objectAtIndex:i]objectForKey:@"Id"]])
+            {
+                
+                NSString *strInt = [NSString stringWithFormat:@"%@",[[assetsData.arrayAddtoCart objectAtIndex:i]objectForKey:@"Count"]];
+                indexVal = [strInt intValue];
+                
+                indexVal = indexVal + 1;
+                isCount = TRUE;
+                
+                NSMutableDictionary *newDict = [[NSMutableDictionary alloc] init];
+                
+                NSDictionary *oldDict = (NSDictionary *)[assetsData.arrayAddtoCart objectAtIndex:i];
+                
+                [newDict addEntriesFromDictionary:oldDict];
+                
+                [newDict setObject:[NSString stringWithFormat:@"%d", indexVal] forKey:@"Count"];
+                
+                [assetsData.arrayAddtoCart replaceObjectAtIndex:i withObject:newDict];
+                [newDict release];
+                cusCell.delObj = [NSString stringWithFormat:@"%d", i];
+                break;
+                
+            } 
+            else
+            {
+                isCount =  FALSE;
+                strCount = @"1";
+                
+            }
+        }
+        
+        if (isCount == TRUE) {
             
+        }
+        else {
+            int x=1;
+            strCount = [NSString stringWithFormat:@"%d",x];
+            [assetsData.dictCart setObject:strPrice forKey:@"ListPrice"];
+            
+            [assetsData.dictCart setObject:strImg forKey:@"Image"];
+            
+            [assetsData.dictCart setObject:strName forKey:@"Name"];
+            
+            [assetsData.dictCart setObject:strId forKey:@"Id"]; 
+            
+            [assetsData.dictCart setObject:strCount forKey:@"Count"];
+            NSLog(@"strCount:%@ ",strCount);
+            [assetsData.arrayAddtoCart addObject:[assetsData.dictCart copy]];
+        }
+        
         AddToBagViewController *tempController = [[AddToBagViewController alloc] initWithNibName:@"AddtoBagViewController-iPAd" bundle:nil];
         self.addToBagController = tempController;
         
@@ -853,7 +855,7 @@ if(UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
         NSString *strCount = [[NSString alloc] init];
         
         for(int i=0; i<[assetsData.arrayAddtoCart count]; i++) {
-           
+            
             if([strId isEqualToString:[[assetsData.arrayAddtoCart objectAtIndex:i]objectForKey:@"Id"]])
             {
                 NSString *strInt = [NSString stringWithFormat:@"%@",[[assetsData.arrayAddtoCart objectAtIndex:i]objectForKey:@"Count"]];
@@ -922,12 +924,12 @@ if(UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
 }
 
 /*
-// Override to allow orientations other than the default portrait orientation.
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
-    // Return YES for supported orientations.
-    return (interfaceOrientation == UIInterfaceOrientationPortrait);
-}
-*/
+ // Override to allow orientations other than the default portrait orientation.
+ - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
+ // Return YES for supported orientations.
+ return (interfaceOrientation == UIInterfaceOrientationPortrait);
+ }
+ */
 
 - (void)didReceiveMemoryWarning {
     // Releases the view if it doesn't have a superview.

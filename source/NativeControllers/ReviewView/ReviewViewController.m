@@ -68,7 +68,7 @@
     [super viewDidLoad];
     
     self.title =@"CustomerReview";
-   
+    
     AssetsDataEntity *assetsData = [SharedObjects sharedInstance].assetsDataEntity;
     stringAverage = [[assetsData.productReviewArray objectAtIndex:([assetsData.productReviewArray count]-1)]averageCustomerReview];
     [assetsData.productReviewArray removeObjectAtIndex:([assetsData.productReviewArray count]-1)];
@@ -103,7 +103,7 @@
     [self loadNavigationBar];
     
     [self initializeTableView];
-        
+    
 }
 
 #pragma mark 
@@ -136,6 +136,8 @@
         [backButton setBackgroundImage:[UIImage imageNamed:@"back_btn-72.png"] forState:UIControlStateNormal];
         
         [backButton addTarget:self action:@selector(goBack:) forControlEvents:UIControlEventTouchUpInside];
+        
+        backButton.accessibilityLabel=@"Back";
         
         [self.view addSubview:backButton];
         
@@ -186,7 +188,7 @@
         }
     }
     else {
-    
+        
         UIImageView *navBarView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 320, 40)];
         
         [navBarView setImage:[UIImage imageNamed:@"header_logo.png"]];
@@ -210,6 +212,8 @@
         [backButton setBackgroundImage:[UIImage imageNamed:@"back_btn.png"] forState:UIControlStateNormal];
         
         [backButton addTarget:self action:@selector(goBack:) forControlEvents:UIControlEventTouchUpInside];
+        
+        backButton.accessibilityLabel=@"Back";
         
         [self.view addSubview:backButton];
         
@@ -265,12 +269,12 @@
 
 -(void) initializeTableView
 {
-  
+    
 	if(UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
 	{
         
         AssetsDataEntity *assetsData = [SharedObjects sharedInstance].assetsDataEntity;
-
+        
 		reviewTableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 500, 768, 200) style:UITableViewStylePlain];
         reviewTableView.dataSource = self;
         reviewTableView.delegate = self;
@@ -287,12 +291,12 @@
         
         [self.view addSubview:submitReview];
         
-       
+        
         for(int i = 0;i<[assetsData.productReviewArray count]; i++)
         {
             
             NSString* string = [NSString stringWithFormat:@"%@",[[assetsData.productReviewArray objectAtIndex:i] averageCustomerReview]];
-//            NSLog(@"rating averageCustomerReview..... :%@",string);
+            //            NSLog(@"rating averageCustomerReview..... :%@",string);
             [averageArray addObject:[[assetsData.productReviewArray objectAtIndex:i] averageCustomerReview]];
         }
         
@@ -315,9 +319,9 @@
         average = [[UILabel alloc] initWithFrame:CGRectMake(0,0,768,45)];
         [average setFont:[UIFont fontWithName:@"Times New Roman-Regular" size:28]];
         [average setTextColor:[UIColor colorWithRed:85/255 green:85/255 blue:75/255 alpha:1.0]];
-
+        
         [average setText:[NSString stringWithFormat:@"  Average customer review  \t(%@)",stringAverage]];
-
+        
         average.backgroundColor =[UIColor colorWithPatternImage:[UIImage imageNamed:@"customerreview_subheader.png"]];
         [reviewTextview  addSubview:average];
         
@@ -389,7 +393,7 @@
             [reviewTextview  addSubview:myRatings];
             [imagePoll addObject:myRatings];
         }
-
+        
         
 	}
     else {
@@ -413,7 +417,7 @@
         {
             
             NSString* string = [NSString stringWithFormat:@"%@",[[assetsData.productReviewArray objectAtIndex:i] averageCustomerReview]];
-//            NSLog(@"rating averageCustomerReview..... :%@",string);
+            //            NSLog(@"rating averageCustomerReview..... :%@",string);
             [averageArray addObject:[[assetsData.productReviewArray objectAtIndex:i] averageCustomerReview]];
         }
         
@@ -504,12 +508,12 @@
             [reviewTextview  addSubview:myRatings];
             [imagePoll addObject:myRatings];
         }
-
-
+        
+        
         
     }
-   
- }
+    
+}
 
 
 
@@ -537,7 +541,7 @@
 {
 	static NSString *CellIdentifier = @"ReviewCell";
     AssetsDataEntity *assestsData = [SharedObjects sharedInstance].assetsDataEntity;
-
+    
 	
 	ReviewCustomCell *cell = (ReviewCustomCell*) [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
 	
@@ -552,19 +556,19 @@
     
     
    	cell.selectionStyle = UITableViewCellSelectionStyleNone;
-	       
+    
     [[cell commentsLabel] setText:[[assestsData.productReviewArray objectAtIndex:indexPath.row]userComments]];
     [[cell disImage] setImage:[UIImage imageNamed:@"nav_arrow.png"]];
-   
+    
     
     NSString* string = [NSString stringWithFormat:@"%@",[[assestsData.productReviewArray objectAtIndex:indexPath.row] productRatingView]];
     
     NSString* averageValue = [NSString stringWithFormat:@"  Average customer review  (%@)",[[assestsData.productReviewArray objectAtIndex:indexPath.row] averageCustomerReview]];
-   
+    
     
     NSString* user = [[[assestsData.productReviewArray objectAtIndex:indexPath.row] userName]description];
     
-        [[cell userNameLabel] setText:user];
+    [[cell userNameLabel] setText:user];
     
     
     NSString* date = [NSString stringWithFormat:@"%@",[[assestsData.productReviewArray objectAtIndex:indexPath.row] commentedDate]];
@@ -644,14 +648,14 @@
             [imageFramesArray addObject:ratingsView];
         }
     }
-   
-  return cell;
+    
+    return cell;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     AssetsDataEntity *assetsData = [SharedObjects sharedInstance].assetsDataEntity;
-      
+    
     if(UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
 	{
         
@@ -696,7 +700,7 @@
         }
         
         [tempReviewCommentsViewController release];
-
+        
     }
     else {
         
@@ -728,27 +732,27 @@
         
         float height = 15;
         
-            NSMutableArray *imageFramesArray = [[NSMutableArray alloc]init];
+        NSMutableArray *imageFramesArray = [[NSMutableArray alloc]init];
         
-               for(int i = 0; i<[string intValue];i++)
-               {
-                   tempReviewCommentsViewController.ratingImage = [[UIImageView alloc]init];
-                  tempReviewCommentsViewController.ratingImage.frame = CGRectMake(xBlue,y,width,height);
-                   [tempReviewCommentsViewController.ratingImage setImage:[UIImage imageNamed:@"blue_star.png"]];
-                   xBlue = xBlue + 15;
-                   [tempReviewCommentsViewController.ratingImage setTag:i];
-                   [tempReviewCommentsViewController.view  addSubview:tempReviewCommentsViewController.ratingImage];
-                   [imageFramesArray addObject:tempReviewCommentsViewController.ratingImage];
-               }
-        
-            [tempReviewCommentsViewController release];
-
+        for(int i = 0; i<[string intValue];i++)
+        {
+            tempReviewCommentsViewController.ratingImage = [[UIImageView alloc]init];
+            tempReviewCommentsViewController.ratingImage.frame = CGRectMake(xBlue,y,width,height);
+            [tempReviewCommentsViewController.ratingImage setImage:[UIImage imageNamed:@"blue_star.png"]];
+            xBlue = xBlue + 15;
+            [tempReviewCommentsViewController.ratingImage setTag:i];
+            [tempReviewCommentsViewController.view  addSubview:tempReviewCommentsViewController.ratingImage];
+            [imageFramesArray addObject:tempReviewCommentsViewController.ratingImage];
         }
+        
+        [tempReviewCommentsViewController release];
+        
+    }
 }
 
 -(void)submitReviewButtonSelected:(id)sender
 {
-   
+    
     ServiceHandler* service = [[ServiceHandler alloc]init];
     AssetsDataEntity *assetsData = [SharedObjects sharedInstance].assetsDataEntity;
     
@@ -757,13 +761,13 @@
         
         int rowIndex = reviewProductId; //Gets from the SpecialOffer
         service.strId = [[assetsData.specialProductsArray objectAtIndex:rowIndex] specialProductId];
-
+        
     }
     else {
         int rowIndex = reviewProductId; //Gets from the results VC
         service.strId = [[assetsData.productArray objectAtIndex:rowIndex] productDetailId];
     }
-   
+    
     
     if(UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
 	{
@@ -778,7 +782,7 @@
         
         
         if(isSpecialOffer == YES) { //If the product selected from specialOffers
-
+            
             if(loginChk == YES) { //If the user logged in
                 SubmitReviewViewController* tempSubmitReviewViewCotroller = [[SubmitReviewViewController alloc]initWithNibName:@"SubmitReviewViewController" bundle:nil];
                 
@@ -872,7 +876,7 @@
     [serviceHandler specialProductsService:self :@selector(finishedSpecialProductsService:)];
     
     [serviceHandler release];
-
+    
 }
 
 
@@ -916,7 +920,7 @@
 		[self.view addSubview:button];
 		
 		x = x + 102;
-               
+        
        	[button release];
 		
 	}
@@ -938,10 +942,10 @@
 
 -(void) goBack:(id) sender
 {
-	  
+    
     AssetsDataEntity *assetsData = [SharedObjects sharedInstance].assetsDataEntity;
     assetsData.productReviewArray = [[NSMutableArray alloc]init];
-
+    
 	[self.view removeFromSuperview];
 }
 -(void)viewWillAppear:(BOOL)animated 

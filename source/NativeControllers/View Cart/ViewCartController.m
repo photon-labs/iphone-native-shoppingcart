@@ -209,6 +209,8 @@
         
         [checkout addTarget:self action:@selector(viewAction:) forControlEvents:UIControlEventTouchUpInside];
         
+        checkout.accessibilityLabel = @"CheckOut";
+        
         [self.view addSubview:checkout];
         
         [checkout release];
@@ -335,6 +337,8 @@
         
         [checkout addTarget:self action:@selector(viewAction:) forControlEvents:UIControlEventTouchUpInside];
         
+        checkout.accessibilityLabel = @"CheckOut";
+        
         [self.view addSubview:checkout];
         
         [checkout release];
@@ -348,7 +352,7 @@
 
 - (void) browseButtonSelected:(id)sender 
 {
-       AssetsDataEntity *assetsData = [SharedObjects sharedInstance].assetsDataEntity;
+    AssetsDataEntity *assetsData = [SharedObjects sharedInstance].assetsDataEntity;
     assetsData.productArray = [[NSMutableArray alloc]init];
     assetsData.productDetailArray = [[NSMutableArray alloc]init];
     ServiceHandler *serviceHandler = [[ServiceHandler alloc] init];
@@ -377,7 +381,7 @@
 
 - (void) specialOfferButtonSelected:(id)sender 
 {
-       
+    
     ServiceHandler *serviceHandler = [[ServiceHandler alloc] init];
     
     [serviceHandler specialProductsService:self :@selector(finishedSpecialProductsService:)];
@@ -432,7 +436,7 @@
         [checkViewCartController release];
     }
     
-
+    
     
 }
 -(void)goBack:(id)sender
@@ -453,9 +457,9 @@
             
             iPadHeightTable = 200;
         }
-            else {
-                iPadHeightTable = 380;
-            }
+        else {
+            iPadHeightTable = 380;
+        }
         viewCartTable = [[UITableView alloc] initWithFrame:CGRectMake(0, 220, 768, iPadHeightTable) style:UITableViewStyleGrouped];
         viewCartTable.dataSource = self;
         viewCartTable.delegate = self;
@@ -517,32 +521,32 @@
     
     if(UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
 	{
-    if ((cell == nil) ||(cell != nil)) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier];
-        cell.backgroundColor = [UIColor clearColor];
-        Quantity=[[UILabel alloc]initWithFrame:CGRectMake(5, 10, 250, 30)];
-        [Quantity setFont:[UIFont fontWithName:@"Helvetica" size:24]];
-        Quantity.backgroundColor = [UIColor clearColor];
-        [Quantity setTextColor:[UIColor whiteColor]];
-        
-        
-        Product=[[UILabel alloc]initWithFrame:CGRectMake(5, 10, 620, 30)];
-        [Product setFont:[UIFont fontWithName:@"Helvetica" size:24]];
-        Product.backgroundColor = [UIColor clearColor];
-        [Product setTextColor:[UIColor whiteColor]];
-        
-        PriceLabel=[[UILabel alloc]initWithFrame:CGRectMake(5, 10, 110, 30)];
-        [PriceLabel setFont:[UIFont fontWithName:@"Helvetica" size:24]];
-        PriceLabel.backgroundColor = [UIColor clearColor];
-        [PriceLabel setTextColor:[UIColor whiteColor]];
-        [PriceLabel setText:@"\tPrice      :"];
-        
-        Price=[[UILabel alloc]initWithFrame:CGRectMake(PriceLabel.frame.size.width , 10, 240, 30)];
-        [Price setFont:[UIFont fontWithName:@"Helvetica" size:24]];
-        Price.backgroundColor = [UIColor clearColor];
-        [Price setTextColor:[UIColor yellowColor]];
-        
-    }
+        if ((cell == nil) ||(cell != nil)) {
+            cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier];
+            cell.backgroundColor = [UIColor clearColor];
+            Quantity=[[UILabel alloc]initWithFrame:CGRectMake(5, 10, 250, 30)];
+            [Quantity setFont:[UIFont fontWithName:@"Helvetica" size:24]];
+            Quantity.backgroundColor = [UIColor clearColor];
+            [Quantity setTextColor:[UIColor whiteColor]];
+            
+            
+            Product=[[UILabel alloc]initWithFrame:CGRectMake(5, 10, 620, 30)];
+            [Product setFont:[UIFont fontWithName:@"Helvetica" size:24]];
+            Product.backgroundColor = [UIColor clearColor];
+            [Product setTextColor:[UIColor whiteColor]];
+            
+            PriceLabel=[[UILabel alloc]initWithFrame:CGRectMake(5, 10, 110, 30)];
+            [PriceLabel setFont:[UIFont fontWithName:@"Helvetica" size:24]];
+            PriceLabel.backgroundColor = [UIColor clearColor];
+            [PriceLabel setTextColor:[UIColor whiteColor]];
+            [PriceLabel setText:@"\tPrice      :"];
+            
+            Price=[[UILabel alloc]initWithFrame:CGRectMake(PriceLabel.frame.size.width , 10, 240, 30)];
+            [Price setFont:[UIFont fontWithName:@"Helvetica" size:24]];
+            Price.backgroundColor = [UIColor clearColor];
+            [Price setTextColor:[UIColor yellowColor]];
+            
+        }
         if(indexPath.row == 0) {
             
             Product.text = [NSString stringWithFormat:@"\tProduct  : %@",[[assetsData.arrayAddtoCart objectAtIndex:indexPath.section]objectForKey:@"Name"]];
@@ -570,7 +574,7 @@
             [cell.contentView addSubview:PriceLabel];
         }
         
-    return  cell;
+        return  cell;
     }
     else {
         
@@ -638,7 +642,7 @@
 
 - (void)viewDidUnload {
     [super viewDidUnload];
-   
+    
 }
 
 
