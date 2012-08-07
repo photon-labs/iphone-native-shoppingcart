@@ -51,42 +51,42 @@
     ConfigurationReader *configReader = [[ConfigurationReader alloc]init];
     [configReader parseXMLFileAtURL:@"phresco-env-config" environment:@"myWebservice"];
     
-   // if(filePath)
-   // {
+    // if(filePath)
+    // {
     
-        //NSDictionary *dictionary = [NSDictionary dictionaryWithContentsOfFile:filePath];
-        
-        NSString *protocol = [[configReader.stories objectAtIndex: 0] objectForKey:kwebserviceprotocol];
-        protocol = [protocol stringByTrimmingCharactersInSet:
+    //NSDictionary *dictionary = [NSDictionary dictionaryWithContentsOfFile:filePath];
+    
+    NSString *protocol = [[configReader.stories objectAtIndex: 0] objectForKey:kwebserviceprotocol];
+    protocol = [protocol stringByTrimmingCharactersInSet:
                 [NSCharacterSet whitespaceAndNewlineCharacterSet]];
-        
-        NSString *host = [[configReader.stories objectAtIndex: 0] objectForKey:kwebservicehost];
-        host = [host stringByTrimmingCharactersInSet:
-                [NSCharacterSet whitespaceAndNewlineCharacterSet]];
-         
-        NSString *port = [[configReader.stories objectAtIndex: 0] objectForKey:kwebserviceport];
-        port = [port stringByTrimmingCharactersInSet:
+    
+    NSString *host = [[configReader.stories objectAtIndex: 0] objectForKey:kwebservicehost];
+    host = [host stringByTrimmingCharactersInSet:
             [NSCharacterSet whitespaceAndNewlineCharacterSet]];
-        
-        NSString *context = [[configReader.stories objectAtIndex: 0] objectForKey:kwebservicecontext];
-        context = [context stringByTrimmingCharactersInSet:
+    
+    NSString *port = [[configReader.stories objectAtIndex: 0] objectForKey:kwebserviceport];
+    port = [port stringByTrimmingCharactersInSet:
             [NSCharacterSet whitespaceAndNewlineCharacterSet]];
-                
-        NSString *urlString = [NSString stringWithFormat:@"%@://%@:%@/%@/%@/%@", protocol,host, port, context,kRestApi,kConfigService];
-                 
-        ///////// Support ////////////////////////
-        AppInfoEntity *appInfoEntity = [[SharedObjects sharedInstance] appInfoEntity];
-        
-        appInfoEntity.configEndpoint = urlString;
-        //////////////////////////////////////////
-        
-        [[ConnectionManager sharedConnections] serviceCallWithURL:urlString 
-                                                         httpBody:@"" 
-                                                       httpMethod:@"GET" 
-                                                   callBackTarget:self 
-                                                 callBackSelector:@selector(configServiceDone:) 
-                                                       callBackID:[[ConnectionManager sharedConnections] getCallbackID]];
-   // }	
+    
+    NSString *context = [[configReader.stories objectAtIndex: 0] objectForKey:kwebservicecontext];
+    context = [context stringByTrimmingCharactersInSet:
+               [NSCharacterSet whitespaceAndNewlineCharacterSet]];
+    
+    NSString *urlString = [NSString stringWithFormat:@"%@://%@:%@/%@/%@/%@", protocol,host, port, context,kRestApi,kConfigService];
+    
+    ///////// Support ////////////////////////
+    AppInfoEntity *appInfoEntity = [[SharedObjects sharedInstance] appInfoEntity];
+    
+    appInfoEntity.configEndpoint = urlString;
+    //////////////////////////////////////////
+    
+    [[ConnectionManager sharedConnections] serviceCallWithURL:urlString 
+                                                     httpBody:@"" 
+                                                   httpMethod:@"GET" 
+                                               callBackTarget:self 
+                                             callBackSelector:@selector(configServiceDone:) 
+                                                   callBackID:[[ConnectionManager sharedConnections] getCallbackID]];
+    // }	
 	
 }
 
@@ -149,34 +149,34 @@
     ConfigurationReader *configReader = [[ConfigurationReader alloc]init];
     [configReader parseXMLFileAtURL:@"phresco-env-config" environment:@"myWebservice"];
     
-   /* if(filePath)
-    {
-        NSDictionary *dictionary = [NSDictionary dictionaryWithContentsOfFile:filePath];*/
-        
+    /* if(filePath)
+     {
+     NSDictionary *dictionary = [NSDictionary dictionaryWithContentsOfFile:filePath];*/
+    
     NSString *protocol = [[configReader.stories objectAtIndex: 0] objectForKey:kwebserviceprotocol];
     protocol = [protocol stringByTrimmingCharactersInSet:
                 [NSCharacterSet whitespaceAndNewlineCharacterSet]];
-        
+    
     NSString *host = [[configReader.stories objectAtIndex: 0] objectForKey:kwebservicehost];
     host = [host stringByTrimmingCharactersInSet:
             [NSCharacterSet whitespaceAndNewlineCharacterSet]];
-        
+    
     NSString *port = [[configReader.stories objectAtIndex: 0] objectForKey:kwebserviceport];
     port = [port stringByTrimmingCharactersInSet:
             [NSCharacterSet whitespaceAndNewlineCharacterSet]];
-        
+    
     NSString *context = [[configReader.stories objectAtIndex: 0] objectForKey:kwebservicecontext];
     context = [context stringByTrimmingCharactersInSet:
                [NSCharacterSet whitespaceAndNewlineCharacterSet]];
-        
-        NSString *urlString = [NSString stringWithFormat:@"%@://%@:%@/%@/%@/%@", protocol,host, port, context,kRestApi,kCatalogService];         
-         
-        [[ConnectionManager sharedConnections] serviceCallWithURL:urlString 
-                                                         httpBody:@"" 
-                                                       httpMethod:@"GET" 
-                                                   callBackTarget:self 
-                                                 callBackSelector:@selector(catalogServiceDone:) 
-                                                       callBackID:[[ConnectionManager sharedConnections] getCallbackID]];
+    
+    NSString *urlString = [NSString stringWithFormat:@"%@://%@:%@/%@/%@/%@", protocol,host, port, context,kRestApi,kCatalogService];         
+    
+    [[ConnectionManager sharedConnections] serviceCallWithURL:urlString 
+                                                     httpBody:@"" 
+                                                   httpMethod:@"GET" 
+                                               callBackTarget:self 
+                                             callBackSelector:@selector(catalogServiceDone:) 
+                                                   callBackID:[[ConnectionManager sharedConnections] getCallbackID]];
     //}		
 }
 
@@ -233,13 +233,36 @@
         [dictCat setObject:strCount forKey:@"productCount"];
         [catalogResponse addObject:[dictCat copy]];
         
+        [strText retain];
+        [strText release];
+        
+        [strID retain];
+        [strID release];
+        
+        [strImg retain];
+        [strImg release];
+        
+        [strName retain];
+        [strName release];
+        
+        [strCount retain];
+        [strCount release];
         
         
     }
-
+    
    	[string release];
 	
 	[self.callBackTarget performSelectorOnMainThread:self.callBackSelector withObject:catalogResponse waitUntilDone:NO];	
+    
+    [ValueID retain];
+    [ValueID release];
+    
+    [dictCat retain];
+    [dictCat release];
+    
+    [catalogResponse retain];
+    [catalogResponse release];
 }
 
 ////To display the product details 
@@ -254,34 +277,34 @@
     [configReader parseXMLFileAtURL:@"phresco-env-config" environment:@"myWebservice"];
     
     /*if(filePath)
-    {
-        NSDictionary *dictionary = [NSDictionary dictionaryWithContentsOfFile:filePath];*/
-        
+     {
+     NSDictionary *dictionary = [NSDictionary dictionaryWithContentsOfFile:filePath];*/
+    
     NSString *protocol = [[configReader.stories objectAtIndex: 0] objectForKey:kwebserviceprotocol];
     protocol = [protocol stringByTrimmingCharactersInSet:
                 [NSCharacterSet whitespaceAndNewlineCharacterSet]];
-        
+    
     NSString *host = [[configReader.stories objectAtIndex: 0] objectForKey:kwebservicehost];
     host = [host stringByTrimmingCharactersInSet:
             [NSCharacterSet whitespaceAndNewlineCharacterSet]];
-        
+    
     NSString *port = [[configReader.stories objectAtIndex: 0] objectForKey:kwebserviceport];
     port = [port stringByTrimmingCharactersInSet:
             [NSCharacterSet whitespaceAndNewlineCharacterSet]];
-        
+    
     NSString *context = [[configReader.stories objectAtIndex: 0] objectForKey:kwebservicecontext];
     context = [context stringByTrimmingCharactersInSet:
                [NSCharacterSet whitespaceAndNewlineCharacterSet]];
-        
-        NSString *urlString = [NSString stringWithFormat:@"%@://%@:%@/%@/%@/%@/%@", protocol,host, port, context, kRestApi, kCatalogService,strId];
-        
-       
-        [[ConnectionManager sharedConnections] serviceCallWithURL:urlString 
-                                                         httpBody:@"" 
-                                                       httpMethod:@"GET" 
-                                                   callBackTarget:self 
-                                                 callBackSelector:@selector(productDetailsServiceDone:) 
-                                                       callBackID:[[ConnectionManager sharedConnections] getCallbackID]];
+    
+    NSString *urlString = [NSString stringWithFormat:@"%@://%@:%@/%@/%@/%@/%@", protocol,host, port, context, kRestApi, kCatalogService,strId];
+    
+    
+    [[ConnectionManager sharedConnections] serviceCallWithURL:urlString 
+                                                     httpBody:@"" 
+                                                   httpMethod:@"GET" 
+                                               callBackTarget:self 
+                                             callBackSelector:@selector(productDetailsServiceDone:) 
+                                                   callBackID:[[ConnectionManager sharedConnections] getCallbackID]];
     //}		
 }
 
@@ -339,11 +362,26 @@
         [productDetailsResponse addObject:[dictCat copy]];
         
         
+        [strText retain]; [strText release];
+        [striD retain]; [striD release];
+        [strImg retain]; [strImg release];
+        [strName retain]; [strName release];
+        [strListprice retain]; [strListprice release];
+        
     }
-     
+    
 	[string release];
 	
 	[self.callBackTarget performSelectorOnMainThread:self.callBackSelector withObject:productDetailsResponse waitUntilDone:NO];	
+    
+    [ValueID retain];
+    [ValueID release];
+    
+    [dictCat retain];
+    [dictCat release];
+    
+    [productDetailsResponse retain];
+    [productDetailsResponse release];
 }
 
 ////To display the product 
@@ -358,36 +396,36 @@
     ConfigurationReader *configReader = [[ConfigurationReader alloc]init];
     [configReader parseXMLFileAtURL:@"phresco-env-config" environment:@"myWebservice"];
     
-   /* if(filePath)
-    {
-        NSDictionary *dictionary = [NSDictionary dictionaryWithContentsOfFile:filePath];*/
-        
+    /* if(filePath)
+     {
+     NSDictionary *dictionary = [NSDictionary dictionaryWithContentsOfFile:filePath];*/
+    
     NSString *protocol = [[configReader.stories objectAtIndex: 0] objectForKey:kwebserviceprotocol];
     protocol = [protocol stringByTrimmingCharactersInSet:
                 [NSCharacterSet whitespaceAndNewlineCharacterSet]];
-        
+    
     NSString *host = [[configReader.stories objectAtIndex: 0] objectForKey:kwebservicehost];
     host = [host stringByTrimmingCharactersInSet:
             [NSCharacterSet whitespaceAndNewlineCharacterSet]];
-        
+    
     NSString *port = [[configReader.stories objectAtIndex: 0] objectForKey:kwebserviceport];
     port = [port stringByTrimmingCharactersInSet:
             [NSCharacterSet whitespaceAndNewlineCharacterSet]];
-        
+    
     NSString *context = [[configReader.stories objectAtIndex: 0] objectForKey:kwebservicecontext];
     context = [context stringByTrimmingCharactersInSet:
                [NSCharacterSet whitespaceAndNewlineCharacterSet]];
     
-        NSString *urlString = [NSString stringWithFormat:@"%@://%@:%@/%@/%@/%@/%@", protocol,host, port, context, kRestApi,kProductService,strId];
-        NSLog(@"urlString %@",urlString);
-        
-        [[ConnectionManager sharedConnections] serviceCallWithURL:urlString 
-                                                         httpBody:@"" 
-                                                       httpMethod:@"GET" 
-                                                   callBackTarget:self 
-                                                 callBackSelector:@selector(productServiceDone:) 
-                                                       callBackID:[[ConnectionManager sharedConnections] getCallbackID]];
-   // }		
+    NSString *urlString = [NSString stringWithFormat:@"%@://%@:%@/%@/%@/%@/%@", protocol,host, port, context, kRestApi,kProductService,strId];
+    NSLog(@"urlString %@",urlString);
+    
+    [[ConnectionManager sharedConnections] serviceCallWithURL:urlString 
+                                                     httpBody:@"" 
+                                                   httpMethod:@"GET" 
+                                               callBackTarget:self 
+                                             callBackSelector:@selector(productServiceDone:) 
+                                                   callBackID:[[ConnectionManager sharedConnections] getCallbackID]];
+    // }		
 }
 
 -(void) productServiceDone:(NSMutableDictionary*) responseDataDict 
@@ -398,7 +436,6 @@
 	
 	
     NSMutableArray *productDetailsResponse;
-    productDetailsResponse = [[NSMutableArray alloc]init];
     
     NSString *responseResultString = [[NSString alloc] initWithData:responseData encoding:NSUTF8StringEncoding];
     
@@ -466,6 +503,23 @@
             [dictCat setObject:strRatio forKey:@"Screen Ratio"];
             [dictCat setObject:strDefinition forKey:@"TV Definition"];
             
+            
+            
+            [strTVType retain];
+            [strTVType release];
+            
+            [strScreen retain];
+            [strScreen release];
+            
+            [strRatio retain];
+            [strRatio release];
+            
+            
+            [strDefinition retain];
+            [strDefinition release];
+            
+            
+            
         }
         
         [dictCat setObject:strText forKey:@"rating"];
@@ -478,6 +532,32 @@
         [productDetailsResponse addObject:[dictCat copy]];
         
         
+        [strText retain];
+        [strText release];
+        
+        [striD  retain];
+        [striD release];
+        
+        [strImg retain];
+        [strImg release];
+        
+        [strName retain];
+        [strName release];
+        
+        [strListprice retain];
+        [strListprice release];
+        
+        [strDescription retain];
+        [strDescription release];
+        
+        [strDetails  retain];
+        [strDetails release];
+        
+        
+        [ValDetail retain];
+        [ValDetail release];
+        
+        
     }
     
     //Ended for new portal
@@ -485,6 +565,18 @@
     
 	
 	[self.callBackTarget performSelectorOnMainThread:self.callBackSelector withObject:productDetailsResponse waitUntilDone:NO];	
+    
+    [ValueID retain];
+    [ValueID release];
+    
+    [productDetailsResponse retain];
+    [productDetailsResponse release];
+    
+    
+    
+    
+    
+    
 }
 
 
@@ -501,34 +593,34 @@
     [configReader parseXMLFileAtURL:@"phresco-env-config" environment:@"myWebservice"];
     
     /*if(filePath)
-    {
-        NSDictionary *dictionary = [NSDictionary dictionaryWithContentsOfFile:filePath];*/
-        
+     {
+     NSDictionary *dictionary = [NSDictionary dictionaryWithContentsOfFile:filePath];*/
+    
     NSString *protocol = [[configReader.stories objectAtIndex: 0] objectForKey:kwebserviceprotocol];
     protocol = [protocol stringByTrimmingCharactersInSet:
                 [NSCharacterSet whitespaceAndNewlineCharacterSet]];
-        
+    
     NSString *host = [[configReader.stories objectAtIndex: 0] objectForKey:kwebservicehost];
     host = [host stringByTrimmingCharactersInSet:
             [NSCharacterSet whitespaceAndNewlineCharacterSet]];
-        
+    
     NSString *port = [[configReader.stories objectAtIndex: 0] objectForKey:kwebserviceport];
     port = [port stringByTrimmingCharactersInSet:
             [NSCharacterSet whitespaceAndNewlineCharacterSet]];
-        
+    
     NSString *context = [[configReader.stories objectAtIndex: 0] objectForKey:kwebservicecontext];
     context = [context stringByTrimmingCharactersInSet:
                [NSCharacterSet whitespaceAndNewlineCharacterSet]];
     
-        NSString *urlString = [NSString stringWithFormat:@"%@://%@:%@/%@/%@/%@/%@/%@", protocol,host, port, context, kRestApi,kProductService,strId,kreview];
-        NSLog(@"urlString %@",urlString);
-        
-        [[ConnectionManager sharedConnections] serviceCallWithURL:urlString 
-                                                         httpBody:@"" 
-                                                       httpMethod:@"GET" 
-                                                   callBackTarget:self 
-                                                 callBackSelector:@selector(productReviewServiceDone:) 
-                                                       callBackID:[[ConnectionManager sharedConnections] getCallbackID]];
+    NSString *urlString = [NSString stringWithFormat:@"%@://%@:%@/%@/%@/%@/%@/%@", protocol,host, port, context, kRestApi,kProductService,strId,kreview];
+    NSLog(@"urlString %@",urlString);
+    
+    [[ConnectionManager sharedConnections] serviceCallWithURL:urlString 
+                                                     httpBody:@"" 
+                                                   httpMethod:@"GET" 
+                                               callBackTarget:self 
+                                             callBackSelector:@selector(productReviewServiceDone:) 
+                                                   callBackID:[[ConnectionManager sharedConnections] getCallbackID]];
     //}		
 }
 
@@ -539,14 +631,13 @@
 	//NSString *string = [[NSString alloc] initWithData:responseData encoding:NSUTF8StringEncoding];
 	
     NSMutableArray *productDetailsResponse;
-    productDetailsResponse = [[NSMutableArray alloc]init];
     NSString *responseResultString = [[NSString alloc] initWithData:responseData encoding:NSUTF8StringEncoding];
     
     
     NSMutableArray *productDetailsResponseOne = [[NSMutableArray alloc]init];
     
     debug(@"prod desc STR:%@ ",responseResultString);
-   // NSLog(@"product review Description....%@", responseResultString);
+    // NSLog(@"product review Description....%@", responseResultString);
     responseData = nil;
     SBJsonParser *jsonParser = [SBJsonParser new];
     
@@ -563,7 +654,7 @@
     NSDictionary *tempArray = [NSDictionary dictionaryWithDictionary:data];
     NSMutableArray *ValueID =  [[NSMutableArray alloc]init];
     NSDictionary *tempReview = [tempArray objectForKey:@"review"];
-   
+    
     
     
     NSDictionary *tempComments = [NSDictionary dictionaryWithDictionary:tempReview];
@@ -584,15 +675,22 @@
     newArray =  [tempRating objectForKey:@"rating"];
     
     for (tempRating in newArray) {
-
+        
         NSMutableString *strKey=[[NSMutableString alloc]init];
         NSMutableString *strValue=[[NSMutableString alloc]init];
-      
+        
         strKey = [tempRating objectForKey:@"key"];
         strValue = [tempRating objectForKey:@"value"];
         
         [productDetailsResponseOne addObject:[tempRating copy]];
-         
+        
+        
+        [strKey retain];
+        [strKey release];
+        
+        [strValue retain];
+        [strValue release];
+        
     }
     
     for (tempComments in ValueID) {
@@ -607,14 +705,47 @@
         strRating = [tempComments objectForKey:@"rating"];
         strUser = [tempComments objectForKey:@"user"];
         [productDetailsResponse addObject:[tempComments copy]];
-       
+        
+        
+        [strComment retain];
+        [strComment release];
+        
+        [strDate retain];
+        [strDate release];
+        
+        [strRating retain];
+        [strRating release];
+        
+        [strUser retain];
+        [strUser release];
+        
+        [ratingsID retain];
+        [ratingsID release];
+        
     }
     
     [productDetailsResponse addObject:[tempReview copy]];
-       
+    
     AssetsDataEntity *assetsData = [SharedObjects sharedInstance].assetsDataEntity;
     assetsData.keyValueArray = productDetailsResponseOne;
     [self.callBackTarget performSelectorOnMainThread:self.callBackSelector withObject:productDetailsResponse waitUntilDone:NO];	
+    
+    
+    [ValueID retain];
+    [ValueID release];
+    
+    [newArray retain];
+    [newArray release];
+    
+    
+    [strAvg retain];
+    [strAvg release];
+    
+    [productDetailsResponse retain];
+    [productDetailsResponse release];
+    
+    [productDetailsResponseOne retain];
+    [productDetailsResponseOne release];
 }
 
 
@@ -631,36 +762,36 @@
     [configReader parseXMLFileAtURL:@"phresco-env-config" environment:@"myWebservice"];
     
     /*if(filePath)
-    {
-        NSDictionary *dictionary = [NSDictionary dictionaryWithContentsOfFile:filePath];*/
-        
+     {
+     NSDictionary *dictionary = [NSDictionary dictionaryWithContentsOfFile:filePath];*/
+    
     NSString *protocol = [[configReader.stories objectAtIndex: 0] objectForKey:kwebserviceprotocol];
     protocol = [protocol stringByTrimmingCharactersInSet:
                 [NSCharacterSet whitespaceAndNewlineCharacterSet]];
-        
+    
     NSString *host = [[configReader.stories objectAtIndex: 0] objectForKey:kwebservicehost];
     host = [host stringByTrimmingCharactersInSet:
             [NSCharacterSet whitespaceAndNewlineCharacterSet]];
-        
+    
     NSString *port = [[configReader.stories objectAtIndex: 0] objectForKey:kwebserviceport];
     port = [port stringByTrimmingCharactersInSet:
             [NSCharacterSet whitespaceAndNewlineCharacterSet]];
-        
-        NSString *context = [[configReader.stories objectAtIndex: 0] objectForKey:kwebservicecontext];
-        context = [context stringByTrimmingCharactersInSet:
-                   [NSCharacterSet whitespaceAndNewlineCharacterSet]];
-        
-        NSString *urlString = [NSString stringWithFormat:@"%@://%@:%@/%@/%@/%@", protocol,host, port, context, kRestApi,kSpecialproducts];
-        NSLog(@"urlString %@",urlString);
-        
-        [[ConnectionManager sharedConnections] serviceCallWithURL:urlString 
-                                                         httpBody:@"" 
-                                                       httpMethod:@"GET" 
-                                                   callBackTarget:self 
-                                                 callBackSelector:@selector(specialProductsServiceDone:) 
-                                                       callBackID:[[ConnectionManager sharedConnections] getCallbackID]];
+    
+    NSString *context = [[configReader.stories objectAtIndex: 0] objectForKey:kwebservicecontext];
+    context = [context stringByTrimmingCharactersInSet:
+               [NSCharacterSet whitespaceAndNewlineCharacterSet]];
+    
+    NSString *urlString = [NSString stringWithFormat:@"%@://%@:%@/%@/%@/%@", protocol,host, port, context, kRestApi,kSpecialproducts];
+    NSLog(@"urlString %@",urlString);
+    
+    [[ConnectionManager sharedConnections] serviceCallWithURL:urlString 
+                                                     httpBody:@"" 
+                                                   httpMethod:@"GET" 
+                                               callBackTarget:self 
+                                             callBackSelector:@selector(specialProductsServiceDone:) 
+                                                   callBackID:[[ConnectionManager sharedConnections] getCallbackID]];
     //}		
-
+    
 }
 
 -(void) specialProductsServiceDone:(NSMutableDictionary*) responseDataDict 
@@ -669,7 +800,6 @@
 	
 	
     NSMutableArray *productDetailsResponse;
-    productDetailsResponse = [[NSMutableArray alloc]init];
     
     NSString *responseResultString = [[NSString alloc] initWithData:responseData encoding:NSUTF8StringEncoding];
     
@@ -726,12 +856,46 @@
         
         [productDetailsResponse addObject:[dictCat copy]];
         
+        [strText retain]; 
+        [strText release];
+        
+        [striD  retain];
+        [striD release];
+        
+        [strImg retain];
+        [strImg release];
+        
+        [strName retain];
+        [strName release];
+        
+        [strListprice retain];
+        [strListprice release];
+        
+        [strDescription retain];
+        [strDescription release];
+        
+        [strDetails  retain];
+        [strDetails release]; 
+        
+        [ValDetail retain];
+        [ValDetail release];
+        
+        
+        
     }
     
     //Ended for new portal
 	
 	[self.callBackTarget performSelectorOnMainThread:self.callBackSelector withObject:productDetailsResponse waitUntilDone:NO];	
-
+    
+    [ValueID retain];
+    [ValueID release];
+    
+    [dictCat retain];
+    [dictCat release];
+    
+    [productDetailsResponse retain];
+    [productDetailsResponse release];
     
 }
 -(void) searchProductsService:(id)callBackTargetMethod: (SEL)callBackSelectorMethod
@@ -744,38 +908,38 @@
     ConfigurationReader *configReader = [[ConfigurationReader alloc]init];
     [configReader parseXMLFileAtURL:@"phresco-env-config" environment:@"myWebservice"];
     
-   /* if(filePath)
-    {
-        NSDictionary *dictionary = [NSDictionary dictionaryWithContentsOfFile:filePath];*/
-        
+    /* if(filePath)
+     {
+     NSDictionary *dictionary = [NSDictionary dictionaryWithContentsOfFile:filePath];*/
+    
     NSString *protocol = [[configReader.stories objectAtIndex: 0] objectForKey:kwebserviceprotocol];
     protocol = [protocol stringByTrimmingCharactersInSet:
                 [NSCharacterSet whitespaceAndNewlineCharacterSet]];
-        
+    
     NSString *host = [[configReader.stories objectAtIndex: 0] objectForKey:kwebservicehost];
     host = [host stringByTrimmingCharactersInSet:
             [NSCharacterSet whitespaceAndNewlineCharacterSet]];
-        
+    
     NSString *port = [[configReader.stories objectAtIndex: 0] objectForKey:kwebserviceport];
     port = [port stringByTrimmingCharactersInSet:
             [NSCharacterSet whitespaceAndNewlineCharacterSet]];
-        
+    
     NSString *context = [[configReader.stories objectAtIndex: 0] objectForKey:kwebservicecontext];
     context = [context stringByTrimmingCharactersInSet:
                [NSCharacterSet whitespaceAndNewlineCharacterSet]]; 
-        
-        NSString *urlString = [NSString stringWithFormat:@"%@://%@:%@/%@/%@/%@/%@/%@", protocol,host, port, context, kRestApi, kProductService,ksearch,productName];
-        
-        NSLog(@"url string:%@", urlString);
-        
-        [[ConnectionManager sharedConnections] serviceCallWithURL:urlString 
-                                                         httpBody:@"" 
-                                                       httpMethod:@"GET" 
-                                                   callBackTarget:self 
-                                                 callBackSelector:@selector(searchProductsServiceDone:) 
-                                                       callBackID:[[ConnectionManager sharedConnections] getCallbackID]];
+    
+    NSString *urlString = [NSString stringWithFormat:@"%@://%@:%@/%@/%@/%@/%@/%@", protocol,host, port, context, kRestApi, kProductService,ksearch,productName];
+    
+    NSLog(@"url string:%@", urlString);
+    
+    [[ConnectionManager sharedConnections] serviceCallWithURL:urlString 
+                                                     httpBody:@"" 
+                                                   httpMethod:@"GET" 
+                                               callBackTarget:self 
+                                             callBackSelector:@selector(searchProductsServiceDone:) 
+                                                   callBackID:[[ConnectionManager sharedConnections] getCallbackID]];
     //}		
-
+    
 }
 
 -(void) searchProductsServiceDone:(NSMutableDictionary*) responseDataDict 
@@ -832,12 +996,38 @@
         [productDetailsResponse addObject:[dictCat copy]];
         
         
-    }    
+        [strText retain]; 
+        [strText release];
         
+        [striD  retain];
+        [striD release];
+        
+        [strImg retain];
+        [strImg release];
+        
+        [strName retain];
+        [strName release];
+        
+        [strListprice retain];
+        [strListprice release];
+        
+        
+    }    
+    
 	[string release];
 	
 	[self.callBackTarget performSelectorOnMainThread:self.callBackSelector withObject:productDetailsResponse waitUntilDone:NO];	
-
+    
+    
+    [ValueID retain];
+    [ValueID release];
+    
+    [dictCat retain];
+    [dictCat release];
+    
+    [productDetailsResponse retain];
+    [productDetailsResponse release];
+    
 }
 - (void) productReviewCommentService:(id)callBackTargetMethod: (SEL)callBackSelectorMethod
 {
@@ -850,44 +1040,43 @@
     [configReader parseXMLFileAtURL:@"phresco-env-config" environment:@"myWebservice"];
     
     /*if(filePath)
-    {
-        NSDictionary *dictionary = [NSDictionary dictionaryWithContentsOfFile:filePath];*/
-        
+     {
+     NSDictionary *dictionary = [NSDictionary dictionaryWithContentsOfFile:filePath];*/
+    
     NSString *protocol = [[configReader.stories objectAtIndex: 0] objectForKey:kwebserviceprotocol];
     protocol = [protocol stringByTrimmingCharactersInSet:
                 [NSCharacterSet whitespaceAndNewlineCharacterSet]];
-        
+    
     NSString *host = [[configReader.stories objectAtIndex: 0] objectForKey:kwebservicehost];
     host = [host stringByTrimmingCharactersInSet:
             [NSCharacterSet whitespaceAndNewlineCharacterSet]];
-        
+    
     NSString *port = [[configReader.stories objectAtIndex: 0] objectForKey:kwebserviceport];
     port = [port stringByTrimmingCharactersInSet:
             [NSCharacterSet whitespaceAndNewlineCharacterSet]];
-        
-        NSString *context = [[configReader.stories objectAtIndex: 0] objectForKey:kwebservicecontext];
-        context = [context stringByTrimmingCharactersInSet:
-                   [NSCharacterSet whitespaceAndNewlineCharacterSet]];
-        
-        NSString *urlString = [NSString stringWithFormat:@"%@://%@:%@/%@/%@/%@/%@/%@", protocol,host, port, context, kRestApi,kProductService,strId,kreview];
-        NSLog(@"urlString %@",urlString);
-        
-        [[ConnectionManager sharedConnections] serviceCallWithURL:urlString 
-                                                         httpBody:@"" 
-                                                       httpMethod:@"GET" 
-                                                   callBackTarget:self 
-                                                 callBackSelector:@selector(productReviewCommentServiceDone:) 
-                                                       callBackID:[[ConnectionManager sharedConnections] getCallbackID]];
+    
+    NSString *context = [[configReader.stories objectAtIndex: 0] objectForKey:kwebservicecontext];
+    context = [context stringByTrimmingCharactersInSet:
+               [NSCharacterSet whitespaceAndNewlineCharacterSet]];
+    
+    NSString *urlString = [NSString stringWithFormat:@"%@://%@:%@/%@/%@/%@/%@/%@", protocol,host, port, context, kRestApi,kProductService,strId,kreview];
+    NSLog(@"urlString %@",urlString);
+    
+    [[ConnectionManager sharedConnections] serviceCallWithURL:urlString 
+                                                     httpBody:@"" 
+                                                   httpMethod:@"GET" 
+                                               callBackTarget:self 
+                                             callBackSelector:@selector(productReviewCommentServiceDone:) 
+                                                   callBackID:[[ConnectionManager sharedConnections] getCallbackID]];
     //}		
-
+    
 }
 
 -(void) productReviewCommentServiceDone:(NSMutableDictionary*) responseDataDict
 {
-
+    
     NSData *responseData = [responseDataDict objectForKey:kConnectionDataReceived];
     NSMutableArray *productDetailsResponse;
-    productDetailsResponse = [[NSMutableArray alloc]init];
     NSString *responseResultString = [[NSString alloc] initWithData:responseData encoding:NSUTF8StringEncoding];
     
     debug(@"prod desc STR:%@ ",responseResultString);
@@ -907,12 +1096,12 @@
     NSDictionary *tempArray = [NSDictionary dictionaryWithDictionary:data];
     NSMutableArray *ValueID =  [[NSMutableArray alloc]init];
     NSDictionary *tempReview = [tempArray objectForKey:@"review"];
-        
+    
     NSDictionary *tempComments = [NSDictionary dictionaryWithDictionary:tempReview];
     productDetailsResponse =  [[NSMutableArray alloc]init];
     ValueID =  [tempComments objectForKey:@"comments"];
     
-       
+    
     for (tempComments in ValueID) {
         
         NSMutableString *strComment=[[NSMutableString alloc]init];
@@ -926,10 +1115,29 @@
         strUser = [tempComments objectForKey:@"user"];
         [productDetailsResponse addObject:[tempComments copy]];
         
+        
+        [strComment retain];
+        [strComment release];
+        
+        [strDate retain];
+        [strDate release];
+        
+        [strRating retain];
+        [strRating release];
+        
+        [strUser retain];
+        [strUser release];
+        
     }//Ended for new portal
     
-   
+    
     [self.callBackTarget performSelectorOnMainThread:self.callBackSelector withObject:productDetailsResponse waitUntilDone:NO];	
+    
+    [ValueID retain];
+    [ValueID release];
+    
+    [productDetailsResponse retain];
+    [productDetailsResponse release];
 }
 
 
