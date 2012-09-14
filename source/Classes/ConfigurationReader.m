@@ -97,6 +97,7 @@
             [item setObject:currentLink forKey:@"port"];
             [item setObject:currentSummary forKey:@"protocol"];
             [item setObject:currentDate forKey:@"context"];
+            [item setObject:thisLength forKey:@"name"];
             NSLog(@"currentDate: %@", currentDate);
             [stories addObject:[item copy]];
             NSLog(@"adding story: %@", currentTitle);
@@ -118,6 +119,8 @@
 		[currentSummary appendString:string];
 	} else if ([currentElement isEqualToString:@"context"]) {
 		[currentDate appendString:string];
+    }  else if ([currentElement isEqualToString:@"name"]) {
+		[thisLength appendString:string];
     }
          
      }

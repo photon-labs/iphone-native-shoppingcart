@@ -18,16 +18,25 @@
   ###
   -->
 <environments>
-    <environment name="Dev" default="true">
-        <WebService name="mywebservice">
-            <host>172.16.17.180</host>
+    <environment default="true" name="Production">
+        <WebService name="eshop">
             <port>2020</port>
-            <protocol>http</protocol>
+            <password/>
             <context>eshop</context>
-            <username>admin</username>
-            <password>admin</password>
+            <host>172.16.17.180</host>
+            <protocol>http</protocol>
+            <username/>
+        </WebService>
+        <WebService name="Store">
+            <port>8080</port>
+            <password/>
+            <context>eshop</context>
+            <host>172.16.17.180</host>
+            <protocol>http</protocol>
+            <username/>
         </WebService>
     </environment>
+
 </environments>
 
 

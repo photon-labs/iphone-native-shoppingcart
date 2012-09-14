@@ -112,19 +112,31 @@ static int extraAssetsCounter = 0;
             
            // NSDictionary *dictionary = [NSDictionary dictionaryWithContentsOfFile:filePath];
             
-        NSString *protocol = [[configReader.stories objectAtIndex: 0] objectForKey:kwebserviceprotocol];
+        int j=0;
+        for (int i=0; i<[configReader.stories count]; i++) {
+            NSLog(@"i:%d",i);
+            NSString *strName = [[configReader.stories objectAtIndex: i] objectForKey:@"name"];
+            NSLog(@"strName:%@",strName);
+            if ([strName isEqualToString: @"eshop"]) {
+                j=i;
+                NSLog(@"j:%d",j);
+            }
+        }
+        NSLog(@"jj:%d",j);
+        
+        NSString *protocol = [[configReader.stories objectAtIndex: j] objectForKey:kwebserviceprotocol];
         protocol = [protocol stringByTrimmingCharactersInSet:
                     [NSCharacterSet whitespaceAndNewlineCharacterSet]];
             
-        NSString *host = [[configReader.stories objectAtIndex: 0] objectForKey:kwebservicehost];
+        NSString *host = [[configReader.stories objectAtIndex: j] objectForKey:kwebservicehost];
         host = [host stringByTrimmingCharactersInSet:
                 [NSCharacterSet whitespaceAndNewlineCharacterSet]];
             
-        NSString *port = [[configReader.stories objectAtIndex: 0] objectForKey:kwebserviceport];
+        NSString *port = [[configReader.stories objectAtIndex: j] objectForKey:kwebserviceport];
         port = [port stringByTrimmingCharactersInSet:
                 [NSCharacterSet whitespaceAndNewlineCharacterSet]];
             
-        NSString *context = [[configReader.stories objectAtIndex: 0] objectForKey:kwebservicecontext];
+        NSString *context = [[configReader.stories objectAtIndex: j] objectForKey:kwebservicecontext];
         context = [context stringByTrimmingCharactersInSet:
                    [NSCharacterSet whitespaceAndNewlineCharacterSet]];
         
