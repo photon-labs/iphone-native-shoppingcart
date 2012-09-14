@@ -36,7 +36,7 @@
 	NSMutableArray * stories;
     
     NSString *thisURL;
-    NSString *thisLength;
+    NSMutableString *thisLength;
     NSString *envVar;
     NSString *currentNode;
 	
