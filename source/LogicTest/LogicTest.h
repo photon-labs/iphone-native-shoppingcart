@@ -1,9 +1,9 @@
 //
-//  AllTest.h
-//  AllTest
+//  LogicTest.h
+//  LogicTest
 //
-//  Created by Administrator on 20/06/12.
-//  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
+//  Created by Sathiyasuresh on 05/10/12.
+//
 //
 
 #import <SenTestingKit/SenTestingKit.h>
@@ -24,9 +24,8 @@
 #import "LoginViewController.h"
 #import "RegistrationViewController.h"
 #import "SpecialOffersViewController.h"
-
-@interface AllTest : SenTestCase
-{
+@interface LogicTest : SenTestCase{
+    
 @private
     iShopAppDelegate *appDelegate;
     RootViewController *rootController;
@@ -47,5 +46,4 @@
     UITableView *tblView;
 }
 
--(void) testAction;
 @end
