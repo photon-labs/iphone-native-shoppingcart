@@ -260,9 +260,15 @@
 		C38975C815920AF700426D92 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
 		C38975CE15920AF700426D92 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C38975CC15920AF700426D92 /* InfoPlist.strings */; };
 		C38975D115920AF700426D92 /* AllTest.m in Sources */ = {isa = PBXBuildFile; fileRef = C38975D015920AF700426D92 /* AllTest.m */; };
-		C391BAB4161EAAD400EE3495 /* GDataXMLNode.m in Sources */ = {isa = PBXBuildFile; fileRef = C391BAB2161EAAD400EE3495 /* GDataXMLNode.m */; };
-		C391BAB5161EAAD400EE3495 /* OCUnitToJUnitLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = C391BAB3161EAAD400EE3495 /* OCUnitToJUnitLogger.m */; };
 		C391BAB7161EAB2E00EE3495 /* libxml2.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = C391BAB6161EAB2E00EE3495 /* libxml2.2.dylib */; };
+		C391BAEA161EAED600EE3495 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4812FA114D284E900903F99 /* SenTestingKit.framework */; };
+		C391BAEB161EAED600EE3495 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
+		C391BAEC161EAED600EE3495 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
+		C391BAF2161EAED600EE3495 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C391BAF0161EAED600EE3495 /* InfoPlist.strings */; };
+		C391BAF5161EAED600EE3495 /* ApplicationTest.m in Sources */ = {isa = PBXBuildFile; fileRef = C391BAF4161EAED600EE3495 /* ApplicationTest.m */; };
+		C391BAFE161EAF3B00EE3495 /* GDataXMLNode.m in Sources */ = {isa = PBXBuildFile; fileRef = C391BAFC161EAF3B00EE3495 /* GDataXMLNode.m */; };
+		C391BAFF161EAF3B00EE3495 /* OCUnitToJUnitLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = C391BAFD161EAF3B00EE3495 /* OCUnitToJUnitLogger.m */; };
+		C391BB00161EAF4600EE3495 /* libxml2.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = C391BAB6161EAB2E00EE3495 /* libxml2.2.dylib */; };
 		C396643F155CEEA00077E4BB /* phresco-env-config.xml in Resources */ = {isa = PBXBuildFile; fileRef = C396643E155CEEA00077E4BB /* phresco-env-config.xml */; };
 		C3C76D0D155953A40096FB7D /* Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = C3C76D08155953A40096FB7D /* Base64.m */; };
 		C3C76D0E155953A40096FB7D /* NSData-AES.m in Sources */ = {isa = PBXBuildFile; fileRef = C3C76D0A155953A40096FB7D /* NSData-AES.m */; };
@@ -579,10 +585,16 @@
 		C38975CF15920AF700426D92 /* AllTest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AllTest.h; sourceTree = "<group>"; };
 		C38975D015920AF700426D92 /* AllTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AllTest.m; sourceTree = "<group>"; };
 		C38975D215920AF700426D92 /* AllTest-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AllTest-Prefix.pch"; sourceTree = "<group>"; };
-		C391BAB1161EAAD400EE3495 /* GDataXMLNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GDataXMLNode.h; path = "ThirdParty/OCUnitReportLogger-1.0/GDataXMLNode.h"; sourceTree = SOURCE_ROOT; };
-		C391BAB2161EAAD400EE3495 /* GDataXMLNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GDataXMLNode.m; path = "ThirdParty/OCUnitReportLogger-1.0/GDataXMLNode.m"; sourceTree = SOURCE_ROOT; };
-		C391BAB3161EAAD400EE3495 /* OCUnitToJUnitLogger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OCUnitToJUnitLogger.m; path = "ThirdParty/OCUnitReportLogger-1.0/OCUnitToJUnitLogger.m"; sourceTree = SOURCE_ROOT; };
 		C391BAB6161EAB2E00EE3495 /* libxml2.2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.2.dylib; path = usr/lib/libxml2.2.dylib; sourceTree = SDKROOT; };
+		C391BAE9161EAED600EE3495 /* ApplicationTest.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ApplicationTest.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C391BAEF161EAED600EE3495 /* ApplicationTest-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ApplicationTest-Info.plist"; sourceTree = "<group>"; };
+		C391BAF1161EAED600EE3495 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		C391BAF3161EAED600EE3495 /* ApplicationTest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ApplicationTest.h; sourceTree = "<group>"; };
+		C391BAF4161EAED600EE3495 /* ApplicationTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ApplicationTest.m; sourceTree = "<group>"; };
+		C391BAF6161EAED600EE3495 /* ApplicationTest-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ApplicationTest-Prefix.pch"; sourceTree = "<group>"; };
+		C391BAFB161EAF3B00EE3495 /* GDataXMLNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GDataXMLNode.h; path = "ThirdParty/OCUnitReportLogger-1.0/GDataXMLNode.h"; sourceTree = SOURCE_ROOT; };
+		C391BAFC161EAF3B00EE3495 /* GDataXMLNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GDataXMLNode.m; path = "ThirdParty/OCUnitReportLogger-1.0/GDataXMLNode.m"; sourceTree = SOURCE_ROOT; };
+		C391BAFD161EAF3B00EE3495 /* OCUnitToJUnitLogger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OCUnitToJUnitLogger.m; path = "ThirdParty/OCUnitReportLogger-1.0/OCUnitToJUnitLogger.m"; sourceTree = SOURCE_ROOT; };
 		C396643E155CEEA00077E4BB /* phresco-env-config.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "phresco-env-config.xml"; sourceTree = "<group>"; };
 		C3C76D07155953A40096FB7D /* Base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Base64.h; sourceTree = "<group>"; };
 		C3C76D08155953A40096FB7D /* Base64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Base64.m; sourceTree = "<group>"; };
@@ -627,6 +639,17 @@
 				C38975C615920AF700426D92 /* SenTestingKit.framework in Frameworks */,
 				C38975C715920AF700426D92 /* UIKit.framework in Frameworks */,
 				C38975C815920AF700426D92 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C391BAE5161EAED600EE3495 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C391BB00161EAF4600EE3495 /* libxml2.2.dylib in Frameworks */,
+				C391BAEA161EAED600EE3495 /* SenTestingKit.framework in Frameworks */,
+				C391BAEB161EAED600EE3495 /* UIKit.framework in Frameworks */,
+				C391BAEC161EAED600EE3495 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -680,6 +703,7 @@
 			children = (
 				1D6058910D05DD3D006BFB54 /* Phresco.app */,
 				C38975C515920AF700426D92 /* AllTest.octest */,
+				C391BAE9161EAED600EE3495 /* ApplicationTest.octest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -736,6 +760,7 @@
 				29B97315FDCFA39411CA2CEA /* Other Sources */,
 				29B97317FDCFA39411CA2CEA /* Resources */,
 				C38975C915920AF700426D92 /* AllTest */,
+				C391BAED161EAED600EE3495 /* ApplicationTest */,
 				29B97323FDCFA39411CA2CEA /* Frameworks */,
 				19C28FACFE9D520D11CA2CBB /* Products */,
 				0444E6EC136AE3EC0030F785 /* UnitTests-Info.plist */,
@@ -1310,9 +1335,6 @@
 		C38975C915920AF700426D92 /* AllTest */ = {
 			isa = PBXGroup;
 			children = (
-				C391BAB1161EAAD400EE3495 /* GDataXMLNode.h */,
-				C391BAB2161EAAD400EE3495 /* GDataXMLNode.m */,
-				C391BAB3161EAAD400EE3495 /* OCUnitToJUnitLogger.m */,
 				C38975CF15920AF700426D92 /* AllTest.h */,
 				C38975D015920AF700426D92 /* AllTest.m */,
 				C38975CA15920AF700426D92 /* Supporting Files */,
@@ -1326,6 +1348,29 @@
 				C38975CB15920AF700426D92 /* AllTest-Info.plist */,
 				C38975CC15920AF700426D92 /* InfoPlist.strings */,
 				C38975D215920AF700426D92 /* AllTest-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C391BAED161EAED600EE3495 /* ApplicationTest */ = {
+			isa = PBXGroup;
+			children = (
+				C391BAFB161EAF3B00EE3495 /* GDataXMLNode.h */,
+				C391BAFC161EAF3B00EE3495 /* GDataXMLNode.m */,
+				C391BAFD161EAF3B00EE3495 /* OCUnitToJUnitLogger.m */,
+				C391BAF3161EAED600EE3495 /* ApplicationTest.h */,
+				C391BAF4161EAED600EE3495 /* ApplicationTest.m */,
+				C391BAEE161EAED600EE3495 /* Supporting Files */,
+			);
+			path = ApplicationTest;
+			sourceTree = "<group>";
+		};
+		C391BAEE161EAED600EE3495 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				C391BAEF161EAED600EE3495 /* ApplicationTest-Info.plist */,
+				C391BAF0161EAED600EE3495 /* InfoPlist.strings */,
+				C391BAF6161EAED600EE3495 /* ApplicationTest-Prefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -1399,6 +1444,24 @@
 			productReference = C38975C515920AF700426D92 /* AllTest.octest */;
 			productType = "com.apple.product-type.bundle";
 		};
+		C391BAE8161EAED600EE3495 /* ApplicationTest */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C391BAF9161EAED600EE3495 /* Build configuration list for PBXNativeTarget "ApplicationTest" */;
+			buildPhases = (
+				C391BAE4161EAED600EE3495 /* Sources */,
+				C391BAE5161EAED600EE3495 /* Frameworks */,
+				C391BAE6161EAED600EE3495 /* Resources */,
+				C391BAE7161EAED600EE3495 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ApplicationTest;
+			productName = ApplicationTest;
+			productReference = C391BAE9161EAED600EE3495 /* ApplicationTest.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -1421,6 +1484,7 @@
 			targets = (
 				1D6058900D05DD3D006BFB54 /* Phresco */,
 				C38975C415920AF700426D92 /* AllTest */,
+				C391BAE8161EAED600EE3495 /* ApplicationTest */,
 			);
 		};
 /* End PBXProject section */
@@ -1636,10 +1700,31 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		C391BAE6161EAED600EE3495 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C391BAF2161EAED600EE3495 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
 		C38975C315920AF700426D92 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+		C391BAE7161EAED600EE3495 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -1721,8 +1806,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				C38975D115920AF700426D92 /* AllTest.m in Sources */,
-				C391BAB4161EAAD400EE3495 /* GDataXMLNode.m in Sources */,
-				C391BAB5161EAAD400EE3495 /* OCUnitToJUnitLogger.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C391BAE4161EAED600EE3495 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C391BAF5161EAED600EE3495 /* ApplicationTest.m in Sources */,
+				C391BAFE161EAF3B00EE3495 /* GDataXMLNode.m in Sources */,
+				C391BAFF161EAF3B00EE3495 /* OCUnitToJUnitLogger.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1733,6 +1826,14 @@
 			isa = PBXVariantGroup;
 			children = (
 				C38975CD15920AF700426D92 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		C391BAF0161EAED600EE3495 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C391BAF1161EAED600EE3495 /* en */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -1890,6 +1991,72 @@
 			};
 			name = Release;
 		};
+		C391BAF7161EAED600EE3495 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Phresco.app/Phresco";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+					"\"$(SRCROOT)\"",
+				);
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ApplicationTest/ApplicationTest-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				HEADER_SEARCH_PATHS = /usr/include/libxml2;
+				INFOPLIST_FILE = "ApplicationTest/ApplicationTest-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		C391BAF8161EAED600EE3495 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Phresco.app/Phresco";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+					"\"$(SRCROOT)\"",
+				);
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ApplicationTest/ApplicationTest-Prefix.pch";
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				HEADER_SEARCH_PATHS = /usr/include/libxml2;
+				INFOPLIST_FILE = "ApplicationTest/ApplicationTest-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				VALIDATE_PRODUCT = YES;
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -1919,6 +2086,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		C391BAF9161EAED600EE3495 /* Build configuration list for PBXNativeTarget "ApplicationTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C391BAF7161EAED600EE3495 /* Debug */,
+				C391BAF8161EAED600EE3495 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};
