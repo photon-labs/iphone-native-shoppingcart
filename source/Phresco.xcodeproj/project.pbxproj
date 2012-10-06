@@ -143,7 +143,6 @@
 		A464A736135817AB00452CB2 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A464A735135817AB00452CB2 /* SystemConfiguration.framework */; };
 		A464A74C135817C800452CB2 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A464A74B135817C800452CB2 /* Security.framework */; };
 		A4811BD414B2CB0E00F5E8B0 /* AddtoBagCustomCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A4811BD314B2CB0E00F5E8B0 /* AddtoBagCustomCell.m */; };
-		A4812FA214D284E900903F99 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4812FA114D284E900903F99 /* SenTestingKit.framework */; };
 		A481306F14D2FFD900903F99 /* categorylist_header.png in Resources */ = {isa = PBXBuildFile; fileRef = A481306D14D2FFD700903F99 /* categorylist_header.png */; };
 		A481307014D2FFD900903F99 /* categorylist_top_row.png in Resources */ = {isa = PBXBuildFile; fileRef = A481306E14D2FFD800903F99 /* categorylist_top_row.png */; };
 		A48852F614D669D900B07F65 /* home_btn_highlighted-72.png in Resources */ = {isa = PBXBuildFile; fileRef = A48852EB14D669D900B07F65 /* home_btn_highlighted-72.png */; };
@@ -215,10 +214,7 @@
 		C371A82F161F34140093A041 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C371A82D161F34140093A041 /* InfoPlist.strings */; };
 		C371A832161F34140093A041 /* LogicTest.m in Sources */ = {isa = PBXBuildFile; fileRef = C371A831161F34140093A041 /* LogicTest.m */; };
 		C371A842161F34340093A041 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C371A839161F34340093A041 /* InfoPlist.strings */; };
-		C371A843161F34340093A041 /* GDataXMLNode.m in Sources */ = {isa = PBXBuildFile; fileRef = C371A83C161F34340093A041 /* GDataXMLNode.m */; };
 		C371A844161F34340093A041 /* LogicTest-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C371A83D161F34340093A041 /* LogicTest-Info.plist */; };
-		C371A845161F34340093A041 /* LogicTest.m in Sources */ = {isa = PBXBuildFile; fileRef = C371A840161F34340093A041 /* LogicTest.m */; };
-		C371A846161F34340093A041 /* OCUnitToJUnitLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = C371A841161F34340093A041 /* OCUnitToJUnitLogger.m */; };
 		C371A847161F34440093A041 /* libxml2.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = C391BAB6161EAB2E00EE3495 /* libxml2.2.dylib */; };
 		C371A848161F34510093A041 /* GDataXMLNode.m in Sources */ = {isa = PBXBuildFile; fileRef = C371A83C161F34340093A041 /* GDataXMLNode.m */; };
 		C371A849161F34580093A041 /* OCUnitToJUnitLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = C371A841161F34340093A041 /* OCUnitToJUnitLogger.m */; };
@@ -642,7 +638,6 @@
 				A464A74C135817C800452CB2 /* Security.framework in Frameworks */,
 				A41E31F31369857E002D9022 /* QuartzCore.framework in Frameworks */,
 				A4BC6940138A7D87005A63E1 /* MessageUI.framework in Frameworks */,
-				A4812FA214D284E900903F99 /* SenTestingKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1831,9 +1826,6 @@
 				EAB181E515C00216000DBF09 /* SBJsonBase.m in Sources */,
 				EAB181E615C00216000DBF09 /* SBJsonParser.m in Sources */,
 				EAB181E715C00216000DBF09 /* SBJsonWriter.m in Sources */,
-				C371A843161F34340093A041 /* GDataXMLNode.m in Sources */,
-				C371A845161F34340093A041 /* LogicTest.m in Sources */,
-				C371A846161F34340093A041 /* OCUnitToJUnitLogger.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1895,11 +1887,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer: Mukund Balasubramanian (JJ5TQ44E7M)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Mukund Balasubramanian (JJ5TQ44E7M)";
 				COPY_PHASE_STRIP = NO;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(SRCROOT)\"",
-					"\"$(SRCROOT)/ThirdParty/GHUnit\"",
-				);
+				FRAMEWORK_SEARCH_PATHS = "";
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -1924,11 +1912,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer: Mukund Balasubramanian (JJ5TQ44E7M)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Mukund Balasubramanian (JJ5TQ44E7M)";
 				COPY_PHASE_STRIP = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(SRCROOT)\"",
-					"\"$(SRCROOT)/ThirdParty/GHUnit\"",
-				);
+				FRAMEWORK_SEARCH_PATHS = "";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = Phresco_Prefix.pch;
 				GCC_PREPROCESSOR_DEFINITIONS = "";
@@ -2135,6 +2119,7 @@
 				C371A835161F34140093A041 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C391BAF9161EAED600EE3495 /* Build configuration list for PBXNativeTarget "ApplicationTest" */ = {
 			isa = XCConfigurationList;
