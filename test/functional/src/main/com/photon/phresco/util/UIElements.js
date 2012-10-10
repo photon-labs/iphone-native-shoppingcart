@@ -1,36 +1,17 @@
+/*   UI elements BestBuy-Ipad Application for PDTS */
+ 
+
+
+/*  **********List of UI-elements **************   */
+
+ 
 
 var LoginButton = "Login";
 var RegistrationButton = "Register";
 var BrowseButton = "Browse";
 
-//var Browser=1;
-//var special = 2;
-//var category  =0;
-//var tv= 0;
-//var computer = 1;
-//var mobile = 2;
-//var tablet = 5;
-//var camera = 4;
-//var desc = 0;
-//var detaildesc_tv = 0;
-//var review = "review btn";
-//var back = "back btn";
-//var addtocart = "addtocart btn";
-//var addcart = "addtocart btn";
-//var quantity = 0;
-//var number = 2;
-//var Delete = 1;
-//var one = 0;
-//var Three = 3;
-//var done = 4;
-//var update = "updatecart btn";
-//var viewmycart = "viewmycart btn";
-//var checkout = "checkout btn";
-//var customer = 0;
-//var info = 0;
-//var delivery = 1;
-//var value = 2;
-//var jumpbtn = "jump btn";
+
+
 var add = "Address2";
 var first = "John";
 var last = "David";
@@ -42,19 +23,9 @@ var state = "NewJersey";
 var country = "USA";
 var code = "10019";
 var phoneno = "+1 212-398-2449";
-//var billing = 3;
-//var same = 4;
-//var sameaddress = "unchecked bok";
-//var payment = 5;
-//var mode = 6 ;
-//var cheque = "radio btn unchecked";
-//var cash = 1;
-//var order = 7;
-
-//var login = 3;
 
 
-var Email_id = "john@phresco.com";//Phresco@Photoninfotech.net //phresco
+var Email_id = "john@phresco.com"; 
 var password = "john";
 var RETURN = 4;
 //Accessibility labels
@@ -71,8 +42,8 @@ var buttonOk = "OkButton";
 var prodReview = "Review";
 var backButton = "Back";
 var addToCartButton = "AddToCart";
-//var register = 4;
-//var register2 = "register btn2";
+
+
 
 var updateCart = "UpdateCart";
 var viewMyCart = "NavigationCart";
