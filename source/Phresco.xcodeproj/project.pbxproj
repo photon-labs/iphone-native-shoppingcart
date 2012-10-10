@@ -213,8 +213,6 @@
 		C371A808161F32600093A041 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
 		C371A80E161F32600093A041 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C371A80C161F32600093A041 /* InfoPlist.strings */; };
 		C371A811161F32600093A041 /* LogicTest.m in Sources */ = {isa = PBXBuildFile; fileRef = C371A810161F32600093A041 /* LogicTest.m */; };
-		C371A818161F330B0093A041 /* OCUnitToJUnitLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = C371A817161F330B0093A041 /* OCUnitToJUnitLogger.m */; };
-		C371A81B161F33120093A041 /* GDataXMLNode.m in Sources */ = {isa = PBXBuildFile; fileRef = C371A81A161F33120093A041 /* GDataXMLNode.m */; };
 		C371A81C161F33510093A041 /* libxml2.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = C391BABD161EACAA00EE3495 /* libxml2.2.dylib */; };
 		C382545314DBBA7800002F27 /* RootViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C382545214DBBA7800002F27 /* RootViewController.xib */; };
 		C382545914DBBAF700002F27 /* HomeViewController-iPAd.xib in Resources */ = {isa = PBXBuildFile; fileRef = C382545514DBBAF700002F27 /* HomeViewController-iPAd.xib */; };
@@ -274,6 +272,8 @@
 		C3C76D0D155953A40096FB7D /* Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = C3C76D08155953A40096FB7D /* Base64.m */; };
 		C3C76D0E155953A40096FB7D /* NSData-AES.m in Sources */ = {isa = PBXBuildFile; fileRef = C3C76D0A155953A40096FB7D /* NSData-AES.m */; };
 		C3C76D0F155953A40096FB7D /* rijndael.c in Sources */ = {isa = PBXBuildFile; fileRef = C3C76D0B155953A40096FB7D /* rijndael.c */; };
+		E066A1471625915100A3775D /* GDataXMLNode.m in Sources */ = {isa = PBXBuildFile; fileRef = E066A1431625913700A3775D /* GDataXMLNode.m */; };
+		E066A1481625915100A3775D /* OCUnitToJUnitLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = E066A1441625913700A3775D /* OCUnitToJUnitLogger.m */; };
 		EAB181E315C00216000DBF09 /* NSObject+SBJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = EAB181DA15C00216000DBF09 /* NSObject+SBJSON.m */; };
 		EAB181E415C00216000DBF09 /* NSString+SBJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = EAB181DC15C00216000DBF09 /* NSString+SBJSON.m */; };
 		EAB181E515C00216000DBF09 /* SBJsonBase.m in Sources */ = {isa = PBXBuildFile; fileRef = EAB181DE15C00216000DBF09 /* SBJsonBase.m */; };
@@ -534,9 +534,6 @@
 		C371A80F161F32600093A041 /* LogicTest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LogicTest.h; sourceTree = "<group>"; };
 		C371A810161F32600093A041 /* LogicTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LogicTest.m; sourceTree = "<group>"; };
 		C371A812161F32600093A041 /* LogicTest-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LogicTest-Prefix.pch"; sourceTree = "<group>"; };
-		C371A817161F330B0093A041 /* OCUnitToJUnitLogger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCUnitToJUnitLogger.m; sourceTree = "<group>"; };
-		C371A819161F33120093A041 /* GDataXMLNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDataXMLNode.h; sourceTree = "<group>"; };
-		C371A81A161F33120093A041 /* GDataXMLNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GDataXMLNode.m; sourceTree = "<group>"; };
 		C382545214DBBA7800002F27 /* RootViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RootViewController.xib; sourceTree = "<group>"; };
 		C382545514DBBAF700002F27 /* HomeViewController-iPAd.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = "HomeViewController-iPAd.xib"; sourceTree = "<group>"; };
 		C382545614DBBAF700002F27 /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
@@ -606,6 +603,9 @@
 		C3C76D0A155953A40096FB7D /* NSData-AES.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData-AES.m"; sourceTree = "<group>"; };
 		C3C76D0B155953A40096FB7D /* rijndael.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = rijndael.c; sourceTree = "<group>"; };
 		C3C76D0C155953A40096FB7D /* rijndael.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = rijndael.h; sourceTree = "<group>"; };
+		E066A1421625913700A3775D /* GDataXMLNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GDataXMLNode.h; path = "../../../PHR_IphoneNativeNone/source/ThirdParty/OCUnitReportLogger-1.0/GDataXMLNode.h"; sourceTree = "<group>"; };
+		E066A1431625913700A3775D /* GDataXMLNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GDataXMLNode.m; path = "../../../PHR_IphoneNativeNone/source/ThirdParty/OCUnitReportLogger-1.0/GDataXMLNode.m"; sourceTree = "<group>"; };
+		E066A1441625913700A3775D /* OCUnitToJUnitLogger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OCUnitToJUnitLogger.m; path = "../../../PHR_IphoneNativeNone/source/ThirdParty/OCUnitReportLogger-1.0/OCUnitToJUnitLogger.m"; sourceTree = "<group>"; };
 		EAB181D815C00216000DBF09 /* JSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSON.h; sourceTree = "<group>"; };
 		EAB181D915C00216000DBF09 /* NSObject+SBJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+SBJSON.h"; sourceTree = "<group>"; };
 		EAB181DA15C00216000DBF09 /* NSObject+SBJSON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+SBJSON.m"; sourceTree = "<group>"; };
@@ -1241,9 +1241,9 @@
 		C371A809161F32600093A041 /* LogicTest */ = {
 			isa = PBXGroup;
 			children = (
-				C371A819161F33120093A041 /* GDataXMLNode.h */,
-				C371A81A161F33120093A041 /* GDataXMLNode.m */,
-				C371A817161F330B0093A041 /* OCUnitToJUnitLogger.m */,
+				E066A1421625913700A3775D /* GDataXMLNode.h */,
+				E066A1431625913700A3775D /* GDataXMLNode.m */,
+				E066A1441625913700A3775D /* OCUnitToJUnitLogger.m */,
 				C371A80F161F32600093A041 /* LogicTest.h */,
 				C371A810161F32600093A041 /* LogicTest.m */,
 				C371A80A161F32600093A041 /* Supporting Files */,
@@ -1811,9 +1811,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E066A1471625915100A3775D /* GDataXMLNode.m in Sources */,
+				E066A1481625915100A3775D /* OCUnitToJUnitLogger.m in Sources */,
 				C371A811161F32600093A041 /* LogicTest.m in Sources */,
-				C371A818161F330B0093A041 /* OCUnitToJUnitLogger.m in Sources */,
-				C371A81B161F33120093A041 /* GDataXMLNode.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1962,7 +1962,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				HEADER_SEARCH_PATHS = /usr/include/libxml2;
 				INFOPLIST_FILE = "LogicTest/LogicTest-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = octest;
 			};
@@ -1988,7 +1988,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				HEADER_SEARCH_PATHS = /usr/include/libxml2;
 				INFOPLIST_FILE = "LogicTest/LogicTest-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				VALIDATE_PRODUCT = YES;
 				WRAPPER_EXTENSION = octest;
