@@ -260,6 +260,8 @@
 		C385859414E00D1400F81380 /* product_viewlist_middle-72.png in Resources */ = {isa = PBXBuildFile; fileRef = C385859114E00D1400F81380 /* product_viewlist_middle-72.png */; };
 		C385859514E00D1400F81380 /* product_viewlist_top-72.png in Resources */ = {isa = PBXBuildFile; fileRef = C385859214E00D1400F81380 /* product_viewlist_top-72.png */; };
 		C385859714E014F300F81380 /* OrderStatusViewController-iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = C385859614E014F300F81380 /* OrderStatusViewController-iPad.xib */; };
+		C38C41591626E81F0081EDCB /* GDataXMLNode.m in Sources */ = {isa = PBXBuildFile; fileRef = C38C41571626E81F0081EDCB /* GDataXMLNode.m */; };
+		C38C415A1626E81F0081EDCB /* OCUnitToJUnitLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = C38C41581626E81F0081EDCB /* OCUnitToJUnitLogger.m */; };
 		C391BACA161EAD7A00EE3495 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4812FA114D284E900903F99 /* SenTestingKit.framework */; };
 		C391BACB161EAD7A00EE3495 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
 		C391BACC161EAD7A00EE3495 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
@@ -268,12 +270,11 @@
 		C391BADD161EAE4400EE3495 /* GDataXMLNode.m in Sources */ = {isa = PBXBuildFile; fileRef = C391BADB161EAE4400EE3495 /* GDataXMLNode.m */; };
 		C391BADE161EAE4400EE3495 /* OCUnitToJUnitLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = C391BADC161EAE4400EE3495 /* OCUnitToJUnitLogger.m */; };
 		C391BADF161EAE5900EE3495 /* libxml2.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = C391BABD161EACAA00EE3495 /* libxml2.2.dylib */; };
+		C39317AD162EB10B00904AEF /* Path.txt in Resources */ = {isa = PBXBuildFile; fileRef = C39317AC162EB10B00904AEF /* Path.txt */; };
 		C396643F155CEEA00077E4BB /* phresco-env-config.xml in Resources */ = {isa = PBXBuildFile; fileRef = C396643E155CEEA00077E4BB /* phresco-env-config.xml */; };
 		C3C76D0D155953A40096FB7D /* Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = C3C76D08155953A40096FB7D /* Base64.m */; };
 		C3C76D0E155953A40096FB7D /* NSData-AES.m in Sources */ = {isa = PBXBuildFile; fileRef = C3C76D0A155953A40096FB7D /* NSData-AES.m */; };
 		C3C76D0F155953A40096FB7D /* rijndael.c in Sources */ = {isa = PBXBuildFile; fileRef = C3C76D0B155953A40096FB7D /* rijndael.c */; };
-		E066A1471625915100A3775D /* GDataXMLNode.m in Sources */ = {isa = PBXBuildFile; fileRef = E066A1431625913700A3775D /* GDataXMLNode.m */; };
-		E066A1481625915100A3775D /* OCUnitToJUnitLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = E066A1441625913700A3775D /* OCUnitToJUnitLogger.m */; };
 		EAB181E315C00216000DBF09 /* NSObject+SBJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = EAB181DA15C00216000DBF09 /* NSObject+SBJSON.m */; };
 		EAB181E415C00216000DBF09 /* NSString+SBJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = EAB181DC15C00216000DBF09 /* NSString+SBJSON.m */; };
 		EAB181E515C00216000DBF09 /* SBJsonBase.m in Sources */ = {isa = PBXBuildFile; fileRef = EAB181DE15C00216000DBF09 /* SBJsonBase.m */; };
@@ -586,6 +587,9 @@
 		C385859114E00D1400F81380 /* product_viewlist_middle-72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "product_viewlist_middle-72.png"; sourceTree = "<group>"; };
 		C385859214E00D1400F81380 /* product_viewlist_top-72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "product_viewlist_top-72.png"; sourceTree = "<group>"; };
 		C385859614E014F300F81380 /* OrderStatusViewController-iPad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = "OrderStatusViewController-iPad.xib"; sourceTree = "<group>"; };
+		C38C41561626E81F0081EDCB /* GDataXMLNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDataXMLNode.h; sourceTree = "<group>"; };
+		C38C41571626E81F0081EDCB /* GDataXMLNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GDataXMLNode.m; sourceTree = "<group>"; };
+		C38C41581626E81F0081EDCB /* OCUnitToJUnitLogger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCUnitToJUnitLogger.m; sourceTree = "<group>"; };
 		C391BABD161EACAA00EE3495 /* libxml2.2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.2.dylib; path = usr/lib/libxml2.2.dylib; sourceTree = SDKROOT; };
 		C391BAC9161EAD7A00EE3495 /* ApplicationTest.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ApplicationTest.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C391BACF161EAD7A00EE3495 /* ApplicationTest-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ApplicationTest-Info.plist"; sourceTree = "<group>"; };
@@ -596,6 +600,7 @@
 		C391BADA161EAE4400EE3495 /* GDataXMLNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GDataXMLNode.h; path = "ThirdParty/OCUnitReportLogger-1.0/GDataXMLNode.h"; sourceTree = SOURCE_ROOT; };
 		C391BADB161EAE4400EE3495 /* GDataXMLNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GDataXMLNode.m; path = "ThirdParty/OCUnitReportLogger-1.0/GDataXMLNode.m"; sourceTree = SOURCE_ROOT; };
 		C391BADC161EAE4400EE3495 /* OCUnitToJUnitLogger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OCUnitToJUnitLogger.m; path = "ThirdParty/OCUnitReportLogger-1.0/OCUnitToJUnitLogger.m"; sourceTree = SOURCE_ROOT; };
+		C39317AC162EB10B00904AEF /* Path.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Path.txt; sourceTree = "<group>"; };
 		C396643E155CEEA00077E4BB /* phresco-env-config.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "phresco-env-config.xml"; sourceTree = "<group>"; };
 		C3C76D07155953A40096FB7D /* Base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Base64.h; sourceTree = "<group>"; };
 		C3C76D08155953A40096FB7D /* Base64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Base64.m; sourceTree = "<group>"; };
@@ -603,9 +608,6 @@
 		C3C76D0A155953A40096FB7D /* NSData-AES.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData-AES.m"; sourceTree = "<group>"; };
 		C3C76D0B155953A40096FB7D /* rijndael.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = rijndael.c; sourceTree = "<group>"; };
 		C3C76D0C155953A40096FB7D /* rijndael.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = rijndael.h; sourceTree = "<group>"; };
-		E066A1421625913700A3775D /* GDataXMLNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GDataXMLNode.h; path = "../../../PHR_IphoneNativeNone/source/ThirdParty/OCUnitReportLogger-1.0/GDataXMLNode.h"; sourceTree = "<group>"; };
-		E066A1431625913700A3775D /* GDataXMLNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GDataXMLNode.m; path = "../../../PHR_IphoneNativeNone/source/ThirdParty/OCUnitReportLogger-1.0/GDataXMLNode.m"; sourceTree = "<group>"; };
-		E066A1441625913700A3775D /* OCUnitToJUnitLogger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OCUnitToJUnitLogger.m; path = "../../../PHR_IphoneNativeNone/source/ThirdParty/OCUnitReportLogger-1.0/OCUnitToJUnitLogger.m"; sourceTree = "<group>"; };
 		EAB181D815C00216000DBF09 /* JSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSON.h; sourceTree = "<group>"; };
 		EAB181D915C00216000DBF09 /* NSObject+SBJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+SBJSON.h"; sourceTree = "<group>"; };
 		EAB181DA15C00216000DBF09 /* NSObject+SBJSON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+SBJSON.m"; sourceTree = "<group>"; };
@@ -783,6 +785,7 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				C39317AC162EB10B00904AEF /* Path.txt */,
 				C396643E155CEEA00077E4BB /* phresco-env-config.xml */,
 				7081249514612E1F00D19665 /* Phresco-Info.plist */,
 				A4D536491368113A00D7C4C4 /* Images */,
@@ -1241,9 +1244,9 @@
 		C371A809161F32600093A041 /* LogicTest */ = {
 			isa = PBXGroup;
 			children = (
-				E066A1421625913700A3775D /* GDataXMLNode.h */,
-				E066A1431625913700A3775D /* GDataXMLNode.m */,
-				E066A1441625913700A3775D /* OCUnitToJUnitLogger.m */,
+				C38C41561626E81F0081EDCB /* GDataXMLNode.h */,
+				C38C41571626E81F0081EDCB /* GDataXMLNode.m */,
+				C38C41581626E81F0081EDCB /* OCUnitToJUnitLogger.m */,
 				C371A80F161F32600093A041 /* LogicTest.h */,
 				C371A810161F32600093A041 /* LogicTest.m */,
 				C371A80A161F32600093A041 /* Supporting Files */,
@@ -1695,6 +1698,7 @@
 				0AB6D09314E63A0400F3C8AE /* popup_bg.png in Resources */,
 				25F92C5414FDF948004D24E5 /* submitreview_btn.png in Resources */,
 				C396643F155CEEA00077E4BB /* phresco-env-config.xml in Resources */,
+				C39317AD162EB10B00904AEF /* Path.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1811,9 +1815,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E066A1471625915100A3775D /* GDataXMLNode.m in Sources */,
-				E066A1481625915100A3775D /* OCUnitToJUnitLogger.m in Sources */,
 				C371A811161F32600093A041 /* LogicTest.m in Sources */,
+				C38C41591626E81F0081EDCB /* GDataXMLNode.m in Sources */,
+				C38C415A1626E81F0081EDCB /* OCUnitToJUnitLogger.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
