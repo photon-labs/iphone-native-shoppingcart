@@ -271,6 +271,7 @@
 		C39317B7162EB46B00904AEF /* GDataXMLNode.m in Sources */ = {isa = PBXBuildFile; fileRef = C39317B5162EB46B00904AEF /* GDataXMLNode.m */; };
 		C39317B8162EB46B00904AEF /* OCUnitToJUnitLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = C39317B6162EB46B00904AEF /* OCUnitToJUnitLogger.m */; };
 		C39317BA162EB4B600904AEF /* Path.txt in Resources */ = {isa = PBXBuildFile; fileRef = C39317B9162EB4B600904AEF /* Path.txt */; };
+		C39317C9162EB6E300904AEF /* Path.txt in Resources */ = {isa = PBXBuildFile; fileRef = C39317B9162EB4B600904AEF /* Path.txt */; };
 		C396643F155CEEA00077E4BB /* phresco-env-config.xml in Resources */ = {isa = PBXBuildFile; fileRef = C396643E155CEEA00077E4BB /* phresco-env-config.xml */; };
 		C3C76D0D155953A40096FB7D /* Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = C3C76D08155953A40096FB7D /* Base64.m */; };
 		C3C76D0E155953A40096FB7D /* NSData-AES.m in Sources */ = {isa = PBXBuildFile; fileRef = C3C76D0A155953A40096FB7D /* NSData-AES.m */; };
@@ -1503,6 +1504,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C39317C9162EB6E300904AEF /* Path.txt in Resources */,
 				28AD733F0D9D9553002E5188 /* MainWindow.xib in Resources */,
 				A464A6E31358163200452CB2 /* WebContainer.xib in Resources */,
 				A41E31D01369803F002D9022 /* Settings.bundle in Resources */,
