@@ -37,7 +37,7 @@ static void __attribute__ ((constructor)) OCUnitToJUnitLoggerStart(void)
 
 static void __attribute__ ((destructor)) OCUnitToJUnitLoggerStop(void)
 {
-    [instance writeResultFile];
+    //[instance writeResultFile];
 	[instance release];
 }
 
@@ -102,6 +102,7 @@ static void __attribute__ ((destructor)) OCUnitToJUnitLoggerStop(void)
 
 - (void)testSuiteStopped:(NSNotification*)notification;
 {
+    [instance writeResultFile];
     SenTestSuiteRun *testSuiteRun = (SenTestSuiteRun *)[notification object];
 	
     if (currentSuiteElement)
