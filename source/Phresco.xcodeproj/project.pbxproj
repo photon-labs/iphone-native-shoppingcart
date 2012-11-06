@@ -282,6 +282,16 @@
 		EAB181E715C00216000DBF09 /* SBJsonWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = EAB181E215C00216000DBF09 /* SBJsonWriter.m */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		C37349B81648ED1100387759 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 29B97313FDCFA39411CA2CEA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1D6058900D05DD3D006BFB54;
+			remoteInfo = Phresco;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		0444E6EC136AE3EC0030F785 /* UnitTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "UnitTests-Info.plist"; sourceTree = "<group>"; };
 		0A6110AC14E553CA00F1BFBB /* customerreview_header.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = customerreview_header.png; sourceTree = "<group>"; };
@@ -1465,6 +1475,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				C37349B91648ED1100387759 /* PBXTargetDependency */,
 			);
 			name = ApplicationTest;
 			productName = ApplicationTest;
@@ -1833,6 +1844,14 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		C37349B91648ED1100387759 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1D6058900D05DD3D006BFB54 /* Phresco */;
+			targetProxy = C37349B81648ED1100387759 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
 		C371A80C161F32600093A041 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
@@ -2030,7 +2049,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
-				TEST_HOST = "$(BUNDLE_LOADER)";
+				VALID_ARCHS = "i386 armv7 armv7s";
 				WRAPPER_EXTENSION = octest;
 			};
 			name = Debug;
@@ -2059,8 +2078,8 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
-				TEST_HOST = "$(BUNDLE_LOADER)";
 				VALIDATE_PRODUCT = YES;
+				VALID_ARCHS = "i386 armv7 armv7s";
 				WRAPPER_EXTENSION = octest;
 			};
 			name = Release;
