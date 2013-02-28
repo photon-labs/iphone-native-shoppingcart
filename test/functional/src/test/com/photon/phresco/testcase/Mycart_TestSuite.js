@@ -2,20 +2,21 @@
 #import "../../../../../main/com/photon/phresco/util/UIElements.js"
 
 
+
 function MyCart_Test(methodName)
 {
 try
 {
-	clickOnButton(BrowseButton);        
+  clickOnButton(BrowseButton);        
     waitForFewSeconds(2);
-	clickOnTableCell(0);
-	waitForFewSeconds(2);
-	clickOnTableCell(0);
-	waitForFewSeconds(2);
+  clickOnTableCell(0);
+  waitForFewSeconds(2);
+  clickOnTableCell(0);
+  waitForFewSeconds(2);
     mainwindow.scrollViews()[0].buttons()[addToCartButton].tap(); 
    
     
-	
+  
    var val= mainwindow.tableViews()[0].cells()[0].textFields()[txtVewQnt].value();
 
    UIALogger.logMessage("val"+val);
@@ -25,8 +26,8 @@ try
      
    UIALogger.logMessage("cost "+cost);
 
-	clickOnButton(updateCart);  
-	waitForFewSeconds(2);
+  clickOnButton(updateCart);  
+  waitForFewSeconds(2);
     
     
   cost = cost.replace('$','');
@@ -39,7 +40,7 @@ try
    var tot = mainwindow.staticTexts()[total].value();
    UIALogger.logMessage("tot "+tot);
    
-	
+  
  
     if(subVal != "629")
     {
@@ -47,25 +48,24 @@ try
     }
     else
     {
-         UIALogger.logPass(methodName);
+         UIALogger.logPass("Mycart_addToCart");
        
     } 
     
-	
-    
+  
     waitForFewSeconds(2);
     clickOnButton(viewMyCart);        
-	
-	clickOnButton(checkoutButton);        
+  
+  clickOnButton(checkoutButton);        
     waitForFewSeconds(2);
-	
-	clickOnTableCell(custInfo);
-	waitForFewSeconds(2);
-	
-	clickOnTableCell(custInfo);
-	waitForFewSeconds(2);
-	
-	clickOnTableCell(delInfo);    
+  
+  clickOnTableCell(custInfo);
+  waitForFewSeconds(2);
+  
+  clickOnTableCell(custInfo);
+  waitForFewSeconds(2);
+  
+  clickOnTableCell(delInfo);    
     mainwindow.tableViews()[0].cells()[2].textFields()[0].setValue(add);
     mainwindow.tableViews()[0].cells()[2].textFields()[1].setValue(first);
     mainwindow.tableViews()[0].cells()[2].textFields()[2].setValue(last);
@@ -95,11 +95,11 @@ try
     waitForFewSeconds(2);
     mainwindow.buttons()[revieworder].tap(); 
     waitForFewSeconds(2);
-    mainwindow.buttons()[submitButton].tap();
-    waitForFewSeconds(5);
-    
-	 UIALogger.logPass(methodName);
+	target.frontMostApp().mainWindow().buttons()[6].tap();
 	
+  UIALogger.logPass(methodName);
+    
+  
     
 }      
 catch(err)
@@ -114,4 +114,3 @@ catch(err)
   
 }
 MyCart_Test("Mycart_Test");
-

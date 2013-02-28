@@ -9,10 +9,12 @@ function Login_Test(methodName)
 	try
 		{
 			clickOnButton(LoginButton);
-			textFields(0, Email_id);
-			passwordTextFields(0, password);	
+			target.frontMostApp().mainWindow().textFields()[0].setValue( Email_id);
+			//textFields(0, Email_id);
+			//passwordTextFields(0, password);
+			target.frontMostApp().mainWindow().secureTextFields()[0].setValue(password);
 			waitForFewSeconds(2);
-			application.keyboard().buttons()[RETURN].tap();
+			target.frontMostApp().keyboard().typeString("\n");
 			clickOnButton(login_);
 			waitForFewSeconds(2);
 			UIATarget.localTarget().logElementTree();    
@@ -40,6 +42,8 @@ function Login_Test(methodName)
   
 }
 Login_Test("Login_Test");
+
+
 
 
 

@@ -30,24 +30,25 @@ try
 
     
     if (textValue === logSuccess){ 
-        UIALogger.logPass( methodName ); 
+        UIALogger.logMessage("Register Success") ;
     }
     else{
-        UIALogger.logFail( methodName ); 
+       UIALogger.logMessage("Register Fail") ;
     }
        
 	clickOnButton(buttonOk);
 	waitForFewSeconds(2);
-        
+    UIALogger.logPass( methodName );     
 	
     
 }      
 catch(err)
 {
             UIALogger.logMessage("There is an error") ;
+            UIALogger.logFail(methodName);
             if(UIALogger.logError())
             {
-                UIATarget.localTarget().captureScreenWithName("Register screenshots"); 
+               captureScreenshot("Register screenshots"); 
             }
 }
   
